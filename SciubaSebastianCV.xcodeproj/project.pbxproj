@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9304606D27DF70330056CB5F /* CostumeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304606C27DF70330056CB5F /* CostumeButtonView.swift */; };
 		9304606F27DF72460056CB5F /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304606E27DF72460056CB5F /* ButtonsView.swift */; };
+		9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304607227DF7C330056CB5F /* ContactTitleLabel.swift */; };
+		9304607527DF7C8E0056CB5F /* ConcactDataLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304607427DF7C8E0056CB5F /* ConcactDataLabel.swift */; };
+		9304607727DF7CB90056CB5F /* ContactDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304607627DF7CB80056CB5F /* ContactDataView.swift */; };
 		93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0E19927DF567200A4433B /* AppDelegate.swift */; };
 		93B0E19C27DF567200A4433B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0E19B27DF567200A4433B /* SceneDelegate.swift */; };
 		93B0E1A327DF567400A4433B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B0E1A227DF567400A4433B /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		9304606C27DF70330056CB5F /* CostumeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumeButtonView.swift; sourceTree = "<group>"; };
 		9304606E27DF72460056CB5F /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		9304607227DF7C330056CB5F /* ContactTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTitleLabel.swift; sourceTree = "<group>"; };
+		9304607427DF7C8E0056CB5F /* ConcactDataLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcactDataLabel.swift; sourceTree = "<group>"; };
+		9304607627DF7CB80056CB5F /* ContactDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataView.swift; sourceTree = "<group>"; };
 		93B0E19627DF567200A4433B /* SciubaSebastianCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciubaSebastianCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B0E19927DF567200A4433B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93B0E19B27DF567200A4433B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +61,9 @@
 			children = (
 				93B0E1B327DF6AE900A4433B /* TopProfileView.swift */,
 				9304606E27DF72460056CB5F /* ButtonsView.swift */,
+				9304607627DF7CB80056CB5F /* ContactDataView.swift */,
 				9304606B27DF6FB70056CB5F /* ButtonsView */,
+				9304607127DF7C1E0056CB5F /* Labels */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -74,6 +82,15 @@
 				9304606C27DF70330056CB5F /* CostumeButtonView.swift */,
 			);
 			path = ButtonsView;
+			sourceTree = "<group>";
+		};
+		9304607127DF7C1E0056CB5F /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				9304607227DF7C330056CB5F /* ContactTitleLabel.swift */,
+				9304607427DF7C8E0056CB5F /* ConcactDataLabel.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 		93B0E18D27DF567200A4433B = {
@@ -178,10 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */,
 				93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */,
 				93B0E19C27DF567200A4433B /* SceneDelegate.swift in Sources */,
+				9304607727DF7CB90056CB5F /* ContactDataView.swift in Sources */,
 				93B0E1AE27DF5A7D00A4433B /* MainViewController.swift in Sources */,
 				9304606D27DF70330056CB5F /* CostumeButtonView.swift in Sources */,
+				9304607527DF7C8E0056CB5F /* ConcactDataLabel.swift in Sources */,
 				9304606F27DF72460056CB5F /* ButtonsView.swift in Sources */,
 				93B0E1B027DF5C3100A4433B /* Constants.swift in Sources */,
 				93B0E1B427DF6AE900A4433B /* TopProfileView.swift in Sources */,
