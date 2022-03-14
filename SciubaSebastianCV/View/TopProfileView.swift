@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  TopProfileView.swift
 //  SciubaSebastianCV
 //
 //  Created by Sebastian Sciuba on 14/03/2022.
@@ -7,8 +7,7 @@
 
 import UIKit
 
-class MainViewController : UIViewController {
-    
+class TopProfileView : UIViewController {
     
     let profileImg = UIImageView()
     let namelabel = UILabel()
@@ -18,6 +17,7 @@ class MainViewController : UIViewController {
         super.viewDidLoad()
             setupView()
     }
+    
     private func setupView() {
         view.backgroundColor = .white
         configureProfileImg()
@@ -69,4 +69,6 @@ class MainViewController : UIViewController {
             positionLabel.centerXAnchor.constraint(equalTo: profileImg.centerXAnchor)
         ])
     }
+    
+    
 }
