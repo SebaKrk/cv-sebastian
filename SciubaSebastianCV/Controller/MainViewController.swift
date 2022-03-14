@@ -11,6 +11,7 @@ class MainViewController : UIViewController {
     
     let topView = UIView()
     let buttonsView = UIView()
+    let contactView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,14 @@ class MainViewController : UIViewController {
         view.backgroundColor = .white
         configureTopView()
         configureButtonsView()
+        configureConcatsView()
         
     }
     
     private func setupChildView() {
         add(childVC: TopProfileView(), to:  topView)
         add(childVC: ButtonsView(), to: buttonsView)
+        add(childVC: ContactDataView(), to: contactView)
     }
     //    MARK: OBJC func
     
@@ -71,7 +74,19 @@ class MainViewController : UIViewController {
             buttonsView.topAnchor.constraint(equalTo: topView.bottomAnchor),
             buttonsView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 5),
             buttonsView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -5),
-            buttonsView.heightAnchor.constraint(equalToConstant: 150)
+            buttonsView.heightAnchor.constraint(equalToConstant: 100)
+        ])
+    }
+    
+    func configureConcatsView() {
+        view.addSubview(contactView)
+        contactView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            contactView.topAnchor.constraint(equalTo: buttonsView.bottomAnchor),
+            contactView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
+            contactView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
+            contactView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
     
