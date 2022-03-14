@@ -10,6 +10,7 @@ import UIKit
 class MainViewController : UIViewController {
     
     let topView = UIView()
+    let buttonsView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +23,13 @@ class MainViewController : UIViewController {
     private func setupView() {
         view.backgroundColor = .white
         configureTopView()
+        configureButtonsView()
         
     }
     
     private func setupChildView() {
         add(childVC: TopProfileView(), to:  topView)
+        add(childVC: ButtonsView(), to: buttonsView)
     }
     //    MARK: OBJC func
     
@@ -57,6 +60,18 @@ class MainViewController : UIViewController {
             topView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             topView.heightAnchor.constraint(equalToConstant: 250)
+        ])
+    }
+    
+    func configureButtonsView() {
+        view.addSubview(buttonsView)
+        buttonsView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            buttonsView.topAnchor.constraint(equalTo: topView.bottomAnchor),
+            buttonsView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 5),
+            buttonsView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -5),
+            buttonsView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
     
