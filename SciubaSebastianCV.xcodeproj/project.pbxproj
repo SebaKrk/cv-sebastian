@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		9304606D27DF70330056CB5F /* CostumeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304606C27DF70330056CB5F /* CostumeButtonView.swift */; };
 		9304606F27DF72460056CB5F /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304606E27DF72460056CB5F /* ButtonsView.swift */; };
 		9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304607227DF7C330056CB5F /* ContactTitleLabel.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		9304606C27DF70330056CB5F /* CostumeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumeButtonView.swift; sourceTree = "<group>"; };
 		9304606E27DF72460056CB5F /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		9304607227DF7C330056CB5F /* ContactTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTitleLabel.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				93B0E1B327DF6AE900A4433B /* TopProfileView.swift */,
 				9304606E27DF72460056CB5F /* ButtonsView.swift */,
 				9304607627DF7CB80056CB5F /* ContactDataView.swift */,
+				05F9105727E07F050069233D /* AboutMeView.swift */,
 				9304606B27DF6FB70056CB5F /* ButtonsView */,
 				9304607127DF7C1E0056CB5F /* Labels */,
 			);
@@ -197,6 +200,7 @@
 			files = (
 				9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */,
 				93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */,
+				05F9105827E07F050069233D /* AboutMeView.swift in Sources */,
 				93B0E19C27DF567200A4433B /* SceneDelegate.swift in Sources */,
 				9304607727DF7CB90056CB5F /* ContactDataView.swift in Sources */,
 				93B0E1AE27DF5A7D00A4433B /* MainViewController.swift in Sources */,

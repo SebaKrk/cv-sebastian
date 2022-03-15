@@ -12,6 +12,7 @@ class MainViewController : UIViewController {
     let topView = UIView()
     let buttonsView = UIView()
     let contactView = UIView()
+    let aboutMeView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class MainViewController : UIViewController {
         configureTopView()
         configureButtonsView()
         configureConcatsView()
+        configureAboutMeView()
         
     }
     
@@ -33,6 +35,7 @@ class MainViewController : UIViewController {
         add(childVC: TopProfileView(), to:  topView)
         add(childVC: ButtonsView(), to: buttonsView)
         add(childVC: ContactDataView(), to: contactView)
+        add(childVC: AbutMeView(), to: aboutMeView)
     }
     //    MARK: OBJC func
     
@@ -88,6 +91,20 @@ class MainViewController : UIViewController {
             contactView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
             contactView.heightAnchor.constraint(equalToConstant: 150)
         ])
+    }
+    
+    private func configureAboutMeView() {
+        view.addSubview(aboutMeView)
+        aboutMeView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        NSLayoutConstraint.activate([
+            aboutMeView.topAnchor.constraint(equalTo: contactView.bottomAnchor, constant: 20),
+            aboutMeView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
+            aboutMeView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
+            aboutMeView.heightAnchor.constraint(equalToConstant: 200)
+        ])
+        
     }
     
     //    MARK: Helpers
