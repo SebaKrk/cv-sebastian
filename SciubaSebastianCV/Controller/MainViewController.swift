@@ -96,8 +96,7 @@ class MainViewController : UIViewController {
     private func configureAboutMeView() {
         view.addSubview(aboutMeView)
         aboutMeView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+            
         NSLayoutConstraint.activate([
             aboutMeView.topAnchor.constraint(equalTo: contactView.bottomAnchor, constant: 20),
             aboutMeView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),

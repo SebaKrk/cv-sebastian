@@ -15,7 +15,7 @@ class TopProfileView : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            setupView()
+        setupView()
     }
     
     private func setupView() {
