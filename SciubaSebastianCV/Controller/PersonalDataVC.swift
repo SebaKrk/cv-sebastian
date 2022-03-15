@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController : UIViewController {
+class PersonalDataVC : UIViewController {
     
     let topView = UIView()
     let buttonsView = UIView()
