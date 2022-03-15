@@ -36,7 +36,7 @@ class AbutMeView : UIViewController {
             container.topAnchor.constraint(equalTo: view.topAnchor),
             container.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             container.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            container.heightAnchor.constraint(equalToConstant: 150)
+            container.heightAnchor.constraint(equalToConstant: 170)
         ])
     }
     private func configureScrollView() {

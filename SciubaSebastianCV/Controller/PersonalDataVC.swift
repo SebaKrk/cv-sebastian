@@ -14,6 +14,8 @@ class PersonalDataVC : UIViewController {
     let contactView = UIView()
     let aboutMeView = UIView()
     
+    let padding : CGFloat = 15
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -75,8 +77,8 @@ class PersonalDataVC : UIViewController {
         
         NSLayoutConstraint.activate([
             buttonsView.topAnchor.constraint(equalTo: topView.bottomAnchor),
-            buttonsView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 5),
-            buttonsView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -5),
+            buttonsView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: padding),
+            buttonsView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -padding),
             buttonsView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
@@ -87,8 +89,8 @@ class PersonalDataVC : UIViewController {
         
         NSLayoutConstraint.activate([
             contactView.topAnchor.constraint(equalTo: buttonsView.bottomAnchor),
-            contactView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
-            contactView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
+            contactView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            contactView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             contactView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
@@ -99,9 +101,9 @@ class PersonalDataVC : UIViewController {
             
         NSLayoutConstraint.activate([
             aboutMeView.topAnchor.constraint(equalTo: contactView.bottomAnchor, constant: 20),
-            aboutMeView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
-            aboutMeView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
-            aboutMeView.heightAnchor.constraint(equalToConstant: 200)
+            aboutMeView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            aboutMeView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            aboutMeView.heightAnchor.constraint(equalToConstant: 170)
         ])
         
     }
