@@ -12,11 +12,14 @@ class PersonalDataVC : UIViewController {
     let topView = UIView()
     let buttonsView = UIView()
     
+    let scrollView = UIScrollView()
+    let content = UIView()
+    
     let contactView = UIView()
     let adressView = UIView()
     let aboutMeView = UIView()
     
-    let padding : CGFloat = 15
+    let padding : CGFloat = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +29,14 @@ class PersonalDataVC : UIViewController {
     }
     
     //    MARK: - SetupView
+    
     private func setupView() {
         view.backgroundColor = .white
         configureTopView()
         configureButtonsView()
+        configureScrollView()
+        configureContenView()
+        
         configureConcatsView()
         configureAdresView()
         configureAboutMeView()
@@ -87,38 +94,64 @@ class PersonalDataVC : UIViewController {
         ])
     }
     
-    func configureConcatsView() {
-        view.addSubview(contactView)
-        contactView.translatesAutoresizingMaskIntoConstraints = false
+    private func configureScrollView() {
+        view.addSubview(scrollView)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            contactView.topAnchor.constraint(equalTo: buttonsView.bottomAnchor),
-            contactView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            contactView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            scrollView.topAnchor.constraint(equalTo: buttonsView.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+    
+    private func configureContenView() {
+        scrollView.addSubview(content)
+        content.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            content.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            content.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            content.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            content.heightAnchor.constraint(equalToConstant: 600)
+        ])
+    }
+    
+    func configureConcatsView() {
+        content.addSubview(contactView)
+        contactView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            contactView.topAnchor.constraint(equalTo: content.topAnchor,constant: 20),
+            contactView.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: padding),
+            contactView.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -padding),
             contactView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
     
     private func configureAdresView() {
-        view.addSubview(adressView)
+        content.addSubview(adressView)
         adressView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         NSLayoutConstraint.activate([
             adressView.topAnchor.constraint(equalTo: contactView.bottomAnchor, constant: 20),
-            adressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            adressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            adressView.heightAnchor.constraint(equalToConstant: 150)
+            adressView.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: padding),
+            adressView.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -padding),
+            adressView.heightAnchor.constraint(equalToConstant: 150),
         ])
     }
-    
+
     private func configureAboutMeView() {
-        view.addSubview(aboutMeView)
+        content.addSubview(aboutMeView)
         aboutMeView.translatesAutoresizingMaskIntoConstraints = false
-            
+
         NSLayoutConstraint.activate([
             aboutMeView.topAnchor.constraint(equalTo: adressView.bottomAnchor, constant: 20),
-            aboutMeView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            aboutMeView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            aboutMeView.centerXAnchor.constraint(equalTo: content.centerXAnchor),
+            aboutMeView.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: padding),
+            aboutMeView.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -padding),
             aboutMeView.heightAnchor.constraint(equalToConstant: 170)
         ])
     }
