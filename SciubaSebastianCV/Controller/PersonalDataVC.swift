@@ -102,7 +102,7 @@ class PersonalDataVC : UIViewController {
             scrollView.topAnchor.constraint(equalTo: buttonsView.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
@@ -115,7 +115,7 @@ class PersonalDataVC : UIViewController {
             content.topAnchor.constraint(equalTo: scrollView.topAnchor),
             content.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             content.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            content.heightAnchor.constraint(equalToConstant: 600)
+//            content.heightAnchor.constraint(equalToConstant: 600)
         ])
     }
     
@@ -152,6 +152,7 @@ class PersonalDataVC : UIViewController {
             aboutMeView.centerXAnchor.constraint(equalTo: content.centerXAnchor),
             aboutMeView.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: padding),
             aboutMeView.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -padding),
+            aboutMeView.bottomAnchor.constraint(equalTo: content.safeAreaLayoutGuide.bottomAnchor,constant: -83),
             aboutMeView.heightAnchor.constraint(equalToConstant: 170)
         ])
     }
