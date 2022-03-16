@@ -11,7 +11,9 @@ class PersonalDataVC : UIViewController {
     
     let topView = UIView()
     let buttonsView = UIView()
+    
     let contactView = UIView()
+    let adressView = UIView()
     let aboutMeView = UIView()
     
     let padding : CGFloat = 15
@@ -29,6 +31,7 @@ class PersonalDataVC : UIViewController {
         configureTopView()
         configureButtonsView()
         configureConcatsView()
+        configureAdresView()
         configureAboutMeView()
         
     }
@@ -37,6 +40,7 @@ class PersonalDataVC : UIViewController {
         add(childVC: TopProfileView(), to:  topView)
         add(childVC: ButtonsView(), to: buttonsView)
         add(childVC: ContactDataView(), to: contactView)
+        add(childVC: AdressView(), to: adressView)
         add(childVC: AbutMeView(), to: aboutMeView)
     }
     //    MARK: OBJC func
@@ -95,17 +99,28 @@ class PersonalDataVC : UIViewController {
         ])
     }
     
+    private func configureAdresView() {
+        view.addSubview(adressView)
+        adressView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            adressView.topAnchor.constraint(equalTo: contactView.bottomAnchor, constant: 20),
+            adressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            adressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            adressView.heightAnchor.constraint(equalToConstant: 150)
+        ])
+    }
+    
     private func configureAboutMeView() {
         view.addSubview(aboutMeView)
         aboutMeView.translatesAutoresizingMaskIntoConstraints = false
             
         NSLayoutConstraint.activate([
-            aboutMeView.topAnchor.constraint(equalTo: contactView.bottomAnchor, constant: 20),
+            aboutMeView.topAnchor.constraint(equalTo: adressView.bottomAnchor, constant: 20),
             aboutMeView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             aboutMeView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             aboutMeView.heightAnchor.constraint(equalToConstant: 170)
         ])
-        
     }
     
     //    MARK: Helpers
