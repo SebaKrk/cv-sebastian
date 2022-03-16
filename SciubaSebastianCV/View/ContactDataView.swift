@@ -25,14 +25,14 @@ class ContactDataView : UIViewController {
         configureStackView()
         
     }
-//    MARK: - StakView
+//    MARK: - StackView
     
     private func setupStackView() {
         stackView = UIStackView(arrangedSubviews: [phoneLabel,phoneData,emialLabel,emailData])
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
     }
-//    MARK: - Constant
+//    MARK: - Constraints
     
     private func configureContainer() {
         view.addSubview(container)
@@ -54,10 +54,9 @@ class ContactDataView : UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: container.topAnchor, constant: 5),
-            stackView.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -5)
+            stackView.topAnchor.constraint(equalTo: container.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 10),
+            stackView.bottomAnchor.constraint(equalTo: container.bottomAnchor)
         ])
     }
 

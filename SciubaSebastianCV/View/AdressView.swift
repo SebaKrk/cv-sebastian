@@ -34,12 +34,14 @@ class AdressView : UIViewController {
         cityLabel.text = "\(Constants.city)"
         countrylabel.text = "\(Constants.coutry)"
     }
+//    MARK: - StackView
     
     private func setupStackView() {
         stackView = UIStackView(arrangedSubviews: [homeLabel, adressLabel, cityLabel, countrylabel])
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
     }
+//    MARK: - MapView
     
     private func setupMapView() {
         let annotation = MKPointAnnotation()
@@ -52,7 +54,9 @@ class AdressView : UIViewController {
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: annotation.coordinate,span: span)
         mapView.setRegion(region, animated: true)
+        mapView.isScrollEnabled = false
     }
+//    MARK: - Constraints
     
     private func configureContainer() {
         view.addSubview(container)
@@ -74,10 +78,10 @@ class AdressView : UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: container.topAnchor, constant: 5),
-            stackView.leadingAnchor.constraint(equalTo: countrylabel.leadingAnchor),
-            stackView.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.4),
-            stackView.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -5)
+            stackView.topAnchor.constraint(equalTo: container.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: container.leadingAnchor,constant: 10),
+            stackView.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.45),
+            stackView.bottomAnchor.constraint(equalTo: container.bottomAnchor)
         ])
     }
     
