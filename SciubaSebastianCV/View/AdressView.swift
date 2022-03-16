@@ -5,13 +5,14 @@
 //  Created by akra on 16/03/2022.
 //
 
-import Foundation
 import UIKit
+import MapKit
 
 class AdressView : UIViewController {
     
     let container = UIView()
     var stackView = UIStackView()
+    let mapView = MKMapView()
     
     let homeLabel = ContactTitleLabel(labelTitle: "Home")
     let adressLabel = UILabel()
@@ -22,8 +23,10 @@ class AdressView : UIViewController {
         super.viewDidLoad()
         setupStackView()
         setupData()
+        setupMapView()
         configureContainer()
         configureStackView()
+        configureMapView()
     }
     
     private func setupData() {
@@ -36,6 +39,19 @@ class AdressView : UIViewController {
         stackView = UIStackView(arrangedSubviews: [homeLabel, adressLabel, cityLabel, countrylabel])
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
+    }
+    
+    private func setupMapView() {
+        let annotation = MKPointAnnotation()
+        let latitude = Constants.latitude
+        let longitude = Constants.longitude
+        
+        annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        mapView.addAnnotation(annotation)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: annotation.coordinate,span: span)
+        mapView.setRegion(region, animated: true)
     }
     
     private func configureContainer() {
@@ -62,6 +78,20 @@ class AdressView : UIViewController {
             stackView.leadingAnchor.constraint(equalTo: countrylabel.leadingAnchor),
             stackView.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.4),
             stackView.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -5)
+        ])
+    }
+    
+    private func configureMapView() {
+        view.addSubview(mapView)
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        
+        mapView.layer.cornerRadius = 5
+        
+        NSLayoutConstraint.activate([
+            mapView.topAnchor.constraint(equalTo: container.topAnchor, constant: 5),
+            mapView.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -5),
+            mapView.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.4),
+            mapView.bottomAnchor.constraint(equalTo: container.bottomAnchor,constant: -5)
         ])
     }
 }
