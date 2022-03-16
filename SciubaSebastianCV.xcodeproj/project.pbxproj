@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105A27E0BDC10069233D /* TabBarController.swift */; };
 		05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105C27E0C0700069233D /* WorkExperienceVC.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		05F9105A27E0BDC10069233D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		05F9105C27E0C0700069233D /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				93B0E1B327DF6AE900A4433B /* TopProfileView.swift */,
 				9304606E27DF72460056CB5F /* ButtonsView.swift */,
 				9304607627DF7CB80056CB5F /* ContactDataView.swift */,
+				05BC635C27E1DBD100FB1544 /* AdressView.swift */,
 				05F9105727E07F050069233D /* AboutMeView.swift */,
 				05F9105927E0BD520069233D /* TabBar */,
 				9304606B27DF6FB70056CB5F /* ButtonsView */,
@@ -226,6 +229,7 @@
 				93B0E19C27DF567200A4433B /* SceneDelegate.swift in Sources */,
 				9304607727DF7CB90056CB5F /* ContactDataView.swift in Sources */,
 				93B0E1AE27DF5A7D00A4433B /* PersonalDataVC.swift in Sources */,
+				05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */,
 				9304606D27DF70330056CB5F /* CostumeButtonView.swift in Sources */,
 				9304607527DF7C8E0056CB5F /* ConcactDataLabel.swift in Sources */,
 				05F9106127E0C15C0069233D /* SkillsAndCoursesVC.swift in Sources */,
