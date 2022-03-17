@@ -54,6 +54,9 @@ class PersonalDataVC : UIViewController {
     
     @objc func handleSideMenu() {
         print("handleSideMenu")
+        let desVC = SideMenuVC()
+        desVC.modalPresentationStyle = .overCurrentContext
+        present(desVC, animated: false, completion: nil)
     }
     
     //    MARK: - SetupNavigationbar
