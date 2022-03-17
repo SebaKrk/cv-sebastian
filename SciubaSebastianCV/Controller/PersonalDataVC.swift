@@ -32,6 +32,7 @@ class PersonalDataVC : UIViewController {
     
     private func setupView() {
         view.backgroundColor = .white
+        
         configureTopView()
         configureButtonsView()
         configureScrollView()
@@ -40,7 +41,6 @@ class PersonalDataVC : UIViewController {
         configureConcatsView()
         configureAdresView()
         configureAboutMeView()
-        
     }
     
     private func setupChildView() {
@@ -53,8 +53,10 @@ class PersonalDataVC : UIViewController {
     //    MARK: OBJC func
     
     @objc func handleSideMenu() {
-        print("handleSideMenu")
+        self.tabBarController?.tabBar.isHidden = true
+
         let desVC = SideMenuVC()
+        desVC.delegate = self
         desVC.modalPresentationStyle = .overCurrentContext
         present(desVC, animated: false, completion: nil)
     }
@@ -118,7 +120,6 @@ class PersonalDataVC : UIViewController {
             content.topAnchor.constraint(equalTo: scrollView.topAnchor),
             content.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             content.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-//            content.heightAnchor.constraint(equalToConstant: 600)
         ])
     }
     
@@ -167,5 +168,12 @@ class PersonalDataVC : UIViewController {
         containerView.addSubview(childVC.view)
         childVC.view.frame = containerView.bounds
         childVC.didMove(toParent: self)
+    }
+}
+extension PersonalDataVC : TabBarAppranceDelegate {
+    func dismissAndShowTabBar() {
+        dismiss(animated: false) {
+            self.tabBarController?.tabBar.isHidden = false
+        }
     }
 }

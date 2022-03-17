@@ -5,12 +5,18 @@
 //  Created by akra on 17/03/2022.
 //
 
-import Foundation
 import UIKit
+
+protocol TabBarAppranceDelegate {
+    func dismissAndShowTabBar()
+}
 
 class SideMenuVC : UIViewController {
     
+    var delegate : TabBarAppranceDelegate?
+    
     let menuContainer = UIView()
+    let backButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +25,13 @@ class SideMenuVC : UIViewController {
     private func setupView() {
         view.backgroundColor = .clear
         configureMenuContainer()
+        configureBackButton()
     }
+    @objc func handleBackButton() {
+        delegate?.dismissAndShowTabBar()
+    }
+
+    
     private func configureMenuContainer() {
         view.addSubview(menuContainer)
         menuContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -31,6 +43,18 @@ class SideMenuVC : UIViewController {
             menuContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             menuContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             menuContainer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6)
+        ])
+    }
+    func configureBackButton() {
+        menuContainer.addSubview(backButton)
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        backButton.setTitle("BACK", for: .normal)
+        backButton.addTarget(self, action: #selector(handleBackButton), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            backButton.centerXAnchor.constraint(equalTo: menuContainer.centerXAnchor),
+            backButton.centerYAnchor.constraint(equalTo: menuContainer.centerYAnchor)
         ])
     }
 }
