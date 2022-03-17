@@ -23,7 +23,7 @@ class SideMenuVC : UIViewController {
         setupView()
     }
     private func setupView() {
-        view.backgroundColor = .clear
+        view.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.3)
         configureMenuContainer()
         configureBackButton()
     }
