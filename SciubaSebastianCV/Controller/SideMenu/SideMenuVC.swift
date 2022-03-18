@@ -26,7 +26,7 @@ class SideMenuVC : UIViewController {
         setupView()
     }
     
-//    MARK: - SetupView
+    //    MARK: - SetupView
     
     private func setupView() {
         configureContainer()
@@ -36,31 +36,17 @@ class SideMenuVC : UIViewController {
         addTapGestureRecognizare()
     }
     
-//    MARK: OBJC Func
+    //    MARK: OBJC Func
     
     @objc func handleBackButton() {
         delegate?.dismissAndShowTabBar()
     }
     
     @objc func handleChangeProfileIMG() {
-        print("change the profille img")
-        
-        let imgPicker = UIImagePickerController()
-        imgPicker.delegate = self
-        imgPicker.modalPresentationStyle = .popover
-        
-        if let popover = imgPicker.popoverPresentationController {
-            let sheet = popover.adaptiveSheetPresentationController
-            sheet.detents = [.medium(), .large()]
-            sheet.largestUndimmedDetentIdentifier = .medium
-            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-            sheet.prefersEdgeAttachedInCompactHeight = true
-            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
-        }
-        present(imgPicker, animated: true, completion: nil)
+        changeProfileImg()
     }
-
-//    MARK: - Constraints
+    
+    //    MARK: - Constraints
     
     private func configureContainer() {
         view.addSubview(container)
@@ -119,19 +105,41 @@ class SideMenuVC : UIViewController {
         ])
     }
     
-//    MARK: - Helpers
+    // MARK: - ImagePickerController
+    
+    private func changeProfileImg() {
+        let imgPicker = UIImagePickerController()
+        imgPicker.delegate = self
+        imgPicker.modalPresentationStyle = .popover
+        
+        if let popover = imgPicker.popoverPresentationController {
+            let sheet = popover.adaptiveSheetPresentationController
+            sheet.detents = [.medium(), .large()]
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+        }
+        present(imgPicker, animated: true, completion: nil)
+    }
+    
+    //    MARK: - Helpers
     
     private func addTapGestureRecognizare() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleBackButton))
         container.addGestureRecognizer(tap)
     }
+    
 }
 
 // MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
 extension SideMenuVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
+        if let image = info[.originalImage] as? UIImage {
+            profileIMG.image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
     
 }
