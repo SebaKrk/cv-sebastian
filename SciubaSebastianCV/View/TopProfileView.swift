@@ -16,6 +16,7 @@ class TopProfileView : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupObserver()
     }
     
     private func setupView() {
@@ -24,6 +25,20 @@ class TopProfileView : UIViewController {
         configureNameLabel()
         configurePositionLabel()
     }
+    
+    //    MARK: - setupObserver
+    
+    @objc func handleProfileImgObserver(notification: NSNotification) {
+        let imgPicker = notification.userInfo?["imgPicker"] as? UIImage
+        guard let imgPicker = imgPicker else {return}
+        profileImg.image = imgPicker
+    }
+    
+    private  func setupObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleProfileImgObserver(notification:)), name: .profileImgObserver, object: nil)
+    }
+    
+    // MARK: - Constraints
     
     private func configureProfileImg() {
         view.addSubview(profileImg)

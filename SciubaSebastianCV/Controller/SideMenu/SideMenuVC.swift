@@ -138,6 +138,7 @@ extension SideMenuVC : UIImagePickerControllerDelegate, UINavigationControllerDe
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
             profileIMG.image = image
+            NotificationCenter.default.post(name: .profileImgObserver, object: nil, userInfo: ["imgPicker" : image])
         }
         picker.dismiss(animated: true, completion: nil)
     }

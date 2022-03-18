@@ -50,11 +50,12 @@ class PersonalDataVC : UIViewController {
         add(childVC: AdressView(), to: adressView)
         add(childVC: AbutMeView(), to: aboutMeView)
     }
-    //    MARK: OBJC func
+    
+    //    MARK: - OBJC func
     
     @objc func handleSideMenu() {
         self.tabBarController?.tabBar.isHidden = true
-
+        
         let desVC = SideMenuVC()
         desVC.delegate = self
         desVC.modalPresentationStyle = .overCurrentContext
@@ -126,7 +127,7 @@ class PersonalDataVC : UIViewController {
     func configureConcatsView() {
         content.addSubview(contactView)
         contactView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
             contactView.topAnchor.constraint(equalTo: content.topAnchor,constant: 20),
             contactView.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: padding),
@@ -138,7 +139,7 @@ class PersonalDataVC : UIViewController {
     private func configureAdresView() {
         content.addSubview(adressView)
         adressView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
             adressView.topAnchor.constraint(equalTo: contactView.bottomAnchor, constant: 20),
             adressView.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: padding),
@@ -146,11 +147,11 @@ class PersonalDataVC : UIViewController {
             adressView.heightAnchor.constraint(equalToConstant: 150),
         ])
     }
-
+    
     private func configureAboutMeView() {
         content.addSubview(aboutMeView)
         aboutMeView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
             aboutMeView.topAnchor.constraint(equalTo: adressView.bottomAnchor, constant: 20),
             aboutMeView.centerXAnchor.constraint(equalTo: content.centerXAnchor),
@@ -170,6 +171,7 @@ class PersonalDataVC : UIViewController {
         childVC.didMove(toParent: self)
     }
 }
+
 extension PersonalDataVC : TabBarAppranceDelegate {
     func dismissAndShowTabBar() {
         dismiss(animated: false) {

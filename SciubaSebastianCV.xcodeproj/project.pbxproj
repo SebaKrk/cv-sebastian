@@ -10,6 +10,7 @@
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
+		05BC636627E4C31E00FB1544 /* NSNotification+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636527E4C31E00FB1544 /* NSNotification+Ext.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105A27E0BDC10069233D /* TabBarController.swift */; };
 		05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105C27E0C0700069233D /* WorkExperienceVC.swift */; };
@@ -33,6 +34,7 @@
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
+		05BC636527E4C31E00FB1544 /* NSNotification+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Ext.swift"; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		05F9105A27E0BDC10069233D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		05F9105C27E0C0700069233D /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 				05BC636227E4718400FB1544 /* ProfileIMG.swift */,
 			);
 			path = UIImge;
+			sourceTree = "<group>";
+		};
+		05BC636427E4C2FA00FB1544 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				05BC636527E4C31E00FB1544 /* NSNotification+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		05F9105927E0BD520069233D /* TabBar */ = {
@@ -163,6 +173,7 @@
 				93B0E19927DF567200A4433B /* AppDelegate.swift */,
 				93B0E19B27DF567200A4433B /* SceneDelegate.swift */,
 				93B0E1AF27DF5C3000A4433B /* Constants.swift */,
+				05BC636427E4C2FA00FB1544 /* Extension */,
 				9304606727DF6DFC0056CB5F /* Model */,
 				9304606927DF6E0D0056CB5F /* View */,
 				9304606A27DF6E130056CB5F /* Controller */,
@@ -247,6 +258,7 @@
 				05F9105F27E0C0DB0069233D /* EducationVC.swift in Sources */,
 				05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */,
 				93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */,
+				05BC636627E4C31E00FB1544 /* NSNotification+Ext.swift in Sources */,
 				05F9105827E07F050069233D /* AboutMeView.swift in Sources */,
 				93B0E19C27DF567200A4433B /* SceneDelegate.swift in Sources */,
 				9304607727DF7CB90056CB5F /* ContactDataView.swift in Sources */,
