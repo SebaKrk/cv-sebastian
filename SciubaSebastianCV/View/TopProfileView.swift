@@ -8,8 +8,8 @@
 import UIKit
 
 class TopProfileView : UIViewController {
-    
-    let profileImg = UIImageView()
+
+    let profileImg = ProfileIMG(frame: .zero)
     let namelabel = UILabel()
     let positionLabel = UILabel()
     
@@ -28,15 +28,7 @@ class TopProfileView : UIViewController {
     private func configureProfileImg() {
         view.addSubview(profileImg)
         profileImg.translatesAutoresizingMaskIntoConstraints = false
-        
-        profileImg.image = UIImage(named: "ŚciubaS")
-        profileImg.layer.cornerRadius = 75
-        profileImg.layer.borderColor = UIColor.systemBlue.cgColor
-        profileImg.layer.borderWidth = 1
-        profileImg.layer.masksToBounds = true
-        profileImg.contentMode = .scaleAspectFill
-        
-        
+
         NSLayoutConstraint.activate([
             profileImg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             profileImg.centerXAnchor.constraint(equalTo: view.centerXAnchor),

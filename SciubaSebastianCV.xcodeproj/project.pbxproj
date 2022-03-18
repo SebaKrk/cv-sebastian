@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
+		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105A27E0BDC10069233D /* TabBarController.swift */; };
 		05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105C27E0C0700069233D /* WorkExperienceVC.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		05F9105A27E0BDC10069233D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		05F9105C27E0C0700069233D /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		05BC636127E4715D00FB1544 /* UIImge */ = {
+			isa = PBXGroup;
+			children = (
+				05BC636227E4718400FB1544 /* ProfileIMG.swift */,
+			);
+			path = UIImge;
+			sourceTree = "<group>";
+		};
 		05F9105927E0BD520069233D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 				9304607627DF7CB80056CB5F /* ContactDataView.swift */,
 				05BC635C27E1DBD100FB1544 /* AdressView.swift */,
 				05F9105727E07F050069233D /* AboutMeView.swift */,
+				05BC636127E4715D00FB1544 /* UIImge */,
 				05F9105927E0BD520069233D /* TabBar */,
 				9304606B27DF6FB70056CB5F /* ButtonsView */,
 				9304607127DF7C1E0056CB5F /* Labels */,
@@ -244,6 +255,7 @@
 				9304606D27DF70330056CB5F /* CostumeButtonView.swift in Sources */,
 				9304607527DF7C8E0056CB5F /* ConcactDataLabel.swift in Sources */,
 				05F9106127E0C15C0069233D /* SkillsAndCoursesVC.swift in Sources */,
+				05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */,
 				9304606F27DF72460056CB5F /* ButtonsView.swift in Sources */,
 				05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */,
 				05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */,
