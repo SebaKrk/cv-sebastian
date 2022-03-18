@@ -41,8 +41,23 @@ class SideMenuVC : UIViewController {
     @objc func handleBackButton() {
         delegate?.dismissAndShowTabBar()
     }
+    
     @objc func handleChangeProfileIMG() {
         print("change the profille img")
+        
+        let imgPicker = UIImagePickerController()
+        imgPicker.delegate = self
+        imgPicker.modalPresentationStyle = .popover
+        
+        if let popover = imgPicker.popoverPresentationController {
+            let sheet = popover.adaptiveSheetPresentationController
+            sheet.detents = [.medium(), .large()]
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+        }
+        present(imgPicker, animated: true, completion: nil)
     }
 
 //    MARK: - Constraints
@@ -110,4 +125,13 @@ class SideMenuVC : UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleBackButton))
         container.addGestureRecognizer(tap)
     }
+}
+
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+
+extension SideMenuVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+    }
+    
 }
