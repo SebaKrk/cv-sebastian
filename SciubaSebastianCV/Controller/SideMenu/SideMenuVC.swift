@@ -22,15 +22,22 @@ class SideMenuVC : UIViewController {
         super.viewDidLoad()
         setupView()
     }
+    
+//    MARK: - SetupView
+    
     private func setupView() {
         view.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.3)
         configureMenuContainer()
         configureBackButton()
     }
+    
+//    MARK: OBJC Func
+    
     @objc func handleBackButton() {
         delegate?.dismissAndShowTabBar()
     }
 
+//    MARK: - Constraints
     
     private func configureMenuContainer() {
         view.addSubview(menuContainer)
@@ -45,6 +52,7 @@ class SideMenuVC : UIViewController {
             menuContainer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6)
         ])
     }
+    
     func configureBackButton() {
         menuContainer.addSubview(backButton)
         backButton.translatesAutoresizingMaskIntoConstraints = false
