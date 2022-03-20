@@ -21,9 +21,14 @@ class SideMenuVC : UIViewController {
     let imgButton = UIButton()
     let profileIMG = ProfileIMG(frame: .zero)
     
+    let languageLabel = UILabel()
+    var lanSegmentedControl = UISegmentedControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSegmentedControl()
         setupView()
+       
     }
     
     //    MARK: - SetupView
@@ -33,6 +38,9 @@ class SideMenuVC : UIViewController {
         configureMenuContainer()
         configureProfileIMG()
         configureProfileImgButton()
+        configureLanguageLabel()
+        configureLanSegmentedControl()
+        
         addTapGestureRecognizare()
     }
     
@@ -44,6 +52,29 @@ class SideMenuVC : UIViewController {
     
     @objc func handleChangeProfileIMG() {
         changeProfileImg()
+    }
+    
+    @objc func handleSegCon(segmentedControl: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            print("EN")
+        case 1:
+            print("PL")
+        default:
+            print("EN")
+        }
+    }
+    
+    //    MARK: - SegmentedControl
+    
+    private func setupSegmentedControl() {
+        let language = ["EN","PL"]
+        lanSegmentedControl = UISegmentedControl(items: language)
+        lanSegmentedControl.selectedSegmentIndex = 0
+        
+        lanSegmentedControl.backgroundColor = .blue
+        lanSegmentedControl.tintColor = .white
+        lanSegmentedControl.addTarget(self, action: #selector(handleSegCon(segmentedControl:)), for: .valueChanged)
     }
     
     //    MARK: - Constraints
@@ -102,6 +133,29 @@ class SideMenuVC : UIViewController {
             imgButton.topAnchor.constraint(equalTo: menuContainer.safeAreaLayoutGuide.topAnchor, constant: 20),
             imgButton.widthAnchor.constraint(equalTo: menuContainer.widthAnchor, multiplier: 0.6),
             imgButton.heightAnchor.constraint(equalTo: menuContainer.widthAnchor, multiplier: 0.6)
+        ])
+    }
+    private func configureLanguageLabel() {
+        menuContainer.addSubview(languageLabel)
+        languageLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        languageLabel.text = "Language:"
+        languageLabel.textColor = .white
+        languageLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        
+        NSLayoutConstraint.activate([
+            languageLabel.topAnchor.constraint(equalTo: imgButton.bottomAnchor,constant: 40),
+            languageLabel.leadingAnchor.constraint(equalTo: menuContainer.leadingAnchor,constant: 20)
+        ])
+    }
+    
+    private func configureLanSegmentedControl() {
+        menuContainer.addSubview(lanSegmentedControl)
+        lanSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            lanSegmentedControl.trailingAnchor.constraint(equalTo: menuContainer.trailingAnchor,constant: -20),
+            lanSegmentedControl.centerYAnchor.constraint(equalTo: languageLabel.centerYAnchor)
         ])
     }
     
