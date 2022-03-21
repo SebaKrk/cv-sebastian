@@ -139,7 +139,7 @@ class SideMenuVC : UIViewController {
         menuContainer.addSubview(languageLabel)
         languageLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        languageLabel.text = "Language:"
+        languageLabel.text = NSLocalizedString("Language", comment: "")
         languageLabel.textColor = .white
         languageLabel.font = UIFont.boldSystemFont(ofSize: 18)
         
@@ -183,7 +183,6 @@ class SideMenuVC : UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleBackButton))
         container.addGestureRecognizer(tap)
     }
-    
 }
 
 // MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate

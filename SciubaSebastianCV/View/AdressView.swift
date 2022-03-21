@@ -14,7 +14,7 @@ class AdressView : UIViewController {
     var stackView = UIStackView()
     let mapView = MKMapView()
     
-    let homeLabel = ContactTitleLabel(labelTitle: "Home")
+    let homeLabel = ContactTitleLabel(labelTitle: NSLocalizedString("Home", comment: ""))
     let adressLabel = UILabel()
     let cityLabel = UILabel()
     let countrylabel = UILabel()

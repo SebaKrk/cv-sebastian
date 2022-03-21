@@ -11,9 +11,9 @@ class ContactDataView : UIViewController {
     
     let container = UIView()
     var stackView = UIStackView()
-    
-    let phoneLabel = ContactTitleLabel(labelTitle: "Phone")
-    let emialLabel = ContactTitleLabel(labelTitle: "Email")
+
+    let phoneLabel = ContactTitleLabel(labelTitle: NSLocalizedString("Phone", comment: ""))
+    let emialLabel = ContactTitleLabel(labelTitle: NSLocalizedString("Email", comment: ""))
     let phoneData = ConcactDataLabel(textData: "533-611-188")
     let emailData = ConcactDataLabel(textData: "s.sciuba@icloud.com")
     
