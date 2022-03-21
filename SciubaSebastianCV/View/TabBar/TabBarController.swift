@@ -20,27 +20,32 @@ class TabBarController : UITabBarController {
     func personalDataVC() -> UINavigationController {
         let perVC = PersonalDataVC()
         let img = UIImage(systemName: "person")
-        perVC.tabBarItem = UITabBarItem(title: "Personal Data", image: img, tag: 0)
+        let title = NSLocalizedString("Personal Data", comment: "")
+        perVC.tabBarItem = UITabBarItem(title: title, image: img, tag: 0)
         return UINavigationController(rootViewController: perVC)
     }
     
     func workExperienceVC() -> UINavigationController {
         let workVC = WorkExperienceVC()
         let img = UIImage(systemName: "tortoise")
-        workVC.tabBarItem = UITabBarItem(title: "Work Experience", image: img, tag: 1)
+        let title = NSLocalizedString("Work Experience", comment: "")
+        workVC.tabBarItem = UITabBarItem(title: title, image: img, tag: 1)
         return UINavigationController(rootViewController: workVC)
     }
     func educationVC() -> UINavigationController {
         let eduVC = EducationVC()
-        let img = UIImage(systemName: "alarm") // x.squareroot ?
-        eduVC.tabBarItem = UITabBarItem(title: "Education", image: img, tag: 2)
+        let img = UIImage(systemName: "alarm")
+        let title = NSLocalizedString("Education", comment: "")
+        eduVC.tabBarItem = UITabBarItem(title: title, image: img, tag: 2)
         return UINavigationController(rootViewController: eduVC)
     }
     func skillsAndCoursesC() -> UINavigationController {
         let skilVC = SkillsAndCoursesVC()
         let img = UIImage(systemName: "book")
-        skilVC.tabBarItem = UITabBarItem(title: "Skills", image: img, tag: 3)
+        let title = NSLocalizedString("Skills", comment: "")
+        skilVC.tabBarItem = UITabBarItem(title: title, image: img, tag: 3)
         return UINavigationController(rootViewController: skilVC)
     }
     
 }
+

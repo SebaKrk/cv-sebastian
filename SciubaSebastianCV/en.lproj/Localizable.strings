@@ -1,12 +1,14 @@
-/* 
-  Localizable.strings
-  SciubaSebastianCV
+ 
+// TabBar
+"Personal Data" = "Personal Data";
+"Work Experience" = "Work Experience";
+"Education" = "Education";
+"Skills" = "Skills";
 
-  Created by akra on 20/03/2022.
-  
-*/
-
+//SideMenu
 "Language" = "Language";
+
+//PersonalData
 "Phone" = "Phone";
 "Home" = "Home";
 "Email" = "Email";

@@ -1,5 +1,15 @@
 
-"Language" = "Język";
+
+// TabBar
+"Personal Data" = "Dane osobowe";
+"Work Experience" = "Doswiadczenie";
+"Education" = "Wyksztalcenie";
+"Skills" = "Umiejetnosci";
+
+//SideMenu
+"Language" = "Jezyk";
+
+//PersonalData
 "Phone" = "Telefon";
 "Home" = "Adres";
 "Email" = "Poczta";
