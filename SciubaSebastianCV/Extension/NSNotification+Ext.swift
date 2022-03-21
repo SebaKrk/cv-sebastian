@@ -8,5 +8,7 @@
 import Foundation
 
 extension NSNotification.Name {
+    
     static let profileImgObserver = Notification.Name("profileImgObserver")
+
 }

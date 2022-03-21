@@ -139,7 +139,7 @@ class SideMenuVC : UIViewController {
         menuContainer.addSubview(languageLabel)
         languageLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        languageLabel.text = NSLocalizedString("Language", comment: "")
+        languageLabel.text = "Language".localized()
         languageLabel.textColor = .white
         languageLabel.font = UIFont.boldSystemFont(ofSize: 18)
         

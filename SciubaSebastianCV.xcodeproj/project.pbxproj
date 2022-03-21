@@ -12,6 +12,7 @@
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
 		05BC636627E4C31E00FB1544 /* NSNotification+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636527E4C31E00FB1544 /* NSNotification+Ext.swift */; };
 		05BC636A27E7D82B00FB1544 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05BC636C27E7D82B00FB1544 /* Localizable.strings */; };
+		05BC637127E8760700FB1544 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC637027E8760700FB1544 /* String+Ext.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105A27E0BDC10069233D /* TabBarController.swift */; };
 		05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105C27E0C0700069233D /* WorkExperienceVC.swift */; };
@@ -39,6 +40,7 @@
 		05BC636927E7D81C00FB1544 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		05BC636B27E7D82B00FB1544 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		05BC636D27E7D83400FB1544 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05BC637027E8760700FB1544 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		05F9105A27E0BDC10069233D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		05F9105C27E0C0700069233D /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				05BC636527E4C31E00FB1544 /* NSNotification+Ext.swift */,
+				05BC637027E8760700FB1544 /* String+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */,
 				05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */,
 				93B0E1B027DF5C3100A4433B /* Constants.swift in Sources */,
+				05BC637127E8760700FB1544 /* String+Ext.swift in Sources */,
 				93B0E1B427DF6AE900A4433B /* TopProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
