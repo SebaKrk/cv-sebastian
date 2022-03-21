@@ -98,6 +98,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		05BC637227E8A11500FB1544 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		05F9105927E0BD520069233D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +188,7 @@
 				93B0E19B27DF567200A4433B /* SceneDelegate.swift */,
 				93B0E1AF27DF5C3000A4433B /* Constants.swift */,
 				05BC636427E4C2FA00FB1544 /* Extension */,
+				05BC637227E8A11500FB1544 /* ViewModel */,
 				9304606727DF6DFC0056CB5F /* Model */,
 				9304606927DF6E0D0056CB5F /* View */,
 				9304606A27DF6E130056CB5F /* Controller */,

@@ -14,7 +14,7 @@ class AdressView : UIViewController {
     var stackView = UIStackView()
     let mapView = MKMapView()
     
-    let homeLabel = ContactTitleLabel(labelTitle: "Home".localized())
+    let homeLabel = ContactTitleLabel(labelTitle: "Home".localized)
     let adressLabel = UILabel()
     let cityLabel = UILabel()
     let countrylabel = UILabel()
@@ -32,7 +32,7 @@ class AdressView : UIViewController {
     private func setupData() {
         adressLabel.text = "\(Constants.adres)"
         cityLabel.text = "\(Constants.city)"
-        countrylabel.text = "Poland".localized()
+        countrylabel.text = "Poland".localized
     }
 //    MARK: - StackView
     

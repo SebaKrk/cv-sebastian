@@ -20,7 +20,7 @@ class TabBarController : UITabBarController {
     func personalDataVC() -> UINavigationController {
         let perVC = PersonalDataVC()
         let img = UIImage(systemName: "person")
-        let title = "Personal Data".localized()
+        let title = "Personal Data".localized
         perVC.tabBarItem = UITabBarItem(title: title, image: img, tag: 0)
         return UINavigationController(rootViewController: perVC)
     }
@@ -28,21 +28,21 @@ class TabBarController : UITabBarController {
     func workExperienceVC() -> UINavigationController {
         let workVC = WorkExperienceVC()
         let img = UIImage(systemName: "tortoise")
-        let title = "Work Experience".localized()
+        let title = "Work Experience".localized
         workVC.tabBarItem = UITabBarItem(title: title, image: img, tag: 1)
         return UINavigationController(rootViewController: workVC)
     }
     func educationVC() -> UINavigationController {
         let eduVC = EducationVC()
         let img = UIImage(systemName: "alarm")
-        let title = "Education".localized()
+        let title = "Education".localized
         eduVC.tabBarItem = UITabBarItem(title: title, image: img, tag: 2)
         return UINavigationController(rootViewController: eduVC)
     }
     func skillsAndCoursesC() -> UINavigationController {
         let skilVC = SkillsAndCoursesVC()
         let img = UIImage(systemName: "book")
-        let title = "Skills".localized()
+        let title = "Skills".localized
         skilVC.tabBarItem = UITabBarItem(title: title, image: img, tag: 3)
         return UINavigationController(rootViewController: skilVC)
     }

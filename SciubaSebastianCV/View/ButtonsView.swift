@@ -17,10 +17,10 @@ class ButtonsView : UIViewController {
     let linkedInView = UIView()
     let mailView = UIView()
 
-    let phoneVC = CostumeButtonView(imageName: UIImage(systemName: "phone.fill")!, title: "Phone".localized())
+    let phoneVC = CostumeButtonView(imageName: UIImage(systemName: "phone.fill")!, title: "Phone".localized)
     let gitVC = CostumeButtonView(imageName: UIImage(named: "Github")!, title: "GitHub")
     let linkedInVC = CostumeButtonView(imageName: UIImage(named: "LinkedIn")!, title: "LinkedIn")
-    let mailVC = CostumeButtonView(imageName: UIImage(systemName: "envelope.fill")!, title: "Email".localized())
+    let mailVC = CostumeButtonView(imageName: UIImage(systemName: "envelope.fill")!, title: "Email".localized)
                                     
     //    MARK: - ViewDidLoad
     
