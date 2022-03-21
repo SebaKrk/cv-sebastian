@@ -59,7 +59,7 @@ class ExperienceCell : UITableViewCell {
         
         NSLayoutConstraint.activate([
             positionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            positionLabel.leadingAnchor.constraint(equalTo: startDateLabel.trailingAnchor, constant: 10),
+            positionLabel.leadingAnchor.constraint(equalTo: startDateLabel.trailingAnchor, constant: 20),
         ])
     }
     
@@ -69,7 +69,7 @@ class ExperienceCell : UITableViewCell {
         
         NSLayoutConstraint.activate([
             companyLabel.topAnchor.constraint(equalTo: positionLabel.bottomAnchor, constant: 10),
-            companyLabel.leadingAnchor.constraint(equalTo: startDateLabel.trailingAnchor,constant: 10)
+            companyLabel.leadingAnchor.constraint(equalTo: startDateLabel.trailingAnchor,constant: 20)
         ])
     }
     
