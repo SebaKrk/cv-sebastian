@@ -32,7 +32,7 @@ class AdressView : UIViewController {
     private func setupData() {
         adressLabel.text = "\(Constants.adres)"
         cityLabel.text = "\(Constants.city)"
-        countrylabel.text = "\(Constants.coutry)"
+        countrylabel.text = NSLocalizedString("Poland",comment: "")
     }
 //    MARK: - StackView
     

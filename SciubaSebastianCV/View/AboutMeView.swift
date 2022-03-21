@@ -39,7 +39,7 @@ class AbutMeView : UIViewController {
         container.addSubview(contentLabel)
         contentLabel.translatesAutoresizingMaskIntoConstraints = false
     
-        contentLabel.text = Constants.aboutMe
+        contentLabel.text = NSLocalizedString("aboutMe", comment: "")
         contentLabel.textColor = .black
         contentLabel.textAlignment = .left
         contentLabel.numberOfLines = 0

@@ -20,7 +20,7 @@ class ButtonsView : UIViewController {
     let phoneVC = CostumeButtonView(imageName: UIImage(systemName: "phone.fill")!, title: NSLocalizedString("Phone", comment: ""))
     let gitVC = CostumeButtonView(imageName: UIImage(named: "Github")!, title: "GitHub")
     let linkedInVC = CostumeButtonView(imageName: UIImage(named: "LinkedIn")!, title: "LinkedIn")
-    let mailVC = CostumeButtonView(imageName: UIImage(systemName: "envelope.fill")!, title: NSLocalizedString("Mail", comment: ""))
+    let mailVC = CostumeButtonView(imageName: UIImage(systemName: "envelope.fill")!, title: NSLocalizedString("Email", comment: ""))
                                     
     //    MARK: - ViewDidLoad
     

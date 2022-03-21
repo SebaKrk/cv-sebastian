@@ -21,6 +21,4 @@ enum Constants {
     static let coutry = "Polska"
     static let latitude = 50.04885
     static let longitude = 19.96209
-    static let aboutMe = "Jestem studentem 3 roku informatyki, samoukiem z zakresu wytwarzania oprogramowania na platforme IOS. Posiadam podstawowa wiedze z zakresu programowania którą nadal zdobywam na uczelni. Codziennie powieksza swoja wiedze poprzez roznego rodzaju kursy oraz wlasne projekty ktore załaczam do cv.W Panstwa firmie chce rozwijac sie oraz powiekszac swoja wiedze w zakresie dostarczania oprogramowania dla platformy iOS"
-    
 }
