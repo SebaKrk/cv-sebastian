@@ -16,8 +16,9 @@
 		05BC637727E8A64800FB1544 /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC637627E8A64800FB1544 /* Experience.swift */; };
 		05BC637927E8A9B200FB1544 /* ExperienceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC637827E8A9B200FB1544 /* ExperienceData.swift */; };
 		05BC637C27E8AD5400FB1544 /* ExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC637B27E8AD5400FB1544 /* ExperienceCell.swift */; };
-		05BC637E27E8DFF600FB1544 /* ExperienceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC637D27E8DFF600FB1544 /* ExperienceDetailsVC.swift */; };
+		05BC637E27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC637D27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift */; };
 		05BC638127E9AF6100FB1544 /* SepearatingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC638027E9AF6100FB1544 /* SepearatingLine.swift */; };
+		05BC638327E9BD9D00FB1544 /* ResDetailsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC638227E9BD9D00FB1544 /* ResDetailsLabel.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105A27E0BDC10069233D /* TabBarController.swift */; };
 		05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105C27E0C0700069233D /* WorkExperienceVC.swift */; };
@@ -49,8 +50,9 @@
 		05BC637627E8A64800FB1544 /* Experience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
 		05BC637827E8A9B200FB1544 /* ExperienceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceData.swift; sourceTree = "<group>"; };
 		05BC637B27E8AD5400FB1544 /* ExperienceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCell.swift; sourceTree = "<group>"; };
-		05BC637D27E8DFF600FB1544 /* ExperienceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceDetailsVC.swift; sourceTree = "<group>"; };
+		05BC637D27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsibilitiesDetailsVC.swift; sourceTree = "<group>"; };
 		05BC638027E9AF6100FB1544 /* SepearatingLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepearatingLine.swift; sourceTree = "<group>"; };
+		05BC638227E9BD9D00FB1544 /* ResDetailsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResDetailsLabel.swift; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		05F9105A27E0BDC10069233D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		05F9105C27E0C0700069233D /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
@@ -172,7 +174,7 @@
 				05BC635E27E3287800FB1544 /* SideMenu */,
 				93B0E1AD27DF5A7D00A4433B /* PersonalDataVC.swift */,
 				05F9105C27E0C0700069233D /* WorkExperienceVC.swift */,
-				05BC637D27E8DFF600FB1544 /* ExperienceDetailsVC.swift */,
+				05BC637D27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift */,
 				05F9105E27E0C0DB0069233D /* EducationVC.swift */,
 				05F9106027E0C15C0069233D /* SkillsAndCoursesVC.swift */,
 			);
@@ -192,6 +194,7 @@
 			children = (
 				9304607227DF7C330056CB5F /* ContactTitleLabel.swift */,
 				9304607427DF7C8E0056CB5F /* ConcactDataLabel.swift */,
+				05BC638227E9BD9D00FB1544 /* ResDetailsLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -305,9 +308,10 @@
 			files = (
 				05BC637C27E8AD5400FB1544 /* ExperienceCell.swift in Sources */,
 				9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */,
+				05BC638327E9BD9D00FB1544 /* ResDetailsLabel.swift in Sources */,
 				05F9105F27E0C0DB0069233D /* EducationVC.swift in Sources */,
 				05BC638127E9AF6100FB1544 /* SepearatingLine.swift in Sources */,
-				05BC637E27E8DFF600FB1544 /* ExperienceDetailsVC.swift in Sources */,
+				05BC637E27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift in Sources */,
 				05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */,
 				05BC637727E8A64800FB1544 /* Experience.swift in Sources */,
 				93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */,
