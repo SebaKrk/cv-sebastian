@@ -11,6 +11,8 @@ class WorkExperienceVC : UIViewController {
     
     var tableView = UITableView()
     
+    var expData = getExpData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -56,23 +58,35 @@ class WorkExperienceVC : UIViewController {
 extension WorkExperienceVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        
+        return expData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ExperienceCell.expIdentifier) as! ExperienceCell
-        cell.startDateLabel.text =  "2021-01"
-        cell.endDateLabel.text = "2022-03"
-        cell.positionLabel.text = "iOS Developer"
-        cell.companyLabel.text = "Freelance"
-        cell.locationLabel.text = "Krakow"
+        let data = expData[indexPath.row]
+        
+        cell.startDateLabel.text = data.startDate
+        cell.endDateLabel.text = data.endDate
+        cell.positionLabel.text = data.position
+        cell.companyLabel.text = data.company
+        cell.locationLabel.text = data.location
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let data = expData[indexPath.row]
+        
         let desVC = ResponsibilitiesDetailsVC()
         desVC.modalPresentationStyle = .overFullScreen
+        
+        desVC.firstResp.text = data.responsibilities.first
+        desVC.secondResp.text = data.responsibilities.second
+        desVC.thirdResp.text = data.responsibilities.third
+        
         present(desVC,animated: false)
     }
 }

@@ -60,10 +60,6 @@ class ResponsibilitiesDetailsVC : UIViewController {
         stackView.distribution = .fillProportionally
         stackView.backgroundColor = .white
         stackView.layer.cornerRadius = 5
-        
-        firstResp.text = "Testowanie manualne aplikacji mobilnych i web"
-        secondResp.text = "Samodzielne prowadzenie analizy przyczyny powstanie bledow"
-        thirdResp.text = "Tworzenie scenariuszy i przypadkow testowych"
     }
     
 //    MARK: - Constraints
