@@ -189,11 +189,19 @@ class SideMenuVC : UIViewController {
 
 extension SideMenuVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         if let image = info[.originalImage] as? UIImage {
             profileIMG.image = image
+            let data  = image.pngData()
+            
+            UserDefaults.standard.set(data, forKey: "profileIMG")
+            UserDefaults.standard.synchronize()
+            
             NotificationCenter.default.post(name: .profileImgObserver, object: nil, userInfo: ["imgPicker" : image])
         }
         picker.dismiss(animated: true, completion: nil)
     }
     
 }
+
+

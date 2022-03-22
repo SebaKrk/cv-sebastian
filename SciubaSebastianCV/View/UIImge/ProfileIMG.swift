@@ -19,7 +19,13 @@ class ProfileIMG : UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
     private func configure() {
-        image = UIImage(named: "ŚciubaS")
+        
+        if let imgData = UserDefaults.standard.object(forKey: "profileIMG") as? NSData {
+            image = UIImage(data: imgData as Data)
+        } else {
+            image = UIImage(named: "ŚciubaS")
+        }
+
         layer.cornerRadius = 75
         layer.borderColor = UIColor.systemBlue.cgColor
         layer.borderWidth = 1
