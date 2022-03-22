@@ -22,6 +22,8 @@ class WorkExperienceVC : UIViewController {
     
     private func setupView() {
         view.backgroundColor = .white
+        title = "Work Experience"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     //    MARK: - SetupTableView
@@ -41,10 +43,10 @@ class WorkExperienceVC : UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
 }
@@ -65,5 +67,12 @@ extension WorkExperienceVC : UITableViewDelegate, UITableViewDataSource {
         cell.companyLabel.text = "Freelance"
         cell.locationLabel.text = "Krakow"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let desVC = ResponsibilitiesDetailsVC()
+        desVC.modalPresentationStyle = .overFullScreen
+        present(desVC,animated: false)
     }
 }

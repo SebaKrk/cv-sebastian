@@ -38,7 +38,7 @@ class ResponsibilitiesDetailsVC : UIViewController {
 //    MARK: - ObjcFunc
     
     @objc func handleDoneButton() {
-        print("done")
+        dismiss(animated: false, completion: nil)
     }
     
 //    MARK: - SetupView
