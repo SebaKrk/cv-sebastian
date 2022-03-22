@@ -142,6 +142,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		05BC638427E9D34C00FB1544 /* PersonalData */ = {
+			isa = PBXGroup;
+			children = (
+				93B0E1AD27DF5A7D00A4433B /* PersonalDataVC.swift */,
+			);
+			path = PersonalData;
+			sourceTree = "<group>";
+		};
+		05BC638527E9D35D00FB1544 /* WorkExperience */ = {
+			isa = PBXGroup;
+			children = (
+				05F9105C27E0C0700069233D /* WorkExperienceVC.swift */,
+				05BC637D27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift */,
+			);
+			path = WorkExperience;
+			sourceTree = "<group>";
+		};
+		05BC638627E9D36500FB1544 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				05F9105E27E0C0DB0069233D /* EducationVC.swift */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		05BC638727E9D37600FB1544 /* SkillsAndCourses */ = {
+			isa = PBXGroup;
+			children = (
+				05F9106027E0C15C0069233D /* SkillsAndCoursesVC.swift */,
+			);
+			path = SkillsAndCourses;
+			sourceTree = "<group>";
+		};
 		05F9105927E0BD520069233D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,11 +205,10 @@
 			isa = PBXGroup;
 			children = (
 				05BC635E27E3287800FB1544 /* SideMenu */,
-				93B0E1AD27DF5A7D00A4433B /* PersonalDataVC.swift */,
-				05F9105C27E0C0700069233D /* WorkExperienceVC.swift */,
-				05BC637D27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift */,
-				05F9105E27E0C0DB0069233D /* EducationVC.swift */,
-				05F9106027E0C15C0069233D /* SkillsAndCoursesVC.swift */,
+				05BC638427E9D34C00FB1544 /* PersonalData */,
+				05BC638527E9D35D00FB1544 /* WorkExperience */,
+				05BC638627E9D36500FB1544 /* Education */,
+				05BC638727E9D37600FB1544 /* SkillsAndCourses */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
