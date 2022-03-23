@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SafariServices
 
 class ButtonsView : UIViewController {
     
@@ -49,6 +50,7 @@ class ButtonsView : UIViewController {
         add(childVC: linkedInVC, to: linkedInView)
         add(childVC: mailVC, to: mailView)
     }
+    
     //    MARK: - OBJC Func
     
     @objc func handlePhoneTapGes() {
@@ -57,10 +59,17 @@ class ButtonsView : UIViewController {
     
     @objc func handleGitHubTapGes() {
         print("handleGitHubTapGes")
+        let desVC = GitHubVC()
+        present(desVC,animated: true)
     }
     
     @objc func handleLinkedInTapGes() {
-        print("handleLinkedInTapGes")
+        let linkedInURL = "https://pl.linkedin.com"
+        // https://pl.linkedin.com/in/sebastian-ściuba-5bb021156
+        
+        guard let url = URL(string: linkedInURL) else {return}
+        let safariVC = SFSafariViewController(url: url)
+        present(safariVC, animated: true, completion: nil)
     }
     
     @objc func hadleEmailTapGes() {

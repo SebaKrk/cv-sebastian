@@ -19,6 +19,7 @@
 		05BC637E27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC637D27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift */; };
 		05BC638127E9AF6100FB1544 /* SepearatingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC638027E9AF6100FB1544 /* SepearatingLine.swift */; };
 		05BC638327E9BD9D00FB1544 /* ResDetailsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC638227E9BD9D00FB1544 /* ResDetailsLabel.swift */; };
+		05BC638A27EB118B00FB1544 /* GitHubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC638927EB118B00FB1544 /* GitHubVC.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105A27E0BDC10069233D /* TabBarController.swift */; };
 		05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105C27E0C0700069233D /* WorkExperienceVC.swift */; };
@@ -53,6 +54,7 @@
 		05BC637D27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsibilitiesDetailsVC.swift; sourceTree = "<group>"; };
 		05BC638027E9AF6100FB1544 /* SepearatingLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepearatingLine.swift; sourceTree = "<group>"; };
 		05BC638227E9BD9D00FB1544 /* ResDetailsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResDetailsLabel.swift; sourceTree = "<group>"; };
+		05BC638927EB118B00FB1544 /* GitHubVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubVC.swift; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		05F9105A27E0BDC10069233D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		05F9105C27E0C0700069233D /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		05BC638427E9D34C00FB1544 /* PersonalData */ = {
 			isa = PBXGroup;
 			children = (
+				05BC638827EB117300FB1544 /* GitHubVC */,
 				93B0E1AD27DF5A7D00A4433B /* PersonalDataVC.swift */,
 			);
 			path = PersonalData;
@@ -173,6 +176,14 @@
 				05F9106027E0C15C0069233D /* SkillsAndCoursesVC.swift */,
 			);
 			path = SkillsAndCourses;
+			sourceTree = "<group>";
+		};
+		05BC638827EB117300FB1544 /* GitHubVC */ = {
+			isa = PBXGroup;
+			children = (
+				05BC638927EB118B00FB1544 /* GitHubVC.swift */,
+			);
+			path = GitHubVC;
 			sourceTree = "<group>";
 		};
 		05F9105927E0BD520069233D /* TabBar */ = {
@@ -353,6 +364,7 @@
 				9304607727DF7CB90056CB5F /* ContactDataView.swift in Sources */,
 				93B0E1AE27DF5A7D00A4433B /* PersonalDataVC.swift in Sources */,
 				05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */,
+				05BC638A27EB118B00FB1544 /* GitHubVC.swift in Sources */,
 				9304606D27DF70330056CB5F /* CostumeButtonView.swift in Sources */,
 				9304607527DF7C8E0056CB5F /* ConcactDataLabel.swift in Sources */,
 				05F9106127E0C15C0069233D /* SkillsAndCoursesVC.swift in Sources */,
