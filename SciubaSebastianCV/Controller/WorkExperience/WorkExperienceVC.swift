@@ -11,13 +11,16 @@ class WorkExperienceVC : UIViewController {
     
     var tableView = UITableView()
     
-    var expData = getExpData()
+    var expDataViewModel = ExperianceViewModel()
+    var expArray = [Experience]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupTableView()
         configureTableView()
+        getData()
+   
     }
     
 //    MARK: - SetupView
@@ -36,6 +39,10 @@ class WorkExperienceVC : UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = 75
         tableView.reloadData()
+    }
+    
+    func getData() {
+        expArray = expDataViewModel.getExpData()
     }
     
 //    MARK: - Constraints
@@ -59,12 +66,12 @@ extension WorkExperienceVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return expData.count
+        return expArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ExperienceCell.expIdentifier) as! ExperienceCell
-        let data = expData[indexPath.row]
+        let data = expArray[indexPath.row]
         
         cell.startDateLabel.text = data.startDate
         cell.endDateLabel.text = data.endDate
@@ -78,7 +85,7 @@ extension WorkExperienceVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let data = expData[indexPath.row]
+        let data = expArray[indexPath.row]
         
         let desVC = ResponsibilitiesDetailsVC()
         desVC.modalPresentationStyle = .overFullScreen

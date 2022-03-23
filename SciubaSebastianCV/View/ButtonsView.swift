@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
+
 class ButtonsView : UIViewController {
     
-    var delegate : PersonalDataBttonDelegate!
+    weak var delegate : PersonalDataBttonDelegate!
     
     var stackView = UIStackView()
     

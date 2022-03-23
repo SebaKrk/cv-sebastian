@@ -8,12 +8,14 @@
 import UIKit
 import SafariServices
 
-protocol PersonalDataBttonDelegate {
+protocol PersonalDataBttonDelegate: AnyObject {
     func didTapPhoneButton()
     func didTapGitHubeButton()
     func didTapLinkedInButton()
     func didTapMailButton()
 }
+
+
 
 class PersonalDataVC : UIViewController {
     
