@@ -16,12 +16,12 @@ class ButtonsView : UIViewController {
     let gitView = UIView()
     let linkedInView = UIView()
     let mailView = UIView()
-
+    
     let phoneVC = CostumeButtonView(imageName: UIImage(systemName: "phone.fill")!, title: "Phone".localized)
     let gitVC = CostumeButtonView(imageName: UIImage(named: "Github")!, title: "GitHub")
     let linkedInVC = CostumeButtonView(imageName: UIImage(named: "LinkedIn")!, title: "LinkedIn")
     let mailVC = CostumeButtonView(imageName: UIImage(systemName: "envelope.fill")!, title: "Email".localized)
-                                    
+    
     //    MARK: - ViewDidLoad
     
     override func viewDidLoad() {
@@ -31,6 +31,8 @@ class ButtonsView : UIViewController {
         setupStackView()
         configureViews()
         configureStackView()
+        
+        addGestureToButtons()
     }
     
     //    MARK: - StackView
@@ -47,6 +49,41 @@ class ButtonsView : UIViewController {
         add(childVC: linkedInVC, to: linkedInView)
         add(childVC: mailVC, to: mailView)
     }
+    //    MARK: - OBJC Func
+    
+    @objc func handlePhoneTapGes() {
+        print("handlePhoneTapGes")
+    }
+    
+    @objc func handleGitHubTapGes() {
+        print("handleGitHubTapGes")
+    }
+    
+    @objc func handleLinkedInTapGes() {
+        print("handleLinkedInTapGes")
+    }
+    
+    @objc func hadleEmailTapGes() {
+        print("hadleEmailTapGes")
+    }
+    
+    //    MARK: - GestureRecognizer
+    
+    private func addGestureToButtons() {
+        
+        let phoneTapGesture = UITapGestureRecognizer(target: self, action: #selector(handlePhoneTapGes))
+        phoneVC.view.addGestureRecognizer(phoneTapGesture)
+        
+        let gitHubTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleGitHubTapGes))
+        gitVC.view.addGestureRecognizer(gitHubTapGesture)
+        
+        let linkedInTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleLinkedInTapGes))
+        linkedInVC.view.addGestureRecognizer(linkedInTapGesture)
+        
+        let mailTapGesture = UITapGestureRecognizer(target: self, action: #selector(hadleEmailTapGes))
+        mailVC.view.addGestureRecognizer(mailTapGesture)
+    }
+    
     
     //    MARK: - Constraints
     
@@ -62,7 +99,7 @@ class ButtonsView : UIViewController {
         ])
     }
     
-//    MARK: Helpers
+    //    MARK: Helpers
     
     func add(childVC: UIViewController, to containerView: UIView) {
         addChild(childVC)
