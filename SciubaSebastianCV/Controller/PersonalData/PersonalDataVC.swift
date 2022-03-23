@@ -211,10 +211,7 @@ extension PersonalDataVC : PersonalDataBttonDelegate {
         
         let linkedInURL = "https://pl.linkedin.com"
         // https://pl.linkedin.com/in/sebastian-ściuba-5bb021156
-        
-        guard let url = URL(string: linkedInURL) else {return}
-        let safariVC = SFSafariViewController(url: url)
-        present(safariVC, animated: true, completion: nil)
+       showSafariService(with: linkedInURL)
     }
     
     func didTapMailButton() {

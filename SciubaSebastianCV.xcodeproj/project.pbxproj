@@ -20,6 +20,7 @@
 		05BC638127E9AF6100FB1544 /* SepearatingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC638027E9AF6100FB1544 /* SepearatingLine.swift */; };
 		05BC638327E9BD9D00FB1544 /* ResDetailsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC638227E9BD9D00FB1544 /* ResDetailsLabel.swift */; };
 		05BC638A27EB118B00FB1544 /* GitHubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC638927EB118B00FB1544 /* GitHubVC.swift */; };
+		05BC644227EB2BCD00FB1544 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644127EB2BCD00FB1544 /* UIViewController+Ext.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105A27E0BDC10069233D /* TabBarController.swift */; };
 		05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105C27E0C0700069233D /* WorkExperienceVC.swift */; };
@@ -55,6 +56,7 @@
 		05BC638027E9AF6100FB1544 /* SepearatingLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepearatingLine.swift; sourceTree = "<group>"; };
 		05BC638227E9BD9D00FB1544 /* ResDetailsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResDetailsLabel.swift; sourceTree = "<group>"; };
 		05BC638927EB118B00FB1544 /* GitHubVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubVC.swift; sourceTree = "<group>"; };
+		05BC644127EB2BCD00FB1544 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		05F9105A27E0BDC10069233D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		05F9105C27E0C0700069233D /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				05BC636527E4C31E00FB1544 /* NSNotification+Ext.swift */,
 				05BC637027E8760700FB1544 /* String+Ext.swift */,
+				05BC644127EB2BCD00FB1544 /* UIViewController+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			files = (
 				05BC637C27E8AD5400FB1544 /* ExperienceCell.swift in Sources */,
 				9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */,
+				05BC644227EB2BCD00FB1544 /* UIViewController+Ext.swift in Sources */,
 				05BC638327E9BD9D00FB1544 /* ResDetailsLabel.swift in Sources */,
 				05F9105F27E0C0DB0069233D /* EducationVC.swift in Sources */,
 				05BC638127E9AF6100FB1544 /* SepearatingLine.swift in Sources */,
