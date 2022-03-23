@@ -147,8 +147,8 @@
 		05BC638427E9D34C00FB1544 /* PersonalData */ = {
 			isa = PBXGroup;
 			children = (
-				05BC638827EB117300FB1544 /* GitHubVC */,
 				93B0E1AD27DF5A7D00A4433B /* PersonalDataVC.swift */,
+				05BC638827EB117300FB1544 /* GitHubVC */,
 			);
 			path = PersonalData;
 			sourceTree = "<group>";

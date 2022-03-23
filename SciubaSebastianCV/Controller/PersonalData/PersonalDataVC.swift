@@ -6,6 +6,14 @@
 //
 
 import UIKit
+import SafariServices
+
+protocol PersonalDataBttonDelegate {
+    func didTapPhoneButton()
+    func didTapGitHubeButton()
+    func didTapLinkedInButton()
+    func didTapMailButton()
+}
 
 class PersonalDataVC : UIViewController {
     
@@ -26,6 +34,7 @@ class PersonalDataVC : UIViewController {
         setupView()
         setupNavigationBar()
         setupChildView()
+        
     }
     
     //    MARK: - SetupView
@@ -44,8 +53,11 @@ class PersonalDataVC : UIViewController {
     }
     
     private func setupChildView() {
+        let buttonView = ButtonsView()
+        buttonView.delegate = self
+        
         add(childVC: TopProfileView(), to:  topView)
-        add(childVC: ButtonsView(), to: buttonsView)
+        add(childVC: buttonView, to: buttonsView)
         add(childVC: ContactDataView(), to: contactView)
         add(childVC: AdressView(), to: adressView)
         add(childVC: AbutMeView(), to: aboutMeView)
@@ -171,11 +183,41 @@ class PersonalDataVC : UIViewController {
         childVC.didMove(toParent: self)
     }
 }
+// MARK: - TabBarAppranceDelegate
 
 extension PersonalDataVC : TabBarAppranceDelegate {
     func dismissAndShowTabBar() {
         dismiss(animated: false) {
             self.tabBarController?.tabBar.isHidden = false
         }
+    }
+}
+
+// MARK: - PersonalDataBttonDelegate
+
+extension PersonalDataVC : PersonalDataBttonDelegate {
+    func didTapPhoneButton() {
+        print("didTapPhoneButton")
+    }
+    
+    func didTapGitHubeButton() {
+        print("did tap button")
+        let desVC = GitHubVC()
+        present(desVC,animated: true)
+    }
+    
+    func didTapLinkedInButton() {
+        print("didTapLinkedInButton")
+        
+        let linkedInURL = "https://pl.linkedin.com"
+        // https://pl.linkedin.com/in/sebastian-ściuba-5bb021156
+        
+        guard let url = URL(string: linkedInURL) else {return}
+        let safariVC = SFSafariViewController(url: url)
+        present(safariVC, animated: true, completion: nil)
+    }
+    
+    func didTapMailButton() {
+        print("didTapMailButton")
     }
 }

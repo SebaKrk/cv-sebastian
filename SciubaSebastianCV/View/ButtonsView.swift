@@ -11,6 +11,8 @@ import SafariServices
 
 class ButtonsView : UIViewController {
     
+    var delegate : PersonalDataBttonDelegate!
+    
     var stackView = UIStackView()
     
     let phoneView = UIView()
@@ -54,26 +56,19 @@ class ButtonsView : UIViewController {
     //    MARK: - OBJC Func
     
     @objc func handlePhoneTapGes() {
-        print("handlePhoneTapGes")
+        delegate.didTapPhoneButton()
     }
     
     @objc func handleGitHubTapGes() {
-        print("handleGitHubTapGes")
-        let desVC = GitHubVC()
-        present(desVC,animated: true)
+        delegate.didTapGitHubeButton()
     }
     
     @objc func handleLinkedInTapGes() {
-        let linkedInURL = "https://pl.linkedin.com"
-        // https://pl.linkedin.com/in/sebastian-ściuba-5bb021156
-        
-        guard let url = URL(string: linkedInURL) else {return}
-        let safariVC = SFSafariViewController(url: url)
-        present(safariVC, animated: true, completion: nil)
+        delegate.didTapLinkedInButton()
     }
     
     @objc func hadleEmailTapGes() {
-        print("hadleEmailTapGes")
+        delegate.didTapMailButton()
     }
     
     //    MARK: - GestureRecognizer
