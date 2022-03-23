@@ -26,11 +26,36 @@ extension UIViewController {
         if MFMailComposeViewController.canSendMail() {
             let mailVC = MFMailComposeViewController()
             mailVC.setSubject(subject)
+            mailVC.mailComposeDelegate = self
             mailVC.setToRecipients(["s.sciuba@icloud.com"])
             mailVC.setMessageBody(message, isHTML: false)
             present(mailVC, animated: true, completion: nil)
         } else {
-            print("MFMailComposeViewController failed")
+            let title = "Error".localized
+            let message = "You don't have any mailbox on Your device".localized
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
+    }
+}
+
+// MARK: - MFMailComposeViewControllerDelegate
+
+extension UIViewController : MFMailComposeViewControllerDelegate {
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result {
+        case .cancelled:
+            break
+        case .failed:
+            break
+        case .saved:
+            break
+        case .sent:
+            break
+        @unknown default:
+            fatalError()
+        }
+        controller.dismiss(animated: true, completion: nil)
     }
 }
