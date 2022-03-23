@@ -194,6 +194,7 @@
 		05BC644327EB3DD100FB1544 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				93B0E1AF27DF5C3000A4433B /* Constants.swift */,
 				05BC637827E8A9B200FB1544 /* ExperienceData+Service.swift */,
 			);
 			path = Service;
@@ -276,7 +277,6 @@
 			children = (
 				93B0E19927DF567200A4433B /* AppDelegate.swift */,
 				93B0E19B27DF567200A4433B /* SceneDelegate.swift */,
-				93B0E1AF27DF5C3000A4433B /* Constants.swift */,
 				05BC636427E4C2FA00FB1544 /* Extension */,
 				05BC644327EB3DD100FB1544 /* Service */,
 				05BC637527E8A63A00FB1544 /* Model */,

@@ -20,6 +20,19 @@ extension UIViewController {
         present(safariVC, animated: true, completion: nil)
     }
     
+    //    MARK: - Phone
+    
+    func callNumber(phoneNumber: Int) {
+        guard let url = URL(string: "telprompt://\(phoneNumber)"),
+              UIApplication.shared.canOpenURL(url) else {
+                  print("works on physical device.")
+                  return
+              }
+        
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
     //    MARK: - MessageUI
     
     func showMailMassageUI (subject: String, message: String) {

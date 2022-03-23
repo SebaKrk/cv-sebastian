@@ -199,7 +199,8 @@ extension PersonalDataVC : TabBarAppranceDelegate {
 
 extension PersonalDataVC : PersonalDataBttonDelegate {
     func didTapPhoneButton() {
-        print("didTapPhoneButton")
+        let nummber = Constants.phoneNummber
+        callNumber(phoneNumber: nummber)
     }
     
     func didTapGitHubeButton() {
