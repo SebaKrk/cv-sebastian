@@ -201,20 +201,19 @@ extension PersonalDataVC : PersonalDataBttonDelegate {
     }
     
     func didTapGitHubeButton() {
-        print("did tap button")
         let desVC = GitHubVC()
         present(desVC,animated: true)
     }
     
     func didTapLinkedInButton() {
-        print("didTapLinkedInButton")
-        
         let linkedInURL = "https://pl.linkedin.com"
         // https://pl.linkedin.com/in/sebastian-ściuba-5bb021156
-       showSafariService(with: linkedInURL)
+        showSafariService(with: linkedInURL)
     }
     
     func didTapMailButton() {
-        print("didTapMailButton")
+        let subject = "Sebastian Sciuba CV APP".localized
+        let message = "Hi Sebastian,".localized
+        showMailMassageUI(subject: subject, message: message)
     }
 }
