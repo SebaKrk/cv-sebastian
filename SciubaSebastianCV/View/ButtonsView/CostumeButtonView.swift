@@ -22,11 +22,11 @@ class CostumeButtonView : UIViewController {
         setupStackView()
         configureContainer()
         configureStackView()
-        configureActionButton()
     }
     
     init(imageName: UIImage , title: String) {
         super.init(nibName: nil, bundle: nil)
+
         costumeImg.image = imageName
         costumeImg.contentMode = .scaleAspectFit
         costumeImg.tintColor = .systemBlue
@@ -38,9 +38,6 @@ class CostumeButtonView : UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    @objc func handleActionButton() {
-        print("handleActionButton")
     }
     
     func setupStackView() {
@@ -72,20 +69,6 @@ class CostumeButtonView : UIViewController {
             stackView.leadingAnchor.constraint(equalTo: container.leadingAnchor,constant: padding),
             stackView.trailingAnchor.constraint(equalTo: container.trailingAnchor,constant: -padding),
             stackView.bottomAnchor.constraint(equalTo: container.bottomAnchor,constant: -padding)
-        ])
-    }
-    
-    func configureActionButton() {
-        container.addSubview(actionButton)
-        actionButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        actionButton.addTarget(self, action: #selector(handleActionButton), for: .touchUpInside)
-        
-        NSLayoutConstraint.activate([
-            actionButton.topAnchor.constraint(equalTo: container.topAnchor),
-            actionButton.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            actionButton.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            actionButton.bottomAnchor.constraint(equalTo: container.bottomAnchor)
         ])
     }
 }
