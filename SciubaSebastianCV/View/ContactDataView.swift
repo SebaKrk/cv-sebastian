@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactDataView : UIViewController {
+class ContactDataView : UIView {
     
     let container = UIView()
     var stackView = UIStackView()
@@ -17,14 +17,17 @@ class ContactDataView : UIViewController {
     let phoneData = ConcactDataLabel(textData: "533-611-188")
     let emailData = ConcactDataLabel(textData: "s.sciuba@icloud.com")
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupStackView()
         configureContainer()
         configureStackView()
-        
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 //    MARK: - StackView
     
     private func setupStackView() {
@@ -32,19 +35,20 @@ class ContactDataView : UIViewController {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
     }
+    
 //    MARK: - Constraints
     
     private func configureContainer() {
-        view.addSubview(container)
+        addSubview(container)
         container.translatesAutoresizingMaskIntoConstraints = false
         
         container.backgroundColor = .systemGray6
         container.layer.cornerRadius = 5
         
         NSLayoutConstraint.activate([
-            container.topAnchor.constraint(equalTo: view.topAnchor),
-            container.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            container.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            container.topAnchor.constraint(equalTo: topAnchor),
+            container.leadingAnchor.constraint(equalTo: leadingAnchor),
+            container.trailingAnchor.constraint(equalTo: trailingAnchor),
             container.heightAnchor.constraint(equalToConstant: 150),
         ])
     }
@@ -59,6 +63,4 @@ class ContactDataView : UIViewController {
             stackView.bottomAnchor.constraint(equalTo: container.bottomAnchor)
         ])
     }
-
-    
 }

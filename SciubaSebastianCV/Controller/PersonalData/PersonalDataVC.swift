@@ -15,8 +15,6 @@ protocol PersonalDataBttonDelegate: AnyObject {
     func didTapMailButton()
 }
 
-
-
 class PersonalDataVC : UIViewController {
     
     let topView = TopProfileView()
@@ -25,7 +23,7 @@ class PersonalDataVC : UIViewController {
     let scrollView = UIScrollView()
     let content = UIView()
     
-    let contactView = UIView()
+    let contactView = ContactDataView()
     let adressView = UIView()
     let aboutMeView = UIView()
     
@@ -36,7 +34,6 @@ class PersonalDataVC : UIViewController {
         setupView()
         setupNavigationBar()
         setupChildView()
-        
     }
     
     //    MARK: - SetupView
@@ -60,7 +57,7 @@ class PersonalDataVC : UIViewController {
         
 //        add(childVC: TopProfileView(), to:  topView)
         add(childVC: buttonView, to: buttonsView)
-        add(childVC: ContactDataView(), to: contactView)
+//        add(childVC: ContactDataView(), to: contactView)
         add(childVC: AdressView(), to: adressView)
         add(childVC: AbutMeView(), to: aboutMeView)
     }
