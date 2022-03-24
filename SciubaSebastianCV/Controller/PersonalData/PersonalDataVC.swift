@@ -19,7 +19,7 @@ protocol PersonalDataBttonDelegate: AnyObject {
 
 class PersonalDataVC : UIViewController {
     
-    let topView = UIView()
+    let topView = TopProfileView()
     let buttonsView = UIView()
     
     let scrollView = UIScrollView()
@@ -58,7 +58,7 @@ class PersonalDataVC : UIViewController {
         let buttonView = ButtonsView()
         buttonView.delegate = self
         
-        add(childVC: TopProfileView(), to:  topView)
+//        add(childVC: TopProfileView(), to:  topView)
         add(childVC: buttonView, to: buttonsView)
         add(childVC: ContactDataView(), to: contactView)
         add(childVC: AdressView(), to: adressView)

@@ -7,20 +7,25 @@
 
 import UIKit
 
-class TopProfileView : UIViewController {
+class TopProfileView : UIView {
 
     let profileImg = ProfileIMG(frame: .zero)
     let namelabel = UILabel()
     let positionLabel = UILabel()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupView()
         setupObserver()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setupView() {
-        view.backgroundColor = .white
+        backgroundColor = .white
         configureProfileImg()
         configureNameLabel()
         configurePositionLabel()
@@ -41,19 +46,19 @@ class TopProfileView : UIViewController {
     // MARK: - Constraints
     
     private func configureProfileImg() {
-        view.addSubview(profileImg)
+        addSubview(profileImg)
         profileImg.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            profileImg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            profileImg.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            profileImg.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            profileImg.centerXAnchor.constraint(equalTo: centerXAnchor),
             profileImg.heightAnchor.constraint(equalToConstant: 150),
             profileImg.widthAnchor.constraint(equalToConstant: 150)
         ])
     }
     
     private func configureNameLabel() {
-        view.addSubview(namelabel)
+        addSubview(namelabel)
         namelabel.translatesAutoresizingMaskIntoConstraints = false
         
         namelabel.text = "\(Constants.firstName) \(Constants.lastName)"
@@ -66,7 +71,7 @@ class TopProfileView : UIViewController {
     }
     
     private func configurePositionLabel() {
-        view.addSubview(positionLabel)
+        addSubview(positionLabel)
         positionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         positionLabel.text = Constants.position
