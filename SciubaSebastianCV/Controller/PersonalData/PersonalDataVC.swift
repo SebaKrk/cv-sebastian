@@ -24,7 +24,7 @@ class PersonalDataVC : UIViewController {
     let content = UIView()
     
     let contactView = ContactDataView()
-    let adressView = UIView()
+    let adressView = AdressView()
     let aboutMeView = UIView()
     
     let padding : CGFloat = 10

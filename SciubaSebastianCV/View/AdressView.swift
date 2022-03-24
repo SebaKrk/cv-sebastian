@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class AdressView : UIViewController {
+class AdressView : UIView {
     
     let container = UIView()
     var stackView = UIStackView()
@@ -19,8 +19,8 @@ class AdressView : UIViewController {
     let cityLabel = UILabel()
     let countrylabel = UILabel()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupStackView()
         setupData()
         setupMapView()
@@ -29,11 +29,16 @@ class AdressView : UIViewController {
         configureMapView()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setupData() {
         adressLabel.text = "\(Constants.adres)"
         cityLabel.text = "\(Constants.city)"
         countrylabel.text = "Poland".localized
     }
+    
 //    MARK: - StackView
     
     private func setupStackView() {
@@ -41,6 +46,7 @@ class AdressView : UIViewController {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
     }
+    
 //    MARK: - MapView
     
     private func setupMapView() {
@@ -56,19 +62,20 @@ class AdressView : UIViewController {
         mapView.setRegion(region, animated: true)
         mapView.isScrollEnabled = false
     }
+    
 //    MARK: - Constraints
     
     private func configureContainer() {
-        view.addSubview(container)
+        addSubview(container)
         container.translatesAutoresizingMaskIntoConstraints = false
         
         container.backgroundColor = .systemGray6
         container.layer.cornerRadius = 5
         
         NSLayoutConstraint.activate([
-            container.topAnchor.constraint(equalTo: view.topAnchor),
-            container.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            container.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            container.topAnchor.constraint(equalTo: topAnchor),
+            container.leadingAnchor.constraint(equalTo: leadingAnchor),
+            container.trailingAnchor.constraint(equalTo: trailingAnchor),
             container.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
@@ -86,7 +93,7 @@ class AdressView : UIViewController {
     }
     
     private func configureMapView() {
-        view.addSubview(mapView)
+        addSubview(mapView)
         mapView.translatesAutoresizingMaskIntoConstraints = false
         
         mapView.layer.cornerRadius = 5
