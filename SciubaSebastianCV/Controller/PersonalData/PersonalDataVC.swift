@@ -54,12 +54,7 @@ class PersonalDataVC : UIViewController {
     private func setupChildView() {
         let buttonView = ButtonsView()
         buttonView.delegate = self
-        
-//        add(childVC: TopProfileView(), to:  topView)
         add(childVC: buttonView, to: buttonsView)
-//        add(childVC: ContactDataView(), to: contactView)
-//        add(childVC: AdressView(), to: adressView)
-//        add(childVC: AbutMeView(), to: aboutMeView)
     }
     
     //    MARK: - OBJC func
