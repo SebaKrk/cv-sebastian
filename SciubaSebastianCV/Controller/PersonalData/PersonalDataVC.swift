@@ -25,7 +25,7 @@ class PersonalDataVC : UIViewController {
     
     let contactView = ContactDataView()
     let adressView = AdressView()
-    let aboutMeView = UIView()
+    let aboutMeView = AbutMeView()
     
     let padding : CGFloat = 10
     
@@ -58,8 +58,8 @@ class PersonalDataVC : UIViewController {
 //        add(childVC: TopProfileView(), to:  topView)
         add(childVC: buttonView, to: buttonsView)
 //        add(childVC: ContactDataView(), to: contactView)
-        add(childVC: AdressView(), to: adressView)
-        add(childVC: AbutMeView(), to: aboutMeView)
+//        add(childVC: AdressView(), to: adressView)
+//        add(childVC: AbutMeView(), to: aboutMeView)
     }
     
     //    MARK: - OBJC func

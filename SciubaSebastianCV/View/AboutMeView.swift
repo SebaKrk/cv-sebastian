@@ -8,29 +8,34 @@
 import Foundation
 import UIKit
 
-class AbutMeView : UIViewController {
+class AbutMeView : UIView {
     
     let container = UIView()
     let contentLabel = UILabel()
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         configureContainer()
         configureContenLabel()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//    MARK: - Constraints
+    
     private func configureContainer() {
-        view.addSubview(container)
+        addSubview(container)
         container.translatesAutoresizingMaskIntoConstraints = false
         
         container.backgroundColor = .systemGray6
         container.layer.cornerRadius = 5
         
         NSLayoutConstraint.activate([
-            container.topAnchor.constraint(equalTo: view.topAnchor),
-            container.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            container.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            container.topAnchor.constraint(equalTo: topAnchor),
+            container.leadingAnchor.constraint(equalTo: leadingAnchor),
+            container.trailingAnchor.constraint(equalTo: trailingAnchor),
             container.heightAnchor.constraint(equalToConstant: 250)
         ])
     }
