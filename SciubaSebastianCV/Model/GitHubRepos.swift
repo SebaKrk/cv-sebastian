@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct GitHubRepos {
+struct GitHubRepos : Codable {
     let name : String
     let html_url : String
-    let description : String?
+    let description : String
     
     let created_at: String
     let updated_at: String
