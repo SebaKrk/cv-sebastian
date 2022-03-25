@@ -24,6 +24,8 @@
 		05BC644527EB3E0500FB1544 /* ExperianceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644427EB3E0500FB1544 /* ExperianceViewModel.swift */; };
 		05BC644727EC83FE00FB1544 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644627EC83FE00FB1544 /* GitHubUser.swift */; };
 		05BC644927EC8A9100FB1544 /* GitHubRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644827EC8A9100FB1544 /* GitHubRepos.swift */; };
+		05BC644D27ECD81C00FB1544 /* TopProfileGitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644C27ECD81C00FB1544 /* TopProfileGitHubView.swift */; };
+		05BC649527EDB25B00FB1544 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC649427EDB25B00FB1544 /* Networking.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105A27E0BDC10069233D /* TabBarController.swift */; };
 		05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105C27E0C0700069233D /* WorkExperienceVC.swift */; };
@@ -63,6 +65,8 @@
 		05BC644427EB3E0500FB1544 /* ExperianceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperianceViewModel.swift; sourceTree = "<group>"; };
 		05BC644627EC83FE00FB1544 /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
 		05BC644827EC8A9100FB1544 /* GitHubRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepos.swift; sourceTree = "<group>"; };
+		05BC644C27ECD81C00FB1544 /* TopProfileGitHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileGitHubView.swift; sourceTree = "<group>"; };
+		05BC649427EDB25B00FB1544 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		05F9105A27E0BDC10069233D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		05F9105C27E0C0700069233D /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
@@ -201,9 +205,30 @@
 			isa = PBXGroup;
 			children = (
 				93B0E1AF27DF5C3000A4433B /* Constants.swift */,
+				05BC649427EDB25B00FB1544 /* Networking.swift */,
 				05BC637827E8A9B200FB1544 /* ExperienceData+Service.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		05BC644A27ECD7CA00FB1544 /* PersonalDataView */ = {
+			isa = PBXGroup;
+			children = (
+				93B0E1B327DF6AE900A4433B /* TopProfileView.swift */,
+				9304606E27DF72460056CB5F /* ButtonsView.swift */,
+				9304607627DF7CB80056CB5F /* ContactDataView.swift */,
+				05BC635C27E1DBD100FB1544 /* AdressView.swift */,
+				05F9105727E07F050069233D /* AboutMeView.swift */,
+			);
+			path = PersonalDataView;
+			sourceTree = "<group>";
+		};
+		05BC644B27ECD7E500FB1544 /* GitHubView */ = {
+			isa = PBXGroup;
+			children = (
+				05BC644C27ECD81C00FB1544 /* TopProfileGitHubView.swift */,
+			);
+			path = GitHubView;
 			sourceTree = "<group>";
 		};
 		05F9105927E0BD520069233D /* TabBar */ = {
@@ -217,11 +242,8 @@
 		9304606927DF6E0D0056CB5F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				93B0E1B327DF6AE900A4433B /* TopProfileView.swift */,
-				9304606E27DF72460056CB5F /* ButtonsView.swift */,
-				9304607627DF7CB80056CB5F /* ContactDataView.swift */,
-				05BC635C27E1DBD100FB1544 /* AdressView.swift */,
-				05F9105727E07F050069233D /* AboutMeView.swift */,
+				05BC644A27ECD7CA00FB1544 /* PersonalDataView */,
+				05BC644B27ECD7E500FB1544 /* GitHubView */,
 				05BC637F27E9AF1700FB1544 /* View */,
 				05BC636127E4715D00FB1544 /* UIImge */,
 				05BC637A27E8AD4100FB1544 /* Cell */,
@@ -381,6 +403,7 @@
 				05BC644727EC83FE00FB1544 /* GitHubUser.swift in Sources */,
 				93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */,
 				05BC636627E4C31E00FB1544 /* NSNotification+Ext.swift in Sources */,
+				05BC649527EDB25B00FB1544 /* Networking.swift in Sources */,
 				05F9105827E07F050069233D /* AboutMeView.swift in Sources */,
 				93B0E19C27DF567200A4433B /* SceneDelegate.swift in Sources */,
 				9304607727DF7CB90056CB5F /* ContactDataView.swift in Sources */,
@@ -392,6 +415,7 @@
 				9304607527DF7C8E0056CB5F /* ConcactDataLabel.swift in Sources */,
 				05F9106127E0C15C0069233D /* SkillsAndCoursesVC.swift in Sources */,
 				05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */,
+				05BC644D27ECD81C00FB1544 /* TopProfileGitHubView.swift in Sources */,
 				9304606F27DF72460056CB5F /* ButtonsView.swift in Sources */,
 				05BC644527EB3E0500FB1544 /* ExperianceViewModel.swift in Sources */,
 				05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */,

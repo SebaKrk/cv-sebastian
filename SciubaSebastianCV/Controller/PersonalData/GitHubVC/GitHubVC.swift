@@ -9,7 +9,7 @@ import UIKit
 
 class GitHubVC : UIViewController {
     
-    let topView = UIView()
+    let topView = TopProfileGitHubView()
     let bioView = UIView()
     let folowersView = UIView()
     let publicRepoView = UIView()
