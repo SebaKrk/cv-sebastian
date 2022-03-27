@@ -135,11 +135,11 @@ class GitHubTopProfileView : UIView {
 // MARK: - GitHubUserViewModelDelegate
 
 extension GitHubTopProfileView : GitHubUserViewModelDelegate {
-    func updateView(avatarIMG: String, userLogin: String, userName: String, location: String, company: String) {
-        dowloadImage(from: avatarIMG)
-        userLoginLabel.text = userLogin
-        userNameLabel.text = userName
-        locationLabel.text = location
-        companyLabel.text = company
+    func updateView(user: Users) {
+        dowloadImage(from: user.avatar_url)
+        userLoginLabel.text = user.login
+        userNameLabel.text = user.name
+        locationLabel.text = user.location
+        companyLabel.text = user.company
     }
 }

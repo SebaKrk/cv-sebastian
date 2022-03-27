@@ -7,8 +7,9 @@
 
 import Foundation
 
+
 protocol GitHubUserViewModelDelegate : AnyObject {
-    func updateView(avatarIMG:String, userLogin: String, userName: String, location: String, company: String)
+    func updateView(user: Users)
 }
 
 class GitHubUserViewModel {
@@ -21,11 +22,7 @@ class GitHubUserViewModel {
                 
             case .success( let user):
                 DispatchQueue.main.async {
-                    self.ghUserViewModelDelegate?.updateView(avatarIMG: user.avatar_url,
-                                                             userLogin: user.login,
-                                                             userName: user.name,
-                                                             location: user.location,
-                                                             company: user.company)
+                    self.ghUserViewModelDelegate?.updateView(user: user)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
