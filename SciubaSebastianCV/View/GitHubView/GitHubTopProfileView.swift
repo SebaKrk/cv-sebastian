@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TopProfileGitHubView : UIView {
+class GitHubTopProfileView : UIView {
 
     let avatarImgView = UIImageView()
     let userLoginLabel = UILabel()
@@ -134,7 +134,7 @@ class TopProfileGitHubView : UIView {
 
 // MARK: - GitHubUserViewModelDelegate
 
-extension TopProfileGitHubView : GitHubUserViewModelDelegate {
+extension GitHubTopProfileView : GitHubUserViewModelDelegate {
     func updateView(avatarIMG: String, userLogin: String, userName: String, location: String, company: String) {
         dowloadImage(from: avatarIMG)
         userLoginLabel.text = userLogin
