@@ -9,8 +9,8 @@ import UIKit
 
 class GitHubVC : UIViewController {
     
-    let topView = TopProfileGitHubView()
-    let bioView = UIView()
+    let topView = GitHubTopProfileView()
+    let bioView = GitHubBioView()
     let folowersView = UIView()
     let publicRepoView = UIView()
     let listPubRepoTV = UITableView()
@@ -23,7 +23,7 @@ class GitHubVC : UIViewController {
     }
     
     private func setupView() {
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         configureTopView()
         configureBioView()
         configureFollowersView()
@@ -37,7 +37,6 @@ class GitHubVC : UIViewController {
     private func configureTopView() {
         view.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
-        topView.backgroundColor = .green
         
         NSLayoutConstraint.activate([
             topView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -50,13 +49,12 @@ class GitHubVC : UIViewController {
     private func configureBioView() {
         view.addSubview(bioView)
         bioView.translatesAutoresizingMaskIntoConstraints = false
-        bioView.backgroundColor = .blue
         
         NSLayoutConstraint.activate([
             bioView.topAnchor.constraint(equalTo: topView.bottomAnchor),
             bioView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bioView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bioView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15)
+            bioView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.11)
         ])
     }
     
@@ -102,6 +100,8 @@ class GitHubVC : UIViewController {
     public func configureListPubRepoTeableView() {
         view.addSubview(listPubRepoTV)
         listPubRepoTV.translatesAutoresizingMaskIntoConstraints = false
+        
+        listPubRepoTV.backgroundColor = .red
         
         NSLayoutConstraint.activate([
             listPubRepoTV.topAnchor.constraint(equalTo: publicRepoView.bottomAnchor),
