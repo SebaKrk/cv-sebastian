@@ -11,8 +11,8 @@ class GitHubVC : UIViewController {
     
     let topView = GitHubTopProfileView()
     let bioView = GitHubBioView()
-    let folowersView = UIView()
-    let publicRepoView = UIView()
+    let folowersView = GitHubFollowerView()
+    let publicRepoView = GitHubPublicRepoView()
     let listPubRepoTV = UITableView()
     let githubPage = UIView()
     
@@ -61,7 +61,6 @@ class GitHubVC : UIViewController {
     private func configureFollowersView() {
         view.addSubview(folowersView)
         folowersView.translatesAutoresizingMaskIntoConstraints = false
-        folowersView.backgroundColor = .purple
         
         NSLayoutConstraint.activate([
             folowersView.topAnchor.constraint(equalTo: bioView.bottomAnchor),
@@ -74,8 +73,7 @@ class GitHubVC : UIViewController {
     private func configurePublicRepoView() {
         view.addSubview(publicRepoView)
         publicRepoView.translatesAutoresizingMaskIntoConstraints = false
-        publicRepoView.backgroundColor = .cyan
-        
+
         NSLayoutConstraint.activate([
             publicRepoView.topAnchor.constraint(equalTo: folowersView.bottomAnchor),
             publicRepoView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

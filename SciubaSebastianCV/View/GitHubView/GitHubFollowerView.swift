@@ -75,7 +75,7 @@ class GitHubFollowerView : UIView {
         
         NSLayoutConstraint.activate([
             followerImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            followerImageView.trailingAnchor.constraint(equalTo: followerLabel.leadingAnchor,constant: -30),
+            followerImageView.trailingAnchor.constraint(equalTo: followerLabel.leadingAnchor,constant: -40),
         ])
     }
     
@@ -87,7 +87,7 @@ class GitHubFollowerView : UIView {
         
         NSLayoutConstraint.activate([
             followerScore.centerYAnchor.constraint(equalTo: centerYAnchor),
-            followerScore.leadingAnchor.constraint(equalTo: followerLabel.trailingAnchor,constant: 30)
+            followerScore.leadingAnchor.constraint(equalTo: followerLabel.trailingAnchor,constant: 40)
         ])
     }
 }
