@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0502B59027F047BD00D0ED7F /* GitHubBioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B58F27F047BD00D0ED7F /* GitHubBioView.swift */; };
+		0502B59427F0E65F00D0ED7F /* GitHubPublicRepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59327F0E65F00D0ED7F /* GitHubPublicRepoView.swift */; };
+		0502B59627F0E82D00D0ED7F /* GitHubFollowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59527F0E82D00D0ED7F /* GitHubFollowerView.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		0502B58F27F047BD00D0ED7F /* GitHubBioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubBioView.swift; sourceTree = "<group>"; };
+		0502B59327F0E65F00D0ED7F /* GitHubPublicRepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPublicRepoView.swift; sourceTree = "<group>"; };
+		0502B59527F0E82D00D0ED7F /* GitHubFollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubFollowerView.swift; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 			children = (
 				05BC644C27ECD81C00FB1544 /* GitHubTopProfileView.swift */,
 				0502B58F27F047BD00D0ED7F /* GitHubBioView.swift */,
+				0502B59527F0E82D00D0ED7F /* GitHubFollowerView.swift */,
+				0502B59327F0E65F00D0ED7F /* GitHubPublicRepoView.swift */,
 			);
 			path = GitHubView;
 			sourceTree = "<group>";
@@ -417,6 +423,8 @@
 				05BC637727E8A64800FB1544 /* Experience.swift in Sources */,
 				05BC644727EC83FE00FB1544 /* GitHubUser.swift in Sources */,
 				93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */,
+				0502B59427F0E65F00D0ED7F /* GitHubPublicRepoView.swift in Sources */,
+				0502B59627F0E82D00D0ED7F /* GitHubFollowerView.swift in Sources */,
 				05BC636627E4C31E00FB1544 /* NSNotification+Ext.swift in Sources */,
 				05BC649527EDB25B00FB1544 /* Networking.swift in Sources */,
 				05F9105827E07F050069233D /* AboutMeView.swift in Sources */,
