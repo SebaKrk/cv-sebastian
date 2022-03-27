@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 class TopProfileGitHubView : UIView {
-    
+
     let avatarIMG = UIImageView()
-    let userLogin = UILabel()
+    let userLoginLabel = UILabel()
     let userName = UILabel()
    
     let locationImageView = UIImageView()
@@ -19,6 +19,8 @@ class TopProfileGitHubView : UIView {
    
     let companyImageView = UIImageView()
     let companyLabel = UILabel()
+    
+    let gitHubUserViewModel = GitHubUserViewModel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,14 +38,8 @@ class TopProfileGitHubView : UIView {
     }
     
     func configureUiElemnets() {
-        let avatar_url = "https://avatars.githubusercontent.com/u/61020558?v=4"
-        dowloadImage(from: avatar_url)
-        userLogin.text = "SebaKrk"
-        userName.text = "Sebastian"
-        locationImageView.image = UIImage(systemName: "mappin.and.ellipse")
-        locationLabel.text = "Krakow"
-        companyImageView.image = UIImage(systemName: "bag")
-        companyLabel.text = "AKRA Polska Sp. z o.o."
+        gitHubUserViewModel.getUserData()
+        gitHubUserViewModel.ghUserViewModelDelegate = self
     }
     
     private func configureAvatarIMG() {
@@ -63,15 +59,15 @@ class TopProfileGitHubView : UIView {
     }
     
     private func configureUserLoginLabel() {
-        addSubview(userLogin)
-        userLogin.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(userLoginLabel)
+        userLoginLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        userLogin.textColor = .black
-        userLogin.font = UIFont.boldSystemFont(ofSize: 26)
+        userLoginLabel.textColor = .black
+        userLoginLabel.font = UIFont.boldSystemFont(ofSize: 26)
         
         NSLayoutConstraint.activate([
-            userLogin.centerYAnchor.constraint(equalTo: avatarIMG.topAnchor, constant: 10),
-            userLogin.leadingAnchor.constraint(equalTo: avatarIMG.trailingAnchor, constant: 20),
+            userLoginLabel.centerYAnchor.constraint(equalTo: avatarIMG.topAnchor, constant: 10),
+            userLoginLabel.leadingAnchor.constraint(equalTo: avatarIMG.trailingAnchor, constant: 20),
         ])
     }
     
@@ -82,7 +78,7 @@ class TopProfileGitHubView : UIView {
         userName.font = UIFont.systemFont(ofSize: 20)
         
         NSLayoutConstraint.activate([
-            userName.topAnchor.constraint(equalTo: userLogin.bottomAnchor,constant: 5),
+            userName.topAnchor.constraint(equalTo: userLoginLabel.bottomAnchor,constant: 5),
             userName.leadingAnchor.constraint(equalTo: avatarIMG.trailingAnchor, constant: 20),
         ])
     }
@@ -115,8 +111,6 @@ class TopProfileGitHubView : UIView {
         ])
     }
     
-    
-    
 // MARK: - Helpers
     
     func dowloadImage(from urlString: String) {
@@ -132,4 +126,13 @@ class TopProfileGitHubView : UIView {
         }
         task.resume()
       }
+}
+
+// MARK: - GitHubUserViewModelDelegate
+
+extension TopProfileGitHubView : GitHubUserViewModelDelegate {
+    func updateView(userLogin: String) {
+        print("odpalil")
+        userLoginLabel.text = userLogin
+    }
 }

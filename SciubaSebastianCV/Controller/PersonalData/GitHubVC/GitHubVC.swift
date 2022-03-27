@@ -31,7 +31,7 @@ class GitHubVC : UIViewController {
         configureGitHubButton()
         configureListPubRepoTeableView()
     }
-    
+
 //    MARK: - Constraints
     
     private func configureTopView() {
