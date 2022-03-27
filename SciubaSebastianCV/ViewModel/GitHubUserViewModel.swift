@@ -8,12 +8,12 @@
 import Foundation
 
 protocol GitHubUserViewModelDelegate : AnyObject {
-    func updateView(userLogin: String)
+    func updateView(avatarIMG:String, userLogin: String, userName: String, location: String, company: String)
 }
 
 class GitHubUserViewModel {
     
-    var ghUserViewModelDeelegate : GitHubUserViewModelDelegate?
+    var ghUserViewModelDelegate : GitHubUserViewModelDelegate?
     
     func getUserData() {
         Networking.shared.getUserData { result in
@@ -21,7 +21,11 @@ class GitHubUserViewModel {
                 
             case .success( let user):
                 DispatchQueue.main.async {
-                    self.ghUserViewModelDeelegate?.updateView(userLogin: user.login)
+                    self.ghUserViewModelDelegate?.updateView(avatarIMG: user.avatar_url,
+                                                             userLogin: user.login,
+                                                             userName: user.name,
+                                                             location: user.location,
+                                                             company: user.company)
                 }
             case .failure(let error):
                 print(error.localizedDescription)

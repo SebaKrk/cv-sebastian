@@ -10,9 +10,9 @@ import UIKit
 
 class TopProfileGitHubView : UIView {
 
-    let avatarIMG = UIImageView()
+    let avatarImgView = UIImageView()
     let userLoginLabel = UILabel()
-    let userName = UILabel()
+    let userNameLabel = UILabel()
    
     let locationImageView = UIImageView()
     let locationLabel = UILabel()
@@ -43,18 +43,18 @@ class TopProfileGitHubView : UIView {
     }
     
     private func configureAvatarIMG() {
-        addSubview(avatarIMG)
-        avatarIMG.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(avatarImgView)
+        avatarImgView.translatesAutoresizingMaskIntoConstraints = false
         
-        avatarIMG.layer.cornerRadius = 10
-        avatarIMG.layer.masksToBounds = true
-        avatarIMG.contentMode = .scaleAspectFill
+        avatarImgView.layer.cornerRadius = 10
+        avatarImgView.layer.masksToBounds = true
+        avatarImgView.contentMode = .scaleAspectFill
         
         NSLayoutConstraint.activate([
-            avatarIMG.centerYAnchor.constraint(equalTo: centerYAnchor),
-            avatarIMG.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            avatarIMG.heightAnchor.constraint(equalToConstant: 100),
-            avatarIMG.widthAnchor.constraint(equalToConstant: 100)
+            avatarImgView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            avatarImgView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            avatarImgView.heightAnchor.constraint(equalToConstant: 100),
+            avatarImgView.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
     
@@ -66,20 +66,20 @@ class TopProfileGitHubView : UIView {
         userLoginLabel.font = UIFont.boldSystemFont(ofSize: 26)
         
         NSLayoutConstraint.activate([
-            userLoginLabel.centerYAnchor.constraint(equalTo: avatarIMG.topAnchor, constant: 10),
-            userLoginLabel.leadingAnchor.constraint(equalTo: avatarIMG.trailingAnchor, constant: 20),
+            userLoginLabel.centerYAnchor.constraint(equalTo: avatarImgView.topAnchor, constant: 10),
+            userLoginLabel.leadingAnchor.constraint(equalTo: avatarImgView.trailingAnchor, constant: 20),
         ])
     }
     
     private func configureUserNameLabe() {
-        addSubview(userName)
-        userName.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(userNameLabel)
+        userNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        userName.font = UIFont.systemFont(ofSize: 20)
+        userNameLabel.font = UIFont.systemFont(ofSize: 20)
         
         NSLayoutConstraint.activate([
-            userName.topAnchor.constraint(equalTo: userLoginLabel.bottomAnchor,constant: 5),
-            userName.leadingAnchor.constraint(equalTo: avatarIMG.trailingAnchor, constant: 20),
+            userNameLabel.topAnchor.constraint(equalTo: userLoginLabel.bottomAnchor,constant: 5),
+            userNameLabel.leadingAnchor.constraint(equalTo: avatarImgView.trailingAnchor, constant: 20),
         ])
     }
     
@@ -89,10 +89,12 @@ class TopProfileGitHubView : UIView {
         locationImageView.translatesAutoresizingMaskIntoConstraints = false
         locationLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        locationImageView.image = UIImage(systemName: "mappin.and.ellipse")
+        
         NSLayoutConstraint.activate([
-            locationImageView.topAnchor.constraint(equalTo: userName.bottomAnchor,constant: 5),
-            locationImageView.leadingAnchor.constraint(equalTo: avatarIMG.trailingAnchor,constant: 20),
-            locationLabel.topAnchor.constraint(equalTo: userName.bottomAnchor,constant: 5),
+            locationImageView.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor,constant: 5),
+            locationImageView.leadingAnchor.constraint(equalTo: avatarImgView.trailingAnchor,constant: 20),
+            locationLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor,constant: 5),
             locationLabel.leadingAnchor.constraint(equalTo: locationImageView.trailingAnchor,constant: 5),
         ])
     }
@@ -103,9 +105,11 @@ class TopProfileGitHubView : UIView {
         companyImageView.translatesAutoresizingMaskIntoConstraints = false
         companyLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        companyImageView.image = UIImage(systemName: "bag")
+        
         NSLayoutConstraint.activate([
             companyImageView.topAnchor.constraint(equalTo: locationImageView.bottomAnchor,constant: 5),
-            companyImageView.leadingAnchor.constraint(equalTo: avatarIMG.trailingAnchor,constant: 20),
+            companyImageView.leadingAnchor.constraint(equalTo: avatarImgView.trailingAnchor,constant: 20),
             companyLabel.topAnchor.constraint(equalTo: locationImageView.bottomAnchor,constant: 5),
             companyLabel.leadingAnchor.constraint(equalTo: companyImageView.trailingAnchor,constant: 5),
         ])
@@ -121,7 +125,7 @@ class TopProfileGitHubView : UIView {
           guard let data = data else {return}
           guard let image = UIImage(data: data) else {return}
           DispatchQueue.main.async {
-            self.avatarIMG.image = image
+            self.avatarImgView.image = image
           }
         }
         task.resume()
@@ -131,8 +135,11 @@ class TopProfileGitHubView : UIView {
 // MARK: - GitHubUserViewModelDelegate
 
 extension TopProfileGitHubView : GitHubUserViewModelDelegate {
-    func updateView(userLogin: String) {
-        print("odpalil")
+    func updateView(avatarIMG: String, userLogin: String, userName: String, location: String, company: String) {
+        dowloadImage(from: avatarIMG)
         userLoginLabel.text = userLogin
+        userNameLabel.text = userName
+        locationLabel.text = location
+        companyLabel.text = company
     }
 }
