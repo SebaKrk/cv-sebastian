@@ -14,7 +14,7 @@ class GitHubVC : UIViewController {
     let folowersView = GitHubFollowerView()
     let publicRepoView = GitHubPublicRepoView()
     let listPubRepoTV = UITableView()
-    let githubPage = UIView()
+    let githubPage = GitHubPageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +85,6 @@ class GitHubVC : UIViewController {
     public func configureGitHubButton() {
         view.addSubview(githubPage)
         githubPage.translatesAutoresizingMaskIntoConstraints = false
-        githubPage.backgroundColor = .systemBlue
         
         NSLayoutConstraint.activate([
             githubPage.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
