@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 
 class GitHubTopProfileView : UIView {
-
+    
     let avatarImgView = UIImageView()
     let userLoginLabel = UILabel()
     let userNameLabel = UILabel()
-   
+    
     let locationImageView = UIImageView()
     let locationLabel = UILabel()
-   
+    
     let companyImageView = UIImageView()
     let companyLabel = UILabel()
     
@@ -25,7 +25,7 @@ class GitHubTopProfileView : UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        configureUiElemnets()
+        setupUIElements()
         configureAvatarIMG()
         configureUserLoginLabel()
         configureUserNameLabe()
@@ -37,10 +37,14 @@ class GitHubTopProfileView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureUiElemnets() {
+    // MARK: - Setup UIElemenets
+    
+    func setupUIElements() {
         gitHubUserViewModel.getUserData()
         gitHubUserViewModel.ghUserViewModelDelegate = self
     }
+    
+    //    MARK: - Constraints
     
     private func configureAvatarIMG() {
         addSubview(avatarImgView)
@@ -115,21 +119,21 @@ class GitHubTopProfileView : UIView {
         ])
     }
     
-// MARK: - Helpers
+    // MARK: - Helpers
     
     func dowloadImage(from urlString: String) {
         guard let url = URL(string: urlString) else {return}
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-          if error != nil {return}
-          guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {return}
-          guard let data = data else {return}
-          guard let image = UIImage(data: data) else {return}
-          DispatchQueue.main.async {
-            self.avatarImgView.image = image
-          }
+            if error != nil {return}
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {return}
+            guard let data = data else {return}
+            guard let image = UIImage(data: data) else {return}
+            DispatchQueue.main.async {
+                self.avatarImgView.image = image
+            }
         }
         task.resume()
-      }
+    }
 }
 
 // MARK: - GitHubUserViewModelDelegate
