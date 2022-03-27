@@ -26,6 +26,7 @@
 		05BC644927EC8A9100FB1544 /* GitHubRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644827EC8A9100FB1544 /* GitHubRepos.swift */; };
 		05BC644D27ECD81C00FB1544 /* TopProfileGitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644C27ECD81C00FB1544 /* TopProfileGitHubView.swift */; };
 		05BC649527EDB25B00FB1544 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC649427EDB25B00FB1544 /* Networking.swift */; };
+		05BC649727EDB81200FB1544 /* GitHubUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC649627EDB81200FB1544 /* GitHubUserViewModel.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
 		05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105A27E0BDC10069233D /* TabBarController.swift */; };
 		05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105C27E0C0700069233D /* WorkExperienceVC.swift */; };
@@ -67,6 +68,7 @@
 		05BC644827EC8A9100FB1544 /* GitHubRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepos.swift; sourceTree = "<group>"; };
 		05BC644C27ECD81C00FB1544 /* TopProfileGitHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileGitHubView.swift; sourceTree = "<group>"; };
 		05BC649427EDB25B00FB1544 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		05BC649627EDB81200FB1544 /* GitHubUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserViewModel.swift; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		05F9105A27E0BDC10069233D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		05F9105C27E0C0700069233D /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				05BC644427EB3E0500FB1544 /* ExperianceViewModel.swift */,
+				05BC649627EDB81200FB1544 /* GitHubUserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				05BC636627E4C31E00FB1544 /* NSNotification+Ext.swift in Sources */,
 				05BC649527EDB25B00FB1544 /* Networking.swift in Sources */,
 				05F9105827E07F050069233D /* AboutMeView.swift in Sources */,
+				05BC649727EDB81200FB1544 /* GitHubUserViewModel.swift in Sources */,
 				93B0E19C27DF567200A4433B /* SceneDelegate.swift in Sources */,
 				9304607727DF7CB90056CB5F /* ContactDataView.swift in Sources */,
 				93B0E1AE27DF5A7D00A4433B /* PersonalDataVC.swift in Sources */,

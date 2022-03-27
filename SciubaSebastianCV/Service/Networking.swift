@@ -9,20 +9,33 @@ import Foundation
 
 class Networking {
     
-    func getGitHubData() {
-        let url = URL(string: "https://api.github.com/users/SebaKrk")
-        guard let url = url else {return}
+  static let shared = Networking()
+    private let basicURL = "https://api.github.com/users/SebaKrk"
+    
+    func getUserData(completion: @escaping (Result<Users,Error>)->Void) {
+        
+        guard let url = URL(string: basicURL) else { return }
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if error != nil {
-                print(error?.localizedDescription)
+            if let _ = error {
+                completion(.failure(NSError()))
+                return
+            }
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(.failure(NSError()))
+                return
+            }
+            guard let data = data else {
+                completion(.failure(NSError()))
                 return
             }
             do {
-                let result  = try JSONDecoder().decode(Users.self, from: data!)
-                print(result)
+                let decoder = JSONDecoder()
+                let user = try decoder.decode(Users.self, from: data)
+                completion(.success(user))
             } catch {
-                print("error")
+                completion(.failure(NSError()))
             }
-        }.resume()
+        } .resume()
     }
 }
