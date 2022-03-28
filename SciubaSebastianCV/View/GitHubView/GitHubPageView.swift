@@ -10,6 +10,8 @@ import UIKit
 
 class GitHubPageView : UIView {
     
+    let containerButton = UIButton()
+    
     let gitHubIMG = UIImageView()
     let gitHubCreatedLabel = UILabel()
     var gitHubURL = ""
@@ -20,6 +22,7 @@ class GitHubPageView : UIView {
         super.init(frame: frame)
         
         setupUIElemenets()
+        configureContainer()
         conigureCreatedLabel()
         configureGutHubIMG()
         addGestureToButtons()
@@ -50,27 +53,46 @@ class GitHubPageView : UIView {
 
 //    MARK: - Constraints
     
+    private func configureContainer() {
+        addSubview(containerButton)
+        containerButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        containerButton.addTarget(self, action: #selector(handleTapGesture), for: .touchUpInside)
+        containerButton.configuration = .tinted()
+        containerButton.configuration?.cornerStyle = .medium
+        containerButton.configuration?.baseBackgroundColor = .systemBlue
+        containerButton.configuration?.baseForegroundColor = .systemBlue
+        
+        NSLayoutConstraint.activate([
+            containerButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            containerButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            containerButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.95),
+            containerButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.85)
+        ])
+    }
+    
+    
     private func conigureCreatedLabel() {
-        addSubview(gitHubCreatedLabel)
+        containerButton.addSubview(gitHubCreatedLabel)
         gitHubCreatedLabel.translatesAutoresizingMaskIntoConstraints = false
         
         gitHubCreatedLabel.textColor = .secondaryLabel
         gitHubCreatedLabel.font = UIFont.systemFont(ofSize: 16)
         
         NSLayoutConstraint.activate([
-            gitHubCreatedLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            gitHubCreatedLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            gitHubCreatedLabel.centerXAnchor.constraint(equalTo: containerButton.centerXAnchor),
+            gitHubCreatedLabel.centerYAnchor.constraint(equalTo: containerButton.centerYAnchor)
         ])
     }
     
     private func configureGutHubIMG() {
-        addSubview(gitHubIMG)
+        containerButton.addSubview(gitHubIMG)
         gitHubIMG.translatesAutoresizingMaskIntoConstraints = false
         
         gitHubIMG.image = UIImage(named: "Github")
         
         NSLayoutConstraint.activate([
-            gitHubIMG.centerYAnchor.constraint(equalTo: centerYAnchor),
+            gitHubIMG.centerYAnchor.constraint(equalTo: containerButton.centerYAnchor),
             gitHubIMG.trailingAnchor.constraint(equalTo: gitHubCreatedLabel.leadingAnchor,constant: -20),
             gitHubIMG.widthAnchor.constraint(equalToConstant: 25),
             gitHubIMG.heightAnchor.constraint(equalToConstant: 25)
