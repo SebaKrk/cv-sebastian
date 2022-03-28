@@ -15,7 +15,7 @@ class GitHubVC : UIViewController {
     let bioView = GitHubBioView()
     let folowersView = GitHubFollowerView()
     let publicRepoView = GitHubPublicRepoView()
-    let listPubRepoTV = UITableView()
+    let listPubRepoTV = GitHubPublicRepoTableView()
     let githubPage = GitHubPageView()
     
     override func viewDidLoad() {
@@ -122,13 +122,11 @@ class GitHubVC : UIViewController {
     public func configureListPubRepoTeableView() {
         view.addSubview(listPubRepoTV)
         listPubRepoTV.translatesAutoresizingMaskIntoConstraints = false
-        
-        listPubRepoTV.backgroundColor = .red
-        
+                
         NSLayoutConstraint.activate([
             listPubRepoTV.topAnchor.constraint(equalTo: publicRepoView.bottomAnchor),
-            listPubRepoTV.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 30),
-            listPubRepoTV.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -30),
+            listPubRepoTV.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 15),
+            listPubRepoTV.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -15),
             listPubRepoTV.bottomAnchor.constraint(equalTo: githubPage.topAnchor)
         ])
     }
