@@ -11,6 +11,9 @@
 		0502B59427F0E65F00D0ED7F /* GitHubPublicRepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59327F0E65F00D0ED7F /* GitHubPublicRepoView.swift */; };
 		0502B59627F0E82D00D0ED7F /* GitHubFollowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59527F0E82D00D0ED7F /* GitHubFollowerView.swift */; };
 		0502B59827F1081600D0ED7F /* GitHubPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59727F1081600D0ED7F /* GitHubPageView.swift */; };
+		0502B59A27F19CA800D0ED7F /* GitHubPublicRepoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59927F19CA800D0ED7F /* GitHubPublicRepoTableView.swift */; };
+		0502B59C27F1F95100D0ED7F /* GitHubReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59B27F1F95100D0ED7F /* GitHubReposViewModel.swift */; };
+		0502B59E27F2115700D0ED7F /* PublicRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59D27F2115700D0ED7F /* PublicRepoCell.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
@@ -55,6 +58,9 @@
 		0502B59327F0E65F00D0ED7F /* GitHubPublicRepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPublicRepoView.swift; sourceTree = "<group>"; };
 		0502B59527F0E82D00D0ED7F /* GitHubFollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubFollowerView.swift; sourceTree = "<group>"; };
 		0502B59727F1081600D0ED7F /* GitHubPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPageView.swift; sourceTree = "<group>"; };
+		0502B59927F19CA800D0ED7F /* GitHubPublicRepoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPublicRepoTableView.swift; sourceTree = "<group>"; };
+		0502B59B27F1F95100D0ED7F /* GitHubReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReposViewModel.swift; sourceTree = "<group>"; };
+		0502B59D27F2115700D0ED7F /* PublicRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicRepoCell.swift; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 			children = (
 				05BC644427EB3E0500FB1544 /* ExperianceViewModel.swift */,
 				05BC649627EDB81200FB1544 /* GitHubUserViewModel.swift */,
+				0502B59B27F1F95100D0ED7F /* GitHubReposViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				05BC637B27E8AD5400FB1544 /* ExperienceCell.swift */,
+				0502B59D27F2115700D0ED7F /* PublicRepoCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -255,6 +263,7 @@
 				0502B59527F0E82D00D0ED7F /* GitHubFollowerView.swift */,
 				0502B59327F0E65F00D0ED7F /* GitHubPublicRepoView.swift */,
 				0502B59727F1081600D0ED7F /* GitHubPageView.swift */,
+				0502B59927F19CA800D0ED7F /* GitHubPublicRepoTableView.swift */,
 			);
 			path = GitHubView;
 			sourceTree = "<group>";
@@ -417,6 +426,7 @@
 				05BC637C27E8AD5400FB1544 /* ExperienceCell.swift in Sources */,
 				0502B59027F047BD00D0ED7F /* GitHubBioView.swift in Sources */,
 				9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */,
+				0502B59A27F19CA800D0ED7F /* GitHubPublicRepoTableView.swift in Sources */,
 				05BC644227EB2BCD00FB1544 /* UIViewController+Ext.swift in Sources */,
 				05BC638327E9BD9D00FB1544 /* ResDetailsLabel.swift in Sources */,
 				05F9105F27E0C0DB0069233D /* EducationVC.swift in Sources */,
@@ -426,6 +436,7 @@
 				05BC637727E8A64800FB1544 /* Experience.swift in Sources */,
 				05BC644727EC83FE00FB1544 /* GitHubUser.swift in Sources */,
 				93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */,
+				0502B59C27F1F95100D0ED7F /* GitHubReposViewModel.swift in Sources */,
 				0502B59427F0E65F00D0ED7F /* GitHubPublicRepoView.swift in Sources */,
 				0502B59627F0E82D00D0ED7F /* GitHubFollowerView.swift in Sources */,
 				05BC636627E4C31E00FB1544 /* NSNotification+Ext.swift in Sources */,
@@ -444,6 +455,7 @@
 				05F9106127E0C15C0069233D /* SkillsAndCoursesVC.swift in Sources */,
 				05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */,
 				05BC644D27ECD81C00FB1544 /* GitHubTopProfileView.swift in Sources */,
+				0502B59E27F2115700D0ED7F /* PublicRepoCell.swift in Sources */,
 				9304606F27DF72460056CB5F /* ButtonsView.swift in Sources */,
 				05BC644527EB3E0500FB1544 /* ExperianceViewModel.swift in Sources */,
 				05F9105B27E0BDC10069233D /* TabBarController.swift in Sources */,
