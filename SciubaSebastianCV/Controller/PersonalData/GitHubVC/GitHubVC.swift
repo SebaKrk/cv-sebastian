@@ -9,6 +9,8 @@ import UIKit
 
 class GitHubVC : UIViewController {
     
+    let doneButton = UIButton()
+    
     let topView = GitHubTopProfileView()
     let bioView = GitHubBioView()
     let folowersView = GitHubFollowerView()
@@ -24,6 +26,9 @@ class GitHubVC : UIViewController {
     
     private func setupView() {
         view.backgroundColor = .white
+        
+        configureDoneButton()
+        
         configureTopView()
         configureBioView()
         configureFollowersView()
@@ -32,14 +37,34 @@ class GitHubVC : UIViewController {
         configureListPubRepoTeableView()
     }
 
-//    MARK: - Constraints
+//    MARK: - OBJC
+    
+    @objc func handleDoneButton() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //    MARK: - Constraints
+    
+    private func configureDoneButton() {
+        view.addSubview(doneButton)
+        doneButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        doneButton.setTitle("done", for: .normal)
+        doneButton.setTitleColor(.systemBlue, for: .normal)
+        doneButton.addTarget(self, action: #selector(handleDoneButton), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            doneButton.topAnchor.constraint(equalTo: view.topAnchor,constant: 20),
+            doneButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20)
+        ])
+    }
     
     private func configureTopView() {
         view.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            topView.topAnchor.constraint(equalTo: view.topAnchor),
+            topView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 40),
             topView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2)

@@ -26,6 +26,7 @@ class GitHubTopProfileView : UIView {
         super.init(frame: frame)
         
         setupUIElements()
+     
         configureAvatarIMG()
         configureUserLoginLabel()
         configureUserNameLabe()
