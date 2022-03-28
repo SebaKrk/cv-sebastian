@@ -14,17 +14,20 @@ class PublicRepoCell : UITableViewCell {
     
     let repoNameLabel = UILabel()
     let repoCreatedLabel = UILabel()
-    let languageLabel = UIImageView()
+    let languageIMG = UIImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureRepoNameLabel()
         configureCreatedLabel()
+        configureLanguageIMG()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+//    MARK: - Constraints
     
     private func configureRepoNameLabel() {
         addSubview(repoNameLabel)
@@ -51,5 +54,16 @@ class PublicRepoCell : UITableViewCell {
         ])
     }
     
+    private func configureLanguageIMG() {
+        addSubview(languageIMG)
+        languageIMG.translatesAutoresizingMaskIntoConstraints = false
+            
+        NSLayoutConstraint.activate([
+            languageIMG.centerYAnchor.constraint(equalTo: centerYAnchor),
+            languageIMG.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
+            languageIMG.heightAnchor.constraint(equalToConstant: 20),
+            languageIMG.widthAnchor.constraint(equalToConstant: 20)
+        ])
+    }
     
 }

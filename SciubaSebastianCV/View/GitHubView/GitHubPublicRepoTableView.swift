@@ -23,12 +23,16 @@ class GitHubPublicRepoTableView : UITableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    MARK: - TableView
+    
     private func setupTableView() {
         register(PublicRepoCell.self, forCellReuseIdentifier: PublicRepoCell.publicRepoIdentifier)
-        rowHeight = 75
+        rowHeight = 50
         delegate = self
         dataSource = self
     }
+    
+//    MARK: - UI Elements
     
     private func setupUIemenets() {
         gitHubRepoViewModel.getRepoData()
@@ -36,25 +40,26 @@ class GitHubPublicRepoTableView : UITableView {
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
 extension GitHubPublicRepoTableView : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(gitHubRepos.count)
         return gitHubRepos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dequeueReusableCell(withIdentifier: PublicRepoCell.publicRepoIdentifier) as! PublicRepoCell
         let data = gitHubRepos[indexPath.row]
+        
         cell.repoNameLabel.text = data.name
-
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy MM"
-//        let date = dateFormatter.date(from: data.created_at)
         cell.repoCreatedLabel.text = data.created_at
+        cell.languageIMG.image = UIImage(named: data.language)
         
         return cell
     }
 }
+
+// MARK: - GitHubReposViewModellDelegate
 
 extension GitHubPublicRepoTableView : GitHubReposViewModellDelegate {
     func updateView(repos: [GitHubRepos]) {
