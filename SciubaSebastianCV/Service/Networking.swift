@@ -14,7 +14,7 @@ class Networking {
     private let basicURL = "https://api.github.com/users/SebaKrk"
     private let basicRepo = "https://api.github.com/users/SebaKrk/repos"
     
-    func getUserData(completion: @escaping (Result<Users,Error>)->Void) {
+    func fetchUserData(completion: @escaping (Result<Users,Error>)->Void) {
         
         guard let url = URL(string: basicURL) else { return }
         
@@ -41,7 +41,7 @@ class Networking {
         } .resume()
     }
     
-    func getReposData(completion: @escaping (Result<[GitHubRepos],Error>)->Void) {
+    func fetchReposData(completion: @escaping (Result<[GitHubRepos],Error>)->Void) {
         
         guard let url = URL(string: basicRepo) else { return }
         
