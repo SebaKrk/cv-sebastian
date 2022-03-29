@@ -36,7 +36,7 @@ class GitHubProfileView : UIView {
     
     // MARK: - Setup UIElemenets
     
-    func setupData(user: Users) {
+    func setupData(user: User) {
         dowloadImage(from: user.avatar_url)
         userLoginLabel.text = user.login
         userNameLabel.text = user.name

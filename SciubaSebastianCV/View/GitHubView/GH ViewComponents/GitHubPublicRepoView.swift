@@ -31,7 +31,7 @@ class GitHubPublicRepoView : UIView {
 
     // MARK: - Setup UIElemenets
     
-    func setupData(users: Users) {
+    func setupData(users: User) {
         publicRepoScore.text = "\(users.public_repos)"
     }
     

@@ -53,7 +53,7 @@ class GitHubVC : UIViewController{
 
 extension GitHubVC : GitHubViewModelDelegate {
     
-    func updateUserDataView(user: Users) {
+    func updateUserDataView(user: User) {
         gitHubView.getUsersDataView(user: user)
     }
     

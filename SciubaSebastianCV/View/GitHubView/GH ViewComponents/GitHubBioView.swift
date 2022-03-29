@@ -24,7 +24,7 @@ class GitHubBioView : UIView {
     
 // MARK: - Setup UIElemenets
     
-    func setupData(user: Users) {
+    func setupData(user: User) {
         bioLabel.text = user.bio
     }
     

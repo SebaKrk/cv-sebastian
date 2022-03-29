@@ -14,7 +14,7 @@ class Networking {
     private let basicURL = "https://api.github.com/users/SebaKrk"
     private let basicRepo = "https://api.github.com/users/SebaKrk/repos"
     
-    func fetchUserData(completion: @escaping (Result<Users,Error>)->Void) {
+    func fetchUserData(completion: @escaping (Result<User,Error>)->Void) {
         
         guard let url = URL(string: basicURL) else { return }
         
@@ -33,7 +33,7 @@ class Networking {
             }
             do {
                 let decoder = JSONDecoder()
-                let user = try decoder.decode(Users.self, from: data)
+                let user = try decoder.decode(User.self, from: data)
                 completion(.success(user))
             } catch {
                 completion(.failure(NSError()))

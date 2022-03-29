@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol GitHubViewModelDelegate : AnyObject {
-    func updateUserDataView(user: Users)
+    func updateUserDataView(user: User)
     func updateReposView(repos: [GitHubRepos])
 }
 

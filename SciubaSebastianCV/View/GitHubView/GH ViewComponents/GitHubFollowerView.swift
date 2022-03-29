@@ -31,7 +31,7 @@ class GitHubFollowerView : UIView {
     
     // MARK: - Setup UIElemenets
     
-    func setupData(users: Users) {
+    func setupData(users: User) {
         followerScore.text = "\(users.followers)"
     }
 

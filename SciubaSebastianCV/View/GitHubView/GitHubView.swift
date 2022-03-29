@@ -27,19 +27,21 @@ class GitHubView : UIView {
         configurePublicRepoView()
         configureGitHubButton()
         configureListPubRepoTeableView()
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func getUsersDataView(user: Users) {
+    func getUsersDataView(user: User) {
         profileView.setupData(user: user)
         bioView.setupData(user: user)
         folowersView.setupData(users: user)
         publicRepoView.setupData(users: user)
         githubPage.setupData(user: user)
     }
+    
     func getPublicReposDataView(repos: [GitHubRepos]) {
         listPubRepoTableView.setuData(repos: repos)
     }
