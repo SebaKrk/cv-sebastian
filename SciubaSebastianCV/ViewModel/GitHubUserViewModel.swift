@@ -8,25 +8,46 @@
 import Foundation
 
 
-protocol GitHubUserViewModelDelegate : AnyObject {
-    func updateView(user: Users)
+protocol GitHubViewModelDelegate : AnyObject {
+    func updateUserDataView(user: Users)
+    func updateReposView(repos: [GitHubRepos])
 }
 
 class GitHubUserViewModel {
     
-    var ghUserViewModelDelegate : GitHubUserViewModelDelegate?
+    var gitHubViewModelDelegate : GitHubViewModelDelegate?
+    
+//    MARK: - User
     
     func getUserData() {
-        Networking.shared.getUserData { result in
+        Networking.shared.fetchUserData { result in
             switch result {
                 
             case .success( let user):
                 DispatchQueue.main.async {
-                    self.ghUserViewModelDelegate?.updateView(user: user)
+                    self.gitHubViewModelDelegate?.updateUserDataView(user: user)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
+    
+//    MARK: - Repos
+    
+    func getReposData() {
+        Networking.shared.fetchReposData { result in
+            switch result {
+                
+            case .success(let repo):
+                DispatchQueue.main.async {
+                    self.gitHubViewModelDelegate?.updateReposView(repos: repo)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
 }
+
