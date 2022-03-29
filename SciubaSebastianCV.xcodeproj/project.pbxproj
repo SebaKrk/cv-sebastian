@@ -14,6 +14,7 @@
 		0502B59A27F19CA800D0ED7F /* GitHubPublicRepoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59927F19CA800D0ED7F /* GitHubPublicRepoTableView.swift */; };
 		0502B59E27F2115700D0ED7F /* PublicRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59D27F2115700D0ED7F /* PublicRepoCell.swift */; };
 		0502B5A227F2ED5B00D0ED7F /* GitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5A127F2ED5B00D0ED7F /* GitHubView.swift */; };
+		0502B5A527F3019E00D0ED7F /* GitHubTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5A427F3019E00D0ED7F /* GitHubTopView.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
@@ -31,7 +32,7 @@
 		05BC644527EB3E0500FB1544 /* ExperianceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644427EB3E0500FB1544 /* ExperianceViewModel.swift */; };
 		05BC644727EC83FE00FB1544 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644627EC83FE00FB1544 /* GitHubUser.swift */; };
 		05BC644927EC8A9100FB1544 /* GitHubRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644827EC8A9100FB1544 /* GitHubRepos.swift */; };
-		05BC644D27ECD81C00FB1544 /* GitHubTopProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644C27ECD81C00FB1544 /* GitHubTopProfileView.swift */; };
+		05BC644D27ECD81C00FB1544 /* GitHubProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC644C27ECD81C00FB1544 /* GitHubProfileView.swift */; };
 		05BC649527EDB25B00FB1544 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC649427EDB25B00FB1544 /* Networking.swift */; };
 		05BC649727EDB81200FB1544 /* GitHubUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC649627EDB81200FB1544 /* GitHubUserViewModel.swift */; };
 		05F9105827E07F050069233D /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9105727E07F050069233D /* AboutMeView.swift */; };
@@ -61,6 +62,7 @@
 		0502B59927F19CA800D0ED7F /* GitHubPublicRepoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPublicRepoTableView.swift; sourceTree = "<group>"; };
 		0502B59D27F2115700D0ED7F /* PublicRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicRepoCell.swift; sourceTree = "<group>"; };
 		0502B5A127F2ED5B00D0ED7F /* GitHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubView.swift; sourceTree = "<group>"; };
+		0502B5A427F3019E00D0ED7F /* GitHubTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTopView.swift; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		05BC644427EB3E0500FB1544 /* ExperianceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperianceViewModel.swift; sourceTree = "<group>"; };
 		05BC644627EC83FE00FB1544 /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
 		05BC644827EC8A9100FB1544 /* GitHubRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepos.swift; sourceTree = "<group>"; };
-		05BC644C27ECD81C00FB1544 /* GitHubTopProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTopProfileView.swift; sourceTree = "<group>"; };
+		05BC644C27ECD81C00FB1544 /* GitHubProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubProfileView.swift; sourceTree = "<group>"; };
 		05BC649427EDB25B00FB1544 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		05BC649627EDB81200FB1544 /* GitHubUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserViewModel.swift; sourceTree = "<group>"; };
 		05F9105727E07F050069233D /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
@@ -131,7 +133,8 @@
 		0502B5A327F2F11600D0ED7F /* GH ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				05BC644C27ECD81C00FB1544 /* GitHubTopProfileView.swift */,
+				0502B5A427F3019E00D0ED7F /* GitHubTopView.swift */,
+				05BC644C27ECD81C00FB1544 /* GitHubProfileView.swift */,
 				0502B58F27F047BD00D0ED7F /* GitHubBioView.swift */,
 				0502B59527F0E82D00D0ED7F /* GitHubFollowerView.swift */,
 				0502B59327F0E65F00D0ED7F /* GitHubPublicRepoView.swift */,
@@ -461,7 +464,7 @@
 				9304607527DF7C8E0056CB5F /* ConcactDataLabel.swift in Sources */,
 				05F9106127E0C15C0069233D /* SkillsAndCoursesVC.swift in Sources */,
 				05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */,
-				05BC644D27ECD81C00FB1544 /* GitHubTopProfileView.swift in Sources */,
+				05BC644D27ECD81C00FB1544 /* GitHubProfileView.swift in Sources */,
 				0502B59E27F2115700D0ED7F /* PublicRepoCell.swift in Sources */,
 				0502B5A227F2ED5B00D0ED7F /* GitHubView.swift in Sources */,
 				9304606F27DF72460056CB5F /* ButtonsView.swift in Sources */,
@@ -472,6 +475,7 @@
 				05BC637127E8760700FB1544 /* String+Ext.swift in Sources */,
 				93B0E1B427DF6AE900A4433B /* TopProfileView.swift in Sources */,
 				05BC637927E8A9B200FB1544 /* ExperienceData+Service.swift in Sources */,
+				0502B5A527F3019E00D0ED7F /* GitHubTopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

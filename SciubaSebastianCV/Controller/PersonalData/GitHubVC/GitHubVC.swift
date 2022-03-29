@@ -8,10 +8,8 @@
 import UIKit
 
 class GitHubVC : UIViewController{
-    
-    let doneButton = UIButton()
+
     let gitHubView = GitHubView()
-    
     let gitHubViewModel = GitHubUserViewModel()
     
     override func viewDidLoad() {
@@ -24,8 +22,6 @@ class GitHubVC : UIViewController{
     
     private func setupView() {
         view.backgroundColor = .white
-        
-        configureDoneButton()
         configureGitHubView()
         getData()
     }
@@ -37,35 +33,15 @@ class GitHubVC : UIViewController{
         gitHubViewModel.getUserData()
         gitHubViewModel.getReposData()
     }
-    
-//    MARK: - OBJC
-    
-    @objc func handleDoneButton() {
-        dismiss(animated: true, completion: nil)
-    }
-    
+
     //    MARK: - Constraints
-    
-    private func configureDoneButton() {
-        view.addSubview(doneButton)
-        doneButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        doneButton.setTitle("done", for: .normal)
-        doneButton.setTitleColor(.systemBlue, for: .normal)
-        doneButton.addTarget(self, action: #selector(handleDoneButton), for: .touchUpInside)
-        
-        NSLayoutConstraint.activate([
-            doneButton.topAnchor.constraint(equalTo: view.topAnchor,constant: 20),
-            doneButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20)
-        ])
-    }
-    
+
     private func configureGitHubView() {
         view.addSubview(gitHubView)
         gitHubView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            gitHubView.topAnchor.constraint(equalTo: doneButton.bottomAnchor),
+            gitHubView.topAnchor.constraint(equalTo: view.topAnchor),
             gitHubView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             gitHubView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             gitHubView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)

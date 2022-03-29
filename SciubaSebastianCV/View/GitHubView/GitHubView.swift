@@ -9,7 +9,8 @@ import UIKit
 
 class GitHubView : UIView {
     
-    let topView = GitHubTopProfileView()
+    let topView = GitHubTopView()
+    let profileView = GitHubProfileView()
     let bioView = GitHubBioView()
     let folowersView = GitHubFollowerView()
     let publicRepoView = GitHubPublicRepoView()
@@ -20,6 +21,7 @@ class GitHubView : UIView {
         super.init(frame: frame)
         
         configureTopView()
+        configureProfileView()
         configureBioView()
         configureFollowersView()
         configurePublicRepoView()
@@ -32,7 +34,7 @@ class GitHubView : UIView {
     }
     
     func getUsersDataView(user: Users) {
-        topView.setupData(user: user)
+        profileView.setupData(user: user)
         bioView.setupData(user: user)
         folowersView.setupData(users: user)
         publicRepoView.setupData(users: user)
@@ -42,8 +44,6 @@ class GitHubView : UIView {
         listPubRepoTableView.setuData(repos: repos)
     }
     
-    
-    
 //    MARK: - Constraints
     
     private func configureTopView() {
@@ -51,10 +51,22 @@ class GitHubView : UIView {
         topView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            topView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            topView.topAnchor.constraint(equalTo: topAnchor),
             topView.leadingAnchor.constraint(equalTo: leadingAnchor),
             topView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            topView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2)
+            topView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.05)
+        ])
+    }
+    
+    private func configureProfileView() {
+        addSubview(profileView)
+        profileView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            profileView.topAnchor.constraint(equalTo: topView.bottomAnchor),
+            profileView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            profileView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            profileView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2)
         ])
     }
     
@@ -63,7 +75,7 @@ class GitHubView : UIView {
         bioView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            bioView.topAnchor.constraint(equalTo: topView.bottomAnchor),
+            bioView.topAnchor.constraint(equalTo: profileView.bottomAnchor),
             bioView.leadingAnchor.constraint(equalTo: leadingAnchor),
             bioView.trailingAnchor.constraint(equalTo: trailingAnchor),
             bioView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.11)

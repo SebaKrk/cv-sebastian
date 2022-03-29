@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class GitHubTopProfileView : UIView {
+class GitHubProfileView : UIView {
     
     let avatarImgView = UIImageView()
     let userLoginLabel = UILabel()
