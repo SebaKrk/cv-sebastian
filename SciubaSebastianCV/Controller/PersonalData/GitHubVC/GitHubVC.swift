@@ -16,6 +16,9 @@ class GitHubVC : UIViewController{
         super.viewDidLoad()
         
         setupView()
+        gitHubView.doneButtonCommpletion = { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        }
     }
     
 //    MARK: - SetupView

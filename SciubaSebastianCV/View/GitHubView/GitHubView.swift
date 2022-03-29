@@ -17,6 +17,12 @@ class GitHubView : UIView {
     let listPubRepoTableView = GitHubPublicRepoTableView()
     let githubPage = GitHubPageView()
     
+    var doneButtonCommpletion : (() -> ())! {
+        didSet {
+            topView.doneButtonCommpletion = doneButtonCommpletion
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -27,7 +33,6 @@ class GitHubView : UIView {
         configurePublicRepoView()
         configureGitHubButton()
         configureListPubRepoTeableView()
-        
     }
     
     required init?(coder: NSCoder) {

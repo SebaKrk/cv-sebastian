@@ -10,6 +10,7 @@ import UIKit
 class GitHubTopView : UIView {
     
     let doneButton = UIButton()
+    var doneButtonCommpletion : (() -> ())!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,11 +20,12 @@ class GitHubTopView : UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     //    MARK: - OBJC
-        
-        @objc func handleDoneButton() {
-            print("dismiss(animated: true, completion: nil)")
-        }
+    
+    @objc func handleDoneButton() {
+        doneButtonCommpletion()
+    }
     
     //    MARK: - Constraints
     
