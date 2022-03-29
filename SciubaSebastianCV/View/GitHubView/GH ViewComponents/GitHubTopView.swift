@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol GitHubTopViewDelegate {
+    func dismissGitHubViewController()
+}
+
 class GitHubTopView : UIView {
     
-    let doneButton = UIButton()
-    var doneButtonCommpletion : (() -> ())!
+    var gitHubTopViewDelegate : GitHubTopViewDelegate!
     
+    let doneButton = UIButton()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -24,7 +29,7 @@ class GitHubTopView : UIView {
     //    MARK: - OBJC
     
     @objc func handleDoneButton() {
-        doneButtonCommpletion()
+        gitHubTopViewDelegate.dismissGitHubViewController()
     }
     
     //    MARK: - Constraints

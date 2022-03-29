@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
+protocol GitHubPageViewDelegate {
+    func didPressGitHubPageButton(urlString: String)
+}
+
 class GitHubPageView : UIView {
+    
+    var delegate : GitHubPageViewDelegate?
     
     let containerButton = UIButton()
     
@@ -32,7 +38,8 @@ class GitHubPageView : UIView {
 //    MARK: - OBJC
     
     @objc func handleTapGesture() {
-        print("safari \(gitHubURL)")
+        let urlString = gitHubURL
+        delegate?.didPressGitHubPageButton(urlString: urlString)
     }
     
 //    MARK: - GestureRecognizer

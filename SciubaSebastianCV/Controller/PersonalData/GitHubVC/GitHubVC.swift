@@ -11,14 +11,11 @@ class GitHubVC : UIViewController{
 
     let gitHubView = GitHubView()
     let gitHubViewModel = GitHubUserViewModel()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
-        gitHubView.doneButtonCommpletion = { [weak self] in
-            self?.dismiss(animated: true, completion: nil)
-        }
     }
     
 //    MARK: - SetupView
@@ -27,6 +24,7 @@ class GitHubVC : UIViewController{
         view.backgroundColor = .white
         configureGitHubView()
         getData()
+        signDelegate()
     }
     
 //    MARK: - GetData
@@ -35,6 +33,11 @@ class GitHubVC : UIViewController{
         gitHubViewModel.gitHubViewModelDelegate = self
         gitHubViewModel.getUserData()
         gitHubViewModel.getReposData()
+    }
+    
+    func signDelegate() {
+        gitHubView.gitHubViewDelegate = self
+//        gitHubView.gitHubViewPageDelegate = self
     }
 
     //    MARK: - Constraints
@@ -52,7 +55,7 @@ class GitHubVC : UIViewController{
     }
 }
 
-//MARK: - GitHubViewModelDelegate
+// MARK: - GitHubViewModelDelegate
 
 extension GitHubVC : GitHubViewModelDelegate {
     
@@ -64,3 +67,17 @@ extension GitHubVC : GitHubViewModelDelegate {
         gitHubView.getPublicReposDataView(repos: repos)
     }
 }
+
+// MARK: - GitHubViewDelegate
+
+extension GitHubVC: GitHubViewDelegate {
+
+    func dismissGitHubViewController() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func didPressGitHubPageButton(urlString: String) {
+        showSafariService(with: urlString)
+    }
+}
+

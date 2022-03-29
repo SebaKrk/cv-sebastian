@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol GitHubViewDelegate {
+    func dismissGitHubViewController()
+    func didPressGitHubPageButton(urlString: String)
+}
+
 class GitHubView : UIView {
     
     let topView = GitHubTopView()
@@ -17,11 +22,7 @@ class GitHubView : UIView {
     let listPubRepoTableView = GitHubPublicRepoTableView()
     let githubPage = GitHubPageView()
     
-    var doneButtonCommpletion : (() -> ())! {
-        didSet {
-            topView.doneButtonCommpletion = doneButtonCommpletion
-        }
-    }
+    var gitHubViewDelegate: GitHubViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,6 +34,8 @@ class GitHubView : UIView {
         configurePublicRepoView()
         configureGitHubButton()
         configureListPubRepoTeableView()
+        signDelegates()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -49,6 +52,11 @@ class GitHubView : UIView {
     
     func getPublicReposDataView(repos: [GitHubRepos]) {
         listPubRepoTableView.setuData(repos: repos)
+    }
+    
+    func signDelegates() {
+        topView.gitHubTopViewDelegate = self
+        githubPage.delegate = self
     }
     
 //    MARK: - Constraints
@@ -137,3 +145,16 @@ class GitHubView : UIView {
         ])
     }
 }
+
+// MARK: - GitHubTopViewDelegate, GitHubPageViewDelegate
+
+extension GitHubView : GitHubTopViewDelegate, GitHubPageViewDelegate {    
+    func dismissGitHubViewController() {
+        gitHubViewDelegate?.dismissGitHubViewController()
+    }
+    
+    func didPressGitHubPageButton(urlString: String) {
+        gitHubViewDelegate?.didPressGitHubPageButton(urlString: urlString)
+    }
+}
+
