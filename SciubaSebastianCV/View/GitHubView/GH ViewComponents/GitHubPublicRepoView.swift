@@ -16,11 +16,11 @@ class GitHubPublicRepoView : UIView {
     let publicRepoLabel = UILabel()
     let publicRepoScore = UILabel()
     
-    let gitHubUserViewModel = GitHubUserViewModel()
+//    let gitHubUserViewModel = GitHubUserViewModel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUIElements()
+//        setupUIElements()
         configureContainer()
         configurePublicRepoLabel()
         configurePublicRepoImageView()
@@ -32,13 +32,16 @@ class GitHubPublicRepoView : UIView {
     }
 
     // MARK: - Setup UIElemenets
+    
+    func setupData(users: Users) {
+        publicRepoScore.text = "\(users.public_repos)"
+    }
         
-        func setupUIElements() {
-            publicRepoImageView.image = UIImage(systemName: "folder.badge.person.crop")
-            publicRepoLabel.text = "public repo"
-            gitHubUserViewModel.getUserData()
-            gitHubUserViewModel.ghUserViewModelDelegate = self
-        }
+//        func setupUIElements() {
+
+//            gitHubUserViewModel.getUserData()
+//            gitHubUserViewModel.gitHubViewModelDelegate = self
+//        }
     
 //    MARK: - Constraints
     
@@ -62,6 +65,7 @@ class GitHubPublicRepoView : UIView {
         publicRepoLabel.translatesAutoresizingMaskIntoConstraints = false
         
         publicRepoLabel.font = UIFont.systemFont(ofSize: 16)
+        publicRepoLabel.text = "public repo"
         
         NSLayoutConstraint.activate([
             publicRepoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -72,6 +76,8 @@ class GitHubPublicRepoView : UIView {
     private func configurePublicRepoImageView() {
         addSubview(publicRepoImageView)
         publicRepoImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        publicRepoImageView.image = UIImage(systemName: "folder.badge.person.crop")
         
         NSLayoutConstraint.activate([
             publicRepoImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -92,11 +98,11 @@ class GitHubPublicRepoView : UIView {
     }
 }
 
-// MARK: - GitHubUserViewModelDelegate
-
-extension GitHubPublicRepoView : GitHubUserViewModelDelegate {
-    func updateView(user: Users) {
-        publicRepoScore.text = "\(user.public_repos)"
-    }
-}
+//// MARK: - GitHubUserViewModelDelegate
+//
+//extension GitHubPublicRepoView : GitHubViewModelDelegate {
+//    func updateUserDataView(user: Users) {
+//        publicRepoScore.text = "\(user.public_repos)"
+//    }
+//}
 

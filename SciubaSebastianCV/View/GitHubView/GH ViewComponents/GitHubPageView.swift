@@ -16,12 +16,12 @@ class GitHubPageView : UIView {
     let gitHubCreatedLabel = UILabel()
     var gitHubURL = ""
     
-    let gitHubUserViewModel = GitHubUserViewModel()
+//    let gitHubUserViewModel = GitHubUserViewModel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupUIElemenets()
+//        setupUIElemenets()
         configureContainer()
         conigureCreatedLabel()
         configureGutHubIMG()
@@ -46,10 +46,15 @@ class GitHubPageView : UIView {
     
 //    MARK: - Setup UI Elemnts
     
-    private func setupUIElemenets() {
-        gitHubUserViewModel.getUserData()
-        gitHubUserViewModel.ghUserViewModelDelegate = self
+    func setupData(user: Users) {
+        gitHubCreatedLabel.text = "since \(user.created_at)"
+        gitHubURL = user.html_url
     }
+    
+//    private func setupUIElemenets() {
+//        gitHubUserViewModel.getUserData()
+//        gitHubUserViewModel.gitHubViewModelDelegate = self
+//    }
 
 //    MARK: - Constraints
     
@@ -101,9 +106,9 @@ class GitHubPageView : UIView {
 }
 // MARK: - GitHubUserViewModelDelegate
 
-extension GitHubPageView : GitHubUserViewModelDelegate {
-    func updateView(user: Users) {
-        gitHubCreatedLabel.text = "since \(user.created_at)"
-        gitHubURL = user.html_url
-    }
-}
+//extension GitHubPageView : GitHubViewModelDelegate {
+//    func updateUserDataView(user: Users) {
+//        gitHubCreatedLabel.text = "since \(user.created_at)"
+//        gitHubURL = user.html_url
+//    }
+//}

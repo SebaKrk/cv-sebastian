@@ -10,12 +10,12 @@ import UIKit
 
 class GitHubPublicRepoTableView : UITableView {
     
-    let gitHubRepoViewModel = GitHubReposViewModel()
+//    let gitHubRepoViewModel = GitHubReposViewModel()
     var gitHubRepos = [GitHubRepos]()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-        setupUIemenets()
+//        setupUIemenets()
         setupTableView()
     }
     
@@ -34,10 +34,15 @@ class GitHubPublicRepoTableView : UITableView {
     
 //    MARK: - UI Elements
     
-    private func setupUIemenets() {
-        gitHubRepoViewModel.getRepoData()
-        gitHubRepoViewModel.ghReposViewModelDelegate = self
+    func setuData(repos: [GitHubRepos]) {
+        gitHubRepos = repos
+        reloadData()
     }
+    
+//    private func setupUIemenets() {
+//        gitHubRepoViewModel.getRepoData()
+//        gitHubRepoViewModel.ghReposViewModelDelegate = self
+//    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -61,9 +66,9 @@ extension GitHubPublicRepoTableView : UITableViewDelegate, UITableViewDataSource
 
 // MARK: - GitHubReposViewModellDelegate
 
-extension GitHubPublicRepoTableView : GitHubReposViewModellDelegate {
-    func updateView(repos: [GitHubRepos]) {
-        gitHubRepos = repos
-        reloadData()
-    }
-}
+//extension GitHubPublicRepoTableView : GitHubReposViewModellDelegate {
+//    func updateView(repos: [GitHubRepos]) {
+//        gitHubRepos = repos
+//        reloadData()
+//    }
+//}

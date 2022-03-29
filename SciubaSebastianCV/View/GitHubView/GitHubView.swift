@@ -1,0 +1,120 @@
+//
+//  GitHubView.swift
+//  SciubaSebastianCV
+//
+//  Created by akra on 29/03/2022.
+//
+
+import UIKit
+
+class GitHubView : UIView {
+    
+    let topView = GitHubTopProfileView()
+    let bioView = GitHubBioView()
+    let folowersView = GitHubFollowerView()
+    let publicRepoView = GitHubPublicRepoView()
+    let listPubRepoTableView = GitHubPublicRepoTableView()
+    let githubPage = GitHubPageView()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        configureTopView()
+        configureBioView()
+        configureFollowersView()
+        configurePublicRepoView()
+        configureGitHubButton()
+        configureListPubRepoTeableView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func getUsersDataView(user: Users) {
+        topView.setupData(user: user)
+        bioView.setupData(user: user)
+        folowersView.setupData(users: user)
+        publicRepoView.setupData(users: user)
+        githubPage.setupData(user: user)
+    }
+    func getPublicReposDataView(repos: [GitHubRepos]) {
+        listPubRepoTableView.setuData(repos: repos)
+    }
+    
+    
+    
+//    MARK: - Constraints
+    
+    private func configureTopView() {
+        addSubview(topView)
+        topView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            topView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            topView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            topView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            topView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2)
+        ])
+    }
+    
+    private func configureBioView() {
+        addSubview(bioView)
+        bioView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            bioView.topAnchor.constraint(equalTo: topView.bottomAnchor),
+            bioView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            bioView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            bioView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.11)
+        ])
+    }
+    
+    private func configureFollowersView() {
+        addSubview(folowersView)
+        folowersView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            folowersView.topAnchor.constraint(equalTo: bioView.bottomAnchor),
+            folowersView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            folowersView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            folowersView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1)
+        ])
+    }
+    
+    private func configurePublicRepoView() {
+        addSubview(publicRepoView)
+        publicRepoView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            publicRepoView.topAnchor.constraint(equalTo: folowersView.bottomAnchor),
+            publicRepoView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            publicRepoView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            publicRepoView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1)
+        ])
+    }
+    
+    public func configureGitHubButton() {
+        addSubview(githubPage)
+        githubPage.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            githubPage.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            githubPage.leadingAnchor.constraint(equalTo: leadingAnchor),
+            githubPage.trailingAnchor.constraint(equalTo: trailingAnchor),
+            githubPage.heightAnchor.constraint(equalToConstant: 75)
+        ])
+    }
+    
+    public func configureListPubRepoTeableView() {
+       addSubview(listPubRepoTableView)
+        listPubRepoTableView.translatesAutoresizingMaskIntoConstraints = false
+                
+        NSLayoutConstraint.activate([
+            listPubRepoTableView.topAnchor.constraint(equalTo: publicRepoView.bottomAnchor),
+            listPubRepoTableView.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 15),
+            listPubRepoTableView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -15),
+            listPubRepoTableView.bottomAnchor.constraint(equalTo: githubPage.topAnchor)
+        ])
+    }
+}

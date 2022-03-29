@@ -20,12 +20,13 @@ class GitHubTopProfileView : UIView {
     let companyImageView = UIImageView()
     let companyLabel = UILabel()
     
-    let gitHubUserViewModel = GitHubUserViewModel()
+//    let gitHubUserViewModel = GitHubUserViewModel()
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupUIElements()
+//        setupUIElements()
      
         configureAvatarIMG()
         configureUserLoginLabel()
@@ -40,10 +41,17 @@ class GitHubTopProfileView : UIView {
     
     // MARK: - Setup UIElemenets
     
-    func setupUIElements() {
-        gitHubUserViewModel.getUserData()
-        gitHubUserViewModel.ghUserViewModelDelegate = self
+    func setupData(user: Users) {
+        dowloadImage(from: user.avatar_url)
+        userLoginLabel.text = user.login
+        userNameLabel.text = user.name
+        locationLabel.text = user.location
+        companyLabel.text = user.company
     }
+//    func setupUIElements() {
+//        gitHubUserViewModel.getUserData()
+//        gitHubUserViewModel.gitHubViewModelDelegate = self
+//    }
     
     //    MARK: - Constraints
     
@@ -121,7 +129,7 @@ class GitHubTopProfileView : UIView {
     }
     
     // MARK: - Helpers
-    
+
     func dowloadImage(from urlString: String) {
         guard let url = URL(string: urlString) else {return}
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -137,14 +145,14 @@ class GitHubTopProfileView : UIView {
     }
 }
 
-// MARK: - GitHubUserViewModelDelegate
-
-extension GitHubTopProfileView : GitHubUserViewModelDelegate {
-    func updateView(user: Users) {
-        dowloadImage(from: user.avatar_url)
-        userLoginLabel.text = user.login
-        userNameLabel.text = user.name
-        locationLabel.text = user.location
-        companyLabel.text = user.company
-    }
-}
+//// MARK: - GitHubUserViewModelDelegate
+//
+//extension GitHubTopProfileView : GitHubViewModelDelegate {
+//    func updateUserDataView(user: Users) {
+//        dowloadImage(from: user.avatar_url)
+//        userLoginLabel.text = user.login
+//        userNameLabel.text = user.name
+//        locationLabel.text = user.location
+//        companyLabel.text = user.company
+//    }
+//}
