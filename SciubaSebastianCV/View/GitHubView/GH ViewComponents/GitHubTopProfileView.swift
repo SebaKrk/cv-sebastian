@@ -20,14 +20,9 @@ class GitHubTopProfileView : UIView {
     let companyImageView = UIImageView()
     let companyLabel = UILabel()
     
-//    let gitHubUserViewModel = GitHubUserViewModel()
-
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        setupUIElements()
-     
         configureAvatarIMG()
         configureUserLoginLabel()
         configureUserNameLabe()
@@ -48,10 +43,6 @@ class GitHubTopProfileView : UIView {
         locationLabel.text = user.location
         companyLabel.text = user.company
     }
-//    func setupUIElements() {
-//        gitHubUserViewModel.getUserData()
-//        gitHubUserViewModel.gitHubViewModelDelegate = self
-//    }
     
     //    MARK: - Constraints
     
@@ -144,15 +135,3 @@ class GitHubTopProfileView : UIView {
         task.resume()
     }
 }
-
-//// MARK: - GitHubUserViewModelDelegate
-//
-//extension GitHubTopProfileView : GitHubViewModelDelegate {
-//    func updateUserDataView(user: Users) {
-//        dowloadImage(from: user.avatar_url)
-//        userLoginLabel.text = user.login
-//        userNameLabel.text = user.name
-//        locationLabel.text = user.location
-//        companyLabel.text = user.company
-//    }
-//}

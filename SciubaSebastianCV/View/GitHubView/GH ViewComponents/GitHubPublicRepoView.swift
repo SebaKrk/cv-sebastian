@@ -16,11 +16,9 @@ class GitHubPublicRepoView : UIView {
     let publicRepoLabel = UILabel()
     let publicRepoScore = UILabel()
     
-//    let gitHubUserViewModel = GitHubUserViewModel()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        setupUIElements()
+        
         configureContainer()
         configurePublicRepoLabel()
         configurePublicRepoImageView()
@@ -36,12 +34,6 @@ class GitHubPublicRepoView : UIView {
     func setupData(users: Users) {
         publicRepoScore.text = "\(users.public_repos)"
     }
-        
-//        func setupUIElements() {
-
-//            gitHubUserViewModel.getUserData()
-//            gitHubUserViewModel.gitHubViewModelDelegate = self
-//        }
     
 //    MARK: - Constraints
     
@@ -97,12 +89,3 @@ class GitHubPublicRepoView : UIView {
         ])
     }
 }
-
-//// MARK: - GitHubUserViewModelDelegate
-//
-//extension GitHubPublicRepoView : GitHubViewModelDelegate {
-//    func updateUserDataView(user: Users) {
-//        publicRepoScore.text = "\(user.public_repos)"
-//    }
-//}
-

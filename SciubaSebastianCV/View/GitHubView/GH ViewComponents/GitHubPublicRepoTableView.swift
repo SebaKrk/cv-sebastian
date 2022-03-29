@@ -10,12 +10,10 @@ import UIKit
 
 class GitHubPublicRepoTableView : UITableView {
     
-//    let gitHubRepoViewModel = GitHubReposViewModel()
     var gitHubRepos = [GitHubRepos]()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-//        setupUIemenets()
         setupTableView()
     }
     
@@ -38,11 +36,6 @@ class GitHubPublicRepoTableView : UITableView {
         gitHubRepos = repos
         reloadData()
     }
-    
-//    private func setupUIemenets() {
-//        gitHubRepoViewModel.getRepoData()
-//        gitHubRepoViewModel.ghReposViewModelDelegate = self
-//    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -63,12 +56,3 @@ extension GitHubPublicRepoTableView : UITableViewDelegate, UITableViewDataSource
         return cell
     }
 }
-
-// MARK: - GitHubReposViewModellDelegate
-
-//extension GitHubPublicRepoTableView : GitHubReposViewModellDelegate {
-//    func updateView(repos: [GitHubRepos]) {
-//        gitHubRepos = repos
-//        reloadData()
-//    }
-//}

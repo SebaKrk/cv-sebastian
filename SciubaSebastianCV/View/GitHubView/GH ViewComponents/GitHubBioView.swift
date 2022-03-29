@@ -11,12 +11,11 @@ import UIKit
 class GitHubBioView : UIView {
     
     let bioLabel = UILabel()
-//    let gitHubUserViewModel = GitHubUserViewModel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         configureBioLabel()
-//        setupUIElements()
     }
     
     required init?(coder: NSCoder) {
@@ -28,11 +27,6 @@ class GitHubBioView : UIView {
     func setupData(user: Users) {
         bioLabel.text = user.bio
     }
-
-//    func setupUIElements() {
-//        gitHubUserViewModel.getUserData()
-//        gitHubUserViewModel.gitHubViewModelDelegate = self
-//    }
     
 //    MARK: - Constraints
     
@@ -51,9 +45,3 @@ class GitHubBioView : UIView {
         ])
     }
 }
-
-//// MARK: - GitHubUserViewModelDelegate
-//
-//extension GitHubBioView : GitHubViewModelDelegate {
-//
-//}

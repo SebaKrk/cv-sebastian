@@ -16,12 +16,9 @@ class GitHubPageView : UIView {
     let gitHubCreatedLabel = UILabel()
     var gitHubURL = ""
     
-//    let gitHubUserViewModel = GitHubUserViewModel()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        setupUIElemenets()
         configureContainer()
         conigureCreatedLabel()
         configureGutHubIMG()
@@ -31,6 +28,7 @@ class GitHubPageView : UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 //    MARK: - OBJC
     
     @objc func handleTapGesture() {
@@ -51,11 +49,6 @@ class GitHubPageView : UIView {
         gitHubURL = user.html_url
     }
     
-//    private func setupUIElemenets() {
-//        gitHubUserViewModel.getUserData()
-//        gitHubUserViewModel.gitHubViewModelDelegate = self
-//    }
-
 //    MARK: - Constraints
     
     private func configureContainer() {
@@ -75,7 +68,6 @@ class GitHubPageView : UIView {
             containerButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.85)
         ])
     }
-    
     
     private func conigureCreatedLabel() {
         containerButton.addSubview(gitHubCreatedLabel)
@@ -104,11 +96,3 @@ class GitHubPageView : UIView {
         ])
     }
 }
-// MARK: - GitHubUserViewModelDelegate
-
-//extension GitHubPageView : GitHubViewModelDelegate {
-//    func updateUserDataView(user: Users) {
-//        gitHubCreatedLabel.text = "since \(user.created_at)"
-//        gitHubURL = user.html_url
-//    }
-//}

@@ -16,11 +16,9 @@ class GitHubFollowerView : UIView {
     let followerLabel = UILabel()
     let followerScore = UILabel()
     
-//    let gitHubUserViewModel = GitHubUserViewModel()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        setupUIElements()
+        
         configureContainer()
         configureFollowerLabel()
         configureFolloverImageView()
@@ -36,14 +34,7 @@ class GitHubFollowerView : UIView {
     func setupData(users: Users) {
         followerScore.text = "\(users.followers)"
     }
-    
-//        func setupUIElements() {
-//            followerImageView.image = UIImage(systemName: "person.3")
-//            followerLabel.text = "follower"
-//            gitHubUserViewModel.getUserData()
-//            gitHubUserViewModel.gitHubViewModelDelegate = self
-//        }
-    
+
 //    MARK: - Constraints
     
     private func configureContainer() {
@@ -61,7 +52,6 @@ class GitHubFollowerView : UIView {
         ])
     }
     
-
     private func configureFollowerLabel() {
         addSubview(followerLabel)
         followerLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -99,11 +89,3 @@ class GitHubFollowerView : UIView {
         ])
     }
 }
-
-//// MARK: - GitHubUserViewModelDelegate
-//
-//extension GitHubFollowerView : GitHubViewModelDelegate {
-//    func updateUserDataView(user: Users) {
-//        followerScore.text = "\(user.followers)"
-//    }
-//}

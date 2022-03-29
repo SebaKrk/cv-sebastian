@@ -38,7 +38,6 @@ class GitHubVC : UIViewController{
         gitHubViewModel.getReposData()
     }
     
-
 //    MARK: - OBJC
     
     @objc func handleDoneButton() {
@@ -86,4 +85,3 @@ extension GitHubVC : GitHubViewModelDelegate {
         gitHubView.getPublicReposDataView(repos: repos)
     }
 }
-
