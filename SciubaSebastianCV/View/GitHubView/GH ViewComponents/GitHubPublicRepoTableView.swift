@@ -55,4 +55,12 @@ extension GitHubPublicRepoTableView : UITableViewDelegate, UITableViewDataSource
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        deselectRow(at: indexPath, animated: true)
+        let cell = gitHubRepos[indexPath.row]
+        let urlString = cell.html_url
+        print(urlString)
+    }
 }
+

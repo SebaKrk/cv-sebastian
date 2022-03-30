@@ -11,7 +11,7 @@ class ExperianceViewModel {
     
     let service = ExperienceDataService()
     
-    func getExpData() -> [Experience] {
-        service.getExpData()
+    func setExpData() -> [Experience] {
+        service.setExpData()
     }
 }

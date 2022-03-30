@@ -15,6 +15,7 @@
 		0502B59E27F2115700D0ED7F /* PublicRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B59D27F2115700D0ED7F /* PublicRepoCell.swift */; };
 		0502B5A227F2ED5B00D0ED7F /* GitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5A127F2ED5B00D0ED7F /* GitHubView.swift */; };
 		0502B5A527F3019E00D0ED7F /* GitHubTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5A427F3019E00D0ED7F /* GitHubTopView.swift */; };
+		0502B5A827F44A4A00D0ED7F /* EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5A727F44A4A00D0ED7F /* EducationView.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
@@ -63,6 +64,7 @@
 		0502B59D27F2115700D0ED7F /* PublicRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicRepoCell.swift; sourceTree = "<group>"; };
 		0502B5A127F2ED5B00D0ED7F /* GitHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubView.swift; sourceTree = "<group>"; };
 		0502B5A427F3019E00D0ED7F /* GitHubTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTopView.swift; sourceTree = "<group>"; };
+		0502B5A727F44A4A00D0ED7F /* EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationView.swift; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 				0502B59927F19CA800D0ED7F /* GitHubPublicRepoTableView.swift */,
 			);
 			path = "GH ViewComponents";
+			sourceTree = "<group>";
+		};
+		0502B5A627F449FE00D0ED7F /* EducationView */ = {
+			isa = PBXGroup;
+			children = (
+				0502B5A727F44A4A00D0ED7F /* EducationView.swift */,
+			);
+			path = EducationView;
 			sourceTree = "<group>";
 		};
 		05BC635E27E3287800FB1544 /* SideMenu */ = {
@@ -292,6 +302,7 @@
 			children = (
 				05BC644A27ECD7CA00FB1544 /* PersonalDataView */,
 				05BC644B27ECD7E500FB1544 /* GitHubView */,
+				0502B5A627F449FE00D0ED7F /* EducationView */,
 				0502B58E27F0423100D0ED7F /* Costume */,
 			);
 			path = View;
@@ -465,6 +476,7 @@
 				05F9106127E0C15C0069233D /* SkillsAndCoursesVC.swift in Sources */,
 				05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */,
 				05BC644D27ECD81C00FB1544 /* GitHubProfileView.swift in Sources */,
+				0502B5A827F44A4A00D0ED7F /* EducationView.swift in Sources */,
 				0502B59E27F2115700D0ED7F /* PublicRepoCell.swift in Sources */,
 				0502B5A227F2ED5B00D0ED7F /* GitHubView.swift in Sources */,
 				9304606F27DF72460056CB5F /* ButtonsView.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 
 class ExperienceDataService {
     
-    func getExpData() -> [Experience] {
+    func setExpData() -> [Experience] {
         let company1 = Experience(company: "ARKA", startDate: "2022-03", endDate: "present", position: "Intern iOS Developer", location: "Krakow", responsibilities: Responsibilities(first: "Learning", second: "Learning", third: "Learning"))
         let company2 = Experience(company: "Freelance", startDate: "2021-01", endDate: "2022-02", position: "iOS Developer", location: "Krakow", responsibilities: Responsibilities(
             first: "Tworzenie aplikacji na platforme iOS",

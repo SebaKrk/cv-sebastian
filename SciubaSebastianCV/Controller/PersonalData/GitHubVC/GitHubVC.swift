@@ -35,8 +35,8 @@ class GitHubVC : UIViewController{
     
     private func getData() {
         gitHubViewModel.gitHubViewModelDelegate = self
-        gitHubViewModel.getUserData()
-        gitHubViewModel.getReposData()
+        gitHubViewModel.setUserData()
+        gitHubViewModel.setReposData()
     }
     
     func signDelegate() {
@@ -64,7 +64,7 @@ class GitHubVC : UIViewController{
 extension GitHubVC : GitHubViewModelDelegate {
     
     func updateUserDataView(user: User) {
-        gitHubView.getUsersDataView(user: user)
+        gitHubView.setUsersDataView(user: user)
     }
     
     func updateReposView(repos: [GitHubRepos]) {

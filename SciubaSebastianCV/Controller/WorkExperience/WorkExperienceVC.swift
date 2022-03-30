@@ -42,7 +42,7 @@ class WorkExperienceVC : UIViewController {
     }
     
     func getData() {
-        expArray = expDataViewModel.getExpData()
+        expArray = expDataViewModel.setExpData()
     }
     
 //    MARK: - Constraints

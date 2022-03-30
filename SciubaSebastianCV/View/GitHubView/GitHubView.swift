@@ -42,7 +42,7 @@ class GitHubView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func getUsersDataView(user: User) {
+    func setUsersDataView(user: User) {
         profileView.setupData(user: user)
         bioView.setupData(user: user)
         folowersView.setupData(users: user)

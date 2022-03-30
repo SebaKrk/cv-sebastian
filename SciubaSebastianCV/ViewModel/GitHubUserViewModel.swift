@@ -19,7 +19,7 @@ class GitHubUserViewModel {
     
 //    MARK: - User
     
-    func getUserData() {
+    func setUserData() {
         Networking.shared.fetchUserData { result in
             switch result {
                 
@@ -35,7 +35,7 @@ class GitHubUserViewModel {
     
 //    MARK: - Repos
     
-    func getReposData() {
+    func setReposData() {
         Networking.shared.fetchReposData { result in
             switch result {
                 
