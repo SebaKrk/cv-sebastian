@@ -4,13 +4,17 @@
 //
 //  Created by akra on 28/03/2022.
 //
-
-import Foundation
 import UIKit
+
+protocol GitHubPublicRepoDelegate : AnyObject {
+    func didSelectPublicRepoCell(urlString: String)
+}
 
 class GitHubPublicRepoTableView : UITableView {
     
     var gitHubRepos = [GitHubRepos]()
+    
+    weak var publicRepoDelegate: GitHubPublicRepoDelegate?
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -60,7 +64,7 @@ extension GitHubPublicRepoTableView : UITableViewDelegate, UITableViewDataSource
         deselectRow(at: indexPath, animated: true)
         let cell = gitHubRepos[indexPath.row]
         let urlString = cell.html_url
-        print(urlString)
+        publicRepoDelegate?.didSelectPublicRepoCell(urlString: urlString)
     }
 }
 

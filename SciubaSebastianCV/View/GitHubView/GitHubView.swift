@@ -10,6 +10,7 @@ import UIKit
 protocol GitHubViewDelegate : AnyObject {
     func dismissGitHubViewController()
     func didPressGitHubPageButton(urlString: String)
+    func didSelectPublicRepoCell(urlString: String)
 }
 
 class GitHubView : UIView {
@@ -41,6 +42,7 @@ class GitHubView : UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+//    MARK: - SetupUsersData
     
     func setUsersDataView(user: User) {
         profileView.setupData(user: user)
@@ -54,9 +56,12 @@ class GitHubView : UIView {
         listPubRepoTableView.setuData(repos: repos)
     }
     
+//    MARK: - SignInDelegates
+    
     func signDelegates() {
         topView.gitHubTopViewDelegate = self
         githubPage.delegate = self
+        listPubRepoTableView.publicRepoDelegate = self
     }
     
 //    MARK: - Constraints
@@ -148,13 +153,18 @@ class GitHubView : UIView {
 
 // MARK: - GitHubTopViewDelegate, GitHubPageViewDelegate
 
-extension GitHubView : GitHubTopViewDelegate, GitHubPageViewDelegate {    
+extension GitHubView : GitHubTopViewDelegate, GitHubPageViewDelegate, GitHubPublicRepoDelegate {
+ 
     func dismissGitHubViewController() {
         gitHubViewDelegate?.dismissGitHubViewController()
     }
     
     func didPressGitHubPageButton(urlString: String) {
         gitHubViewDelegate?.didPressGitHubPageButton(urlString: urlString)
+    }
+    
+    func didSelectPublicRepoCell(urlString: String) {
+        gitHubViewDelegate?.didSelectPublicRepoCell(urlString: urlString)
     }
 }
 

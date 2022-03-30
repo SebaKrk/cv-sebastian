@@ -41,7 +41,6 @@ class GitHubVC : UIViewController{
     
     func signDelegate() {
         gitHubView.gitHubViewDelegate = self
-//        gitHubView.gitHubViewPageDelegate = self
     }
 
     //    MARK: - Constraints
@@ -75,12 +74,17 @@ extension GitHubVC : GitHubViewModelDelegate {
 // MARK: - GitHubViewDelegate
 
 extension GitHubVC: GitHubViewDelegate {
-
+    
+    
     func dismissGitHubViewController() {
         dismiss(animated: true, completion: nil)
     }
     
     func didPressGitHubPageButton(urlString: String) {
+        showSafariService(with: urlString)
+    }
+    
+    func didSelectPublicRepoCell(urlString: String) {
         showSafariService(with: urlString)
     }
 }

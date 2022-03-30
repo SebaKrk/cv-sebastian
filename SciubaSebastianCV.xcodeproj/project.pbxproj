@@ -18,6 +18,7 @@
 		0502B5A827F44A4A00D0ED7F /* EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5A727F44A4A00D0ED7F /* EducationView.swift */; };
 		0502B5AB27F4503100D0ED7F /* UniversityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5AA27F4503100D0ED7F /* UniversityView.swift */; };
 		0502B5AD27F4572600D0ED7F /* StudiesTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5AC27F4572600D0ED7F /* StudiesTitleView.swift */; };
+		0502B5AF27F45BA000D0ED7F /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5AE27F45BA000D0ED7F /* Education.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
@@ -69,6 +70,7 @@
 		0502B5A727F44A4A00D0ED7F /* EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationView.swift; sourceTree = "<group>"; };
 		0502B5AA27F4503100D0ED7F /* UniversityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityView.swift; sourceTree = "<group>"; };
 		0502B5AC27F4572600D0ED7F /* StudiesTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudiesTitleView.swift; sourceTree = "<group>"; };
+		0502B5AE27F45BA000D0ED7F /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
@@ -144,8 +146,8 @@
 				0502B58F27F047BD00D0ED7F /* GitHubBioView.swift */,
 				0502B59527F0E82D00D0ED7F /* GitHubFollowerView.swift */,
 				0502B59327F0E65F00D0ED7F /* GitHubPublicRepoView.swift */,
-				0502B59727F1081600D0ED7F /* GitHubPageView.swift */,
 				0502B59927F19CA800D0ED7F /* GitHubPublicRepoTableView.swift */,
+				0502B59727F1081600D0ED7F /* GitHubPageView.swift */,
 			);
 			path = "GH ViewComponents";
 			sourceTree = "<group>";
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				05BC637627E8A64800FB1544 /* Experience.swift */,
+				0502B5AE27F45BA000D0ED7F /* Education.swift */,
 				05BC644627EC83FE00FB1544 /* GitHubUser.swift */,
 				05BC644827EC8A9100FB1544 /* GitHubRepos.swift */,
 			);
@@ -471,6 +474,7 @@
 				05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */,
 				05BC637727E8A64800FB1544 /* Experience.swift in Sources */,
 				05BC644727EC83FE00FB1544 /* GitHubUser.swift in Sources */,
+				0502B5AF27F45BA000D0ED7F /* Education.swift in Sources */,
 				93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */,
 				0502B59427F0E65F00D0ED7F /* GitHubPublicRepoView.swift in Sources */,
 				0502B59627F0E82D00D0ED7F /* GitHubFollowerView.swift in Sources */,
