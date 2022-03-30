@@ -9,7 +9,7 @@ import UIKit
 
 class EducationVC : UIViewController {
     override func viewDidLoad() {
-        view.backgroundColor = .green
+        
     }
 }
  

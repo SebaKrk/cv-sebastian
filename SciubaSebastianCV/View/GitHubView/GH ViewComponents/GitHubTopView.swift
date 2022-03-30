@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol GitHubTopViewDelegate {
+protocol GitHubTopViewDelegate: AnyObject {
     func dismissGitHubViewController()
 }
 
 class GitHubTopView : UIView {
     
-    var gitHubTopViewDelegate : GitHubTopViewDelegate!
+   weak var gitHubTopViewDelegate: GitHubTopViewDelegate!
     
     let doneButton = UIButton()
 

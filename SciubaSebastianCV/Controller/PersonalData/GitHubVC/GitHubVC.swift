@@ -20,6 +20,10 @@ class GitHubVC : UIViewController{
     
 //    MARK: - SetupView
     
+    deinit {
+        debugPrint("dddddddddddddddd einti")
+    }
+    
     private func setupView() {
         view.backgroundColor = .white
         configureGitHubView()

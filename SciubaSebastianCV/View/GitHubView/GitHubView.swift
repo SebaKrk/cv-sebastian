@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol GitHubViewDelegate {
+protocol GitHubViewDelegate : AnyObject {
     func dismissGitHubViewController()
     func didPressGitHubPageButton(urlString: String)
 }
@@ -22,7 +22,7 @@ class GitHubView : UIView {
     let listPubRepoTableView = GitHubPublicRepoTableView()
     let githubPage = GitHubPageView()
     
-    var gitHubViewDelegate: GitHubViewDelegate?
+   weak var gitHubViewDelegate: GitHubViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

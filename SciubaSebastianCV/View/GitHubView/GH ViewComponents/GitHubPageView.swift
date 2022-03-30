@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-protocol GitHubPageViewDelegate {
+protocol GitHubPageViewDelegate : AnyObject {
     func didPressGitHubPageButton(urlString: String)
 }
 
 class GitHubPageView : UIView {
     
-    var delegate : GitHubPageViewDelegate?
+    weak var delegate : GitHubPageViewDelegate?
     
     let containerButton = UIButton()
     

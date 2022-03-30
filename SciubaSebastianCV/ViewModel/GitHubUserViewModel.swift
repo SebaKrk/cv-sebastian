@@ -15,7 +15,7 @@ protocol GitHubViewModelDelegate : AnyObject {
 
 class GitHubUserViewModel {
     
-    var gitHubViewModelDelegate : GitHubViewModelDelegate?
+    weak var gitHubViewModelDelegate : GitHubViewModelDelegate?
     
 //    MARK: - User
     

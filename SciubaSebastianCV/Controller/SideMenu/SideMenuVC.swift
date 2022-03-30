@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol TabBarAppranceDelegate {
+protocol TabBarAppranceDelegate : AnyObject {
     func dismissAndShowTabBar()
 }
 
 class SideMenuVC : UIViewController {
     
-    var delegate : TabBarAppranceDelegate?
+    weak var delegate : TabBarAppranceDelegate?
     
     let container = UIView()
     let menuContainer = UIView()
