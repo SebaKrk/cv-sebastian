@@ -10,14 +10,14 @@ import UIKit
 class EducationView: UIView {
     
     let universityView = UniversityView()
-    let studiesMajorView = UIView()
+    let studiesTitleView = StudiesTitleView()
     let skilsView = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         configureUniversityView()
-        configureStudiesMajorView()
+        configureStudiesTitleView()
         configureSkilsView()
     }
     
@@ -39,17 +39,15 @@ class EducationView: UIView {
         ])
     }
     
-    private func configureStudiesMajorView() {
-        addSubview(studiesMajorView)
-        studiesMajorView.translatesAutoresizingMaskIntoConstraints = false
-        
-        studiesMajorView.backgroundColor = .blue
+    private func configureStudiesTitleView() {
+        addSubview(studiesTitleView)
+        studiesTitleView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            studiesMajorView.topAnchor.constraint(equalTo: universityView.bottomAnchor),
-            studiesMajorView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            studiesMajorView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            studiesMajorView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1)
+            studiesTitleView.topAnchor.constraint(equalTo: universityView.bottomAnchor),
+            studiesTitleView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            studiesTitleView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            studiesTitleView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1)
         ])
     }
     
@@ -60,7 +58,7 @@ class EducationView: UIView {
         skilsView.backgroundColor = .green
         
         NSLayoutConstraint.activate([
-            skilsView.topAnchor.constraint(equalTo: studiesMajorView.bottomAnchor),
+            skilsView.topAnchor.constraint(equalTo: studiesTitleView.bottomAnchor),
             skilsView.leadingAnchor.constraint(equalTo: leadingAnchor),
             skilsView.trailingAnchor.constraint(equalTo: trailingAnchor),
             skilsView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
