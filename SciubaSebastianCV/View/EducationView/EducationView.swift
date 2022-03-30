@@ -9,7 +9,7 @@ import UIKit
 
 class EducationView: UIView {
     
-    let universityView = UIView()
+    let universityView = UniversityView()
     let studiesMajorView = UIView()
     let skilsView = UIView()
     
@@ -30,8 +30,6 @@ class EducationView: UIView {
     private func configureUniversityView() {
         addSubview(universityView)
         universityView.translatesAutoresizingMaskIntoConstraints = false
-        
-        universityView.backgroundColor = .red
         
         NSLayoutConstraint.activate([
             universityView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

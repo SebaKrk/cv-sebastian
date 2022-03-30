@@ -16,6 +16,7 @@
 		0502B5A227F2ED5B00D0ED7F /* GitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5A127F2ED5B00D0ED7F /* GitHubView.swift */; };
 		0502B5A527F3019E00D0ED7F /* GitHubTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5A427F3019E00D0ED7F /* GitHubTopView.swift */; };
 		0502B5A827F44A4A00D0ED7F /* EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5A727F44A4A00D0ED7F /* EducationView.swift */; };
+		0502B5AB27F4503100D0ED7F /* UniversityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5AA27F4503100D0ED7F /* UniversityView.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
@@ -65,6 +66,7 @@
 		0502B5A127F2ED5B00D0ED7F /* GitHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubView.swift; sourceTree = "<group>"; };
 		0502B5A427F3019E00D0ED7F /* GitHubTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTopView.swift; sourceTree = "<group>"; };
 		0502B5A727F44A4A00D0ED7F /* EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationView.swift; sourceTree = "<group>"; };
+		0502B5AA27F4503100D0ED7F /* UniversityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityView.swift; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
@@ -150,8 +152,17 @@
 			isa = PBXGroup;
 			children = (
 				0502B5A727F44A4A00D0ED7F /* EducationView.swift */,
+				0502B5A927F4500500D0ED7F /* EduViewComponents */,
 			);
 			path = EducationView;
+			sourceTree = "<group>";
+		};
+		0502B5A927F4500500D0ED7F /* EduViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				0502B5AA27F4503100D0ED7F /* UniversityView.swift */,
+			);
+			path = EduViewComponents;
 			sourceTree = "<group>";
 		};
 		05BC635E27E3287800FB1544 /* SideMenu */ = {
@@ -469,6 +480,7 @@
 				93B0E1AE27DF5A7D00A4433B /* PersonalDataVC.swift in Sources */,
 				05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */,
 				0502B59827F1081600D0ED7F /* GitHubPageView.swift in Sources */,
+				0502B5AB27F4503100D0ED7F /* UniversityView.swift in Sources */,
 				05BC638A27EB118B00FB1544 /* GitHubVC.swift in Sources */,
 				9304606D27DF70330056CB5F /* CostumeButtonView.swift in Sources */,
 				05BC644927EC8A9100FB1544 /* GitHubRepos.swift in Sources */,
