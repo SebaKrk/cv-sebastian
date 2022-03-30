@@ -21,7 +21,7 @@ class GitHubVC : UIViewController{
 //    MARK: - SetupView
     
     deinit {
-        debugPrint("dddddddddddddddd einti")
+        debugPrint("GitHub ViewController deinitialization from the memory")
     }
     
     private func setupView() {

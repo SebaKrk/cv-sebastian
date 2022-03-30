@@ -22,7 +22,7 @@ class GitHubView : UIView {
     let listPubRepoTableView = GitHubPublicRepoTableView()
     let githubPage = GitHubPageView()
     
-   weak var gitHubViewDelegate: GitHubViewDelegate?
+    weak var gitHubViewDelegate: GitHubViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
