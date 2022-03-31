@@ -10,7 +10,7 @@ import Foundation
 class EducationViewModel {
     let service = EducationDataService()
     
-    func setExpData() -> [Education] {
+    func setEduData() -> [Education] {
         service.setEducationData()
     }
 }

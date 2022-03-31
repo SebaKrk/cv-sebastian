@@ -10,19 +10,29 @@ import UIKit
 class EducationVC : UIViewController {
     
     let educationView = EducationView()
-
+    let educationViewModel = EducationViewModel()
+    
+    
     override func viewDidLoad() {
         setupView()
+        setupData()
     }
     
-//    MARK: - SetupView
+    //    MARK: - SetupView
     
     private func setupView() {
         view.backgroundColor = .white
         configureEducationView()
     }
     
-//    MARK: - Constraints
+    //    MARK: - SetUpData
+    
+    private func setupData() {
+        educationView.setupEduDataView(eduData: educationViewModel.setEduData())
+    }
+    
+    
+    //    MARK: - Constraints
     
     private func configureEducationView() {
         view.addSubview(educationView)
@@ -36,4 +46,4 @@ class EducationVC : UIViewController {
         ])
     }
 }
- 
+

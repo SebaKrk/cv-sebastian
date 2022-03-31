@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 
-class SemestersTableView: UITableView {
+class SemesterTableView: UITableView {
+    
+    var educationDataViewModel = EducationViewModel()
+    var educationArray = [Education]()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -20,6 +23,8 @@ class SemestersTableView: UITableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    MARK: - setupTableView
+    
     private func setupTableView() {
         register(SemesterCell.self, forCellReuseIdentifier: SemesterCell.semesterReuseIdentifier)
         rowHeight = 100
@@ -27,18 +32,33 @@ class SemestersTableView: UITableView {
         dataSource = self
         reloadData()
     }
+    //    MARK: - UI Elements
+        
+        func setuData(eduData: [Education]) {
+            educationArray = eduData
+            reloadData()
+        }
 }
 
-extension SemestersTableView: UITableViewDelegate,UITableViewDataSource {
+// MARK: - UITableViewDelegate,UITableViewDataSource
+
+extension SemesterTableView: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return educationArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dequeueReusableCell(withIdentifier: SemesterCell.semesterReuseIdentifier) as! SemesterCell
+        let data = educationArray[indexPath.row]
+        
+        cell.subNummberLabel.text = "\(data.semester.subNummber)"
+        cell.scoreLabel.text = "\(data.semester.score)"
+        cell.academicYersLabel.text = data.semester.academic_year
+        cell.semDataLabel.text = data.semester.sem_from
         
         return cell
     }
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        deselectRow(at: indexPath, animated: true)
+    }
 }

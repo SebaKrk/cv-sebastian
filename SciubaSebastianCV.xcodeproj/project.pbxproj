@@ -22,7 +22,7 @@
 		0502B5B527F5E28E00D0ED7F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5B427F5E28E00D0ED7F /* UIView+Ext.swift */; };
 		0502B5B727F5F60A00D0ED7F /* EducationData+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5B627F5F60A00D0ED7F /* EducationData+Service.swift */; };
 		0502B5B927F6010E00D0ED7F /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5B827F6010E00D0ED7F /* EducationViewModel.swift */; };
-		0502B5BB27F6020700D0ED7F /* SemestersTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5BA27F6020700D0ED7F /* SemestersTableView.swift */; };
+		0502B5BB27F6020700D0ED7F /* SemesterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5BA27F6020700D0ED7F /* SemesterTableView.swift */; };
 		0502B5BD27F602AF00D0ED7F /* SemesterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5BC27F602AF00D0ED7F /* SemesterCell.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
@@ -79,7 +79,7 @@
 		0502B5B427F5E28E00D0ED7F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		0502B5B627F5F60A00D0ED7F /* EducationData+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EducationData+Service.swift"; sourceTree = "<group>"; };
 		0502B5B827F6010E00D0ED7F /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
-		0502B5BA27F6020700D0ED7F /* SemestersTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemestersTableView.swift; sourceTree = "<group>"; };
+		0502B5BA27F6020700D0ED7F /* SemesterTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterTableView.swift; sourceTree = "<group>"; };
 		0502B5BC27F602AF00D0ED7F /* SemesterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterCell.swift; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			children = (
 				0502B5AA27F4503100D0ED7F /* UniversityView.swift */,
 				0502B5AC27F4572600D0ED7F /* StudiesTitleView.swift */,
-				0502B5BA27F6020700D0ED7F /* SemestersTableView.swift */,
+				0502B5BA27F6020700D0ED7F /* SemesterTableView.swift */,
 			);
 			path = EduViewComponents;
 			sourceTree = "<group>";
@@ -477,7 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0502B5BB27F6020700D0ED7F /* SemestersTableView.swift in Sources */,
+				0502B5BB27F6020700D0ED7F /* SemesterTableView.swift in Sources */,
 				05BC637C27E8AD5400FB1544 /* ExperienceCell.swift in Sources */,
 				0502B59027F047BD00D0ED7F /* GitHubBioView.swift in Sources */,
 				9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */,

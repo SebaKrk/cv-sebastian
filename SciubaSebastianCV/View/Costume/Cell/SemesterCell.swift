@@ -61,7 +61,7 @@ class SemesterCell : UITableViewCell {
         container.addSubview(semLabel)
         semLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        semLabel.text = "Star Date:".localized
+        semLabel.text = "Star date:".localized
         semLabel.font = UIFont.boldSystemFont(ofSize: 14)
         
         NSLayoutConstraint.activate([
@@ -74,7 +74,6 @@ class SemesterCell : UITableViewCell {
         container.addSubview(semDataLabel)
         semDataLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        semDataLabel.text = "25-09-2019"
         semDataLabel.font = UIFont.systemFont(ofSize: 12)
         semDataLabel.textColor = .systemBlue
         
@@ -101,7 +100,6 @@ class SemesterCell : UITableViewCell {
         container.addSubview(academicYersLabel)
         academicYersLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        academicYersLabel.text = "2019/2020 zimowy"
         academicYersLabel.font = UIFont.systemFont(ofSize: 12)
         academicYersLabel.textColor = .systemBlue
         
@@ -127,7 +125,6 @@ class SemesterCell : UITableViewCell {
         container.addSubview(subNummberLabel)
         subNummberLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        subNummberLabel.text = "10"
         subNummberLabel.font = UIFont.systemFont(ofSize: 12)
         subNummberLabel.textColor = .systemBlue
         
@@ -155,7 +152,6 @@ class SemesterCell : UITableViewCell {
         container.addSubview(scoreLabel)
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        scoreLabel.text = "4.0"
         scoreLabel.font = UIFont.boldSystemFont(ofSize: 12)
         
         NSLayoutConstraint.activate([
@@ -164,5 +160,3 @@ class SemesterCell : UITableViewCell {
         ])
     }
 }
-
-//(academic_year: "2019/2020 zimowy", sem_from: "25-09-2019", subNummber: 10, score: 4.2)

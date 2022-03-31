@@ -11,7 +11,7 @@ class EducationView: UIView {
     
     let universityView = UniversityView()
     let studiesTitleView = StudiesTitleView()
-    let semestersView = SemestersTableView()
+    let semestersTableView = SemesterTableView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,6 +23,12 @@ class EducationView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //    MARK: - SetupEduData
+    
+    func setupEduDataView(eduData: [Education]) {
+        semestersTableView.setuData(eduData: eduData)
     }
     
 //    MARK: - Constraints
@@ -52,14 +58,14 @@ class EducationView: UIView {
     }
     
     private func configureSemestersView() {
-        addSubview(semestersView)
-        semestersView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(semestersTableView)
+        semestersTableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            semestersView.topAnchor.constraint(equalTo: studiesTitleView.bottomAnchor),
-            semestersView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            semestersView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            semestersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            semestersTableView.topAnchor.constraint(equalTo: studiesTitleView.bottomAnchor),
+            semestersTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            semestersTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            semestersTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     
