@@ -11,14 +11,14 @@ class EducationView: UIView {
     
     let universityView = UniversityView()
     let studiesTitleView = StudiesTitleView()
-    let skilsView = UIView()
+    let semestersView = SemestersTableView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         configureUniversityView()
         configureStudiesTitleView()
-        configureSkilsView()
+        configureSemestersView()
     }
     
     required init?(coder: NSCoder) {
@@ -51,17 +51,15 @@ class EducationView: UIView {
         ])
     }
     
-    private func configureSkilsView() {
-        addSubview(skilsView)
-        skilsView.translatesAutoresizingMaskIntoConstraints = false
-        
-        skilsView.backgroundColor = .green
+    private func configureSemestersView() {
+        addSubview(semestersView)
+        semestersView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            skilsView.topAnchor.constraint(equalTo: studiesTitleView.bottomAnchor),
-            skilsView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            skilsView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            skilsView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            semestersView.topAnchor.constraint(equalTo: studiesTitleView.bottomAnchor),
+            semestersView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            semestersView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            semestersView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     
