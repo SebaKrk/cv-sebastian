@@ -10,7 +10,6 @@ import UIKit
 
 extension UIView {
     func convertDate(date: String) -> String {
-        let date = "2020-02-13T16:14:25Z"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         let newDate = dateFormatter.date(from: date)

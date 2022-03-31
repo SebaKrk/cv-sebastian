@@ -53,8 +53,10 @@ extension GitHubPublicRepoTableView : UITableViewDelegate, UITableViewDataSource
         let cell = dequeueReusableCell(withIdentifier: PublicRepoCell.publicRepoIdentifier) as! PublicRepoCell
         let data = gitHubRepos[indexPath.row]
         
+        let date = convertDate(date: data.created_at)
+        
         cell.repoNameLabel.text = data.name
-        cell.repoCreatedLabel.text = data.created_at
+        cell.repoCreatedLabel.text = date
         cell.languageIMG.image = UIImage(named: data.language)
         
         return cell

@@ -191,10 +191,10 @@
 		05BC636427E4C2FA00FB1544 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				05BC644127EB2BCD00FB1544 /* UIViewController+Ext.swift */,
 				05BC636527E4C31E00FB1544 /* NSNotification+Ext.swift */,
 				0502B5B427F5E28E00D0ED7F /* UIView+Ext.swift */,
 				05BC637027E8760700FB1544 /* String+Ext.swift */,
-				05BC644127EB2BCD00FB1544 /* UIViewController+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
