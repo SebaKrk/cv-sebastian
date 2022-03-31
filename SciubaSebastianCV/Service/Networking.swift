@@ -40,9 +40,9 @@ class Networking {
             }
         } .resume()
     }
+
     
     func fetchReposData(completion: @escaping (Result<[GitHubRepos],Error>)->Void) {
-        
         guard let url = URL(string: basicRepo) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in

@@ -20,6 +20,10 @@
 		0502B5AD27F4572600D0ED7F /* StudiesTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5AC27F4572600D0ED7F /* StudiesTitleView.swift */; };
 		0502B5AF27F45BA000D0ED7F /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5AE27F45BA000D0ED7F /* Education.swift */; };
 		0502B5B527F5E28E00D0ED7F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5B427F5E28E00D0ED7F /* UIView+Ext.swift */; };
+		0502B5B727F5F60A00D0ED7F /* EducationData+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5B627F5F60A00D0ED7F /* EducationData+Service.swift */; };
+		0502B5B927F6010E00D0ED7F /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5B827F6010E00D0ED7F /* EducationViewModel.swift */; };
+		0502B5BB27F6020700D0ED7F /* SemestersTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5BA27F6020700D0ED7F /* SemestersTableView.swift */; };
+		0502B5BD27F602AF00D0ED7F /* SemesterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5BC27F602AF00D0ED7F /* SemesterCell.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
@@ -73,6 +77,10 @@
 		0502B5AC27F4572600D0ED7F /* StudiesTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudiesTitleView.swift; sourceTree = "<group>"; };
 		0502B5AE27F45BA000D0ED7F /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		0502B5B427F5E28E00D0ED7F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		0502B5B627F5F60A00D0ED7F /* EducationData+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EducationData+Service.swift"; sourceTree = "<group>"; };
+		0502B5B827F6010E00D0ED7F /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
+		0502B5BA27F6020700D0ED7F /* SemestersTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemestersTableView.swift; sourceTree = "<group>"; };
+		0502B5BC27F602AF00D0ED7F /* SemesterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterCell.swift; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
@@ -168,6 +176,7 @@
 			children = (
 				0502B5AA27F4503100D0ED7F /* UniversityView.swift */,
 				0502B5AC27F4572600D0ED7F /* StudiesTitleView.swift */,
+				0502B5BA27F6020700D0ED7F /* SemestersTableView.swift */,
 			);
 			path = EduViewComponents;
 			sourceTree = "<group>";
@@ -203,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				05BC644427EB3E0500FB1544 /* ExperianceViewModel.swift */,
+				0502B5B827F6010E00D0ED7F /* EducationViewModel.swift */,
 				05BC649627EDB81200FB1544 /* GitHubUserViewModel.swift */,
 			);
 			path = ViewModel;
@@ -224,6 +234,7 @@
 			children = (
 				05BC637B27E8AD5400FB1544 /* ExperienceCell.swift */,
 				0502B59D27F2115700D0ED7F /* PublicRepoCell.swift */,
+				0502B5BC27F602AF00D0ED7F /* SemesterCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -284,6 +295,7 @@
 				93B0E1AF27DF5C3000A4433B /* Constants.swift */,
 				05BC649427EDB25B00FB1544 /* Networking.swift */,
 				05BC637827E8A9B200FB1544 /* ExperienceData+Service.swift */,
+				0502B5B627F5F60A00D0ED7F /* EducationData+Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -465,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0502B5BB27F6020700D0ED7F /* SemestersTableView.swift in Sources */,
 				05BC637C27E8AD5400FB1544 /* ExperienceCell.swift in Sources */,
 				0502B59027F047BD00D0ED7F /* GitHubBioView.swift in Sources */,
 				9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */,
@@ -473,6 +486,7 @@
 				05BC638327E9BD9D00FB1544 /* ResDetailsLabel.swift in Sources */,
 				05F9105F27E0C0DB0069233D /* EducationVC.swift in Sources */,
 				05BC638127E9AF6100FB1544 /* SepearatingLine.swift in Sources */,
+				0502B5B727F5F60A00D0ED7F /* EducationData+Service.swift in Sources */,
 				05BC637E27E8DFF600FB1544 /* ResponsibilitiesDetailsVC.swift in Sources */,
 				05F9105D27E0C0700069233D /* WorkExperienceVC.swift in Sources */,
 				05BC637727E8A64800FB1544 /* Experience.swift in Sources */,
@@ -500,6 +514,7 @@
 				05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */,
 				05BC644D27ECD81C00FB1544 /* GitHubProfileView.swift in Sources */,
 				0502B5A827F44A4A00D0ED7F /* EducationView.swift in Sources */,
+				0502B5B927F6010E00D0ED7F /* EducationViewModel.swift in Sources */,
 				0502B59E27F2115700D0ED7F /* PublicRepoCell.swift in Sources */,
 				0502B5A227F2ED5B00D0ED7F /* GitHubView.swift in Sources */,
 				0502B5AD27F4572600D0ED7F /* StudiesTitleView.swift in Sources */,
@@ -509,6 +524,7 @@
 				05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */,
 				93B0E1B027DF5C3100A4433B /* Constants.swift in Sources */,
 				05BC637127E8760700FB1544 /* String+Ext.swift in Sources */,
+				0502B5BD27F602AF00D0ED7F /* SemesterCell.swift in Sources */,
 				93B0E1B427DF6AE900A4433B /* TopProfileView.swift in Sources */,
 				05BC637927E8A9B200FB1544 /* ExperienceData+Service.swift in Sources */,
 				0502B5A527F3019E00D0ED7F /* GitHubTopView.swift in Sources */,
