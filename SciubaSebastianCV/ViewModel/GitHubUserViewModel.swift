@@ -63,9 +63,5 @@ class GitHubUserViewModel {
             }
         }
     }
-    
-    // format dates
     // uialert controller
-    
 }
-
