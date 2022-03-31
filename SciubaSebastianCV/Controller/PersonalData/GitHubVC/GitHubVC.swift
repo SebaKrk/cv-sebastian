@@ -63,18 +63,12 @@ class GitHubVC : UIViewController{
 
 extension GitHubVC : GitHubViewModelDelegate {
     func updateUser(userModel: GitHubView.Model) {
-//        gitHubView.setUserModel(userModel: userModel)
         gitHubView.setUserModel(userModel: userModel)
-    }
-    
-    func updateUserDataView(user: User) {
-        gitHubView.setUsersDataView(user: user)
     }
     
     func updateReposView(repos: [GitHubRepos]) {
         gitHubView.getPublicReposDataView(repos: repos)
     }
-    
 }
 
 // MARK: - GitHubViewDelegate

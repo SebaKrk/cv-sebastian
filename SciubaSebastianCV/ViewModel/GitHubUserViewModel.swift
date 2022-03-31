@@ -9,7 +9,6 @@ import Foundation
 
 
 protocol GitHubViewModelDelegate : AnyObject {
-    func updateUserDataView(user: User)
     func updateReposView(repos: [GitHubRepos])
     func updateUser(userModel: GitHubView.Model)
 }
@@ -27,8 +26,6 @@ class GitHubUserViewModel {
                 
             case .success( let user):
                 DispatchQueue.main.async {
-                    self.gitHubViewModelDelegate?.updateUserDataView(user: user)
-                    
                     let formatedUserModel =  self.formatUserData(user)
                     self.gitHubViewModelDelegate?.updateUser(userModel: formatedUserModel)
                 }
@@ -39,7 +36,8 @@ class GitHubUserViewModel {
     }
     
     func formatUserData(_ user: User) -> GitHubView.Model {
-        return GitHubView.Model(githubView: GitHubPageView.Model(created_at: user.created_at),
+        return GitHubView.Model(githubView: GitHubPageView.Model(created_at: user.created_at,
+                                                                 html_url: user.html_url),
                                 publicRepoView: GitHubPublicRepoView.Model(public_repos: user.public_repos),
                                 followerView: GitHubFollowerView.Model(followers: user.followers),
                                 bioView: GitHubBioView.Model(bio: user.bio),
@@ -68,7 +66,6 @@ class GitHubUserViewModel {
     
     // format dates
     // uialert controller
-    
     
 }
 
