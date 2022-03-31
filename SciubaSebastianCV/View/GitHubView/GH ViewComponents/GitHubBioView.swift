@@ -23,11 +23,7 @@ class GitHubBioView : UIView {
     }
     
 // MARK: - Setup UIElemenets
-    
-//    func setupData(user: User) {
-//        bioLabel.text = user.bio
-//    }
-    
+
     func setupBioData(model: Model) {
         bioLabel.text = model.bio
     }
@@ -49,6 +45,7 @@ class GitHubBioView : UIView {
         ])
     }
 }
+// MARK: - GitHubBioView - Model
 
 extension GitHubBioView {
     struct Model {

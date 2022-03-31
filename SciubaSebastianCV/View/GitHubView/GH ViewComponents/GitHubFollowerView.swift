@@ -11,7 +11,7 @@ import UIKit
 class GitHubFollowerView : UIView {
     
     let container = UIView()
-
+    
     let followerImageView = UIImageView()
     let followerLabel = UILabel()
     let followerScore = UILabel()
@@ -31,15 +31,11 @@ class GitHubFollowerView : UIView {
     
     // MARK: - Setup UIElemenets
     
-//    func setupData(users: User) {
-//        followerScore.text = "\(users.followers)"
-//    }
-    
     func setupFollowerData(model: Model) {
         followerScore.text = "\(model.followers)"
     }
-
-//    MARK: - Constraints
+    
+    //    MARK: - Constraints
     
     private func configureContainer() {
         addSubview(container)
@@ -93,6 +89,9 @@ class GitHubFollowerView : UIView {
         ])
     }
 }
+
+// MARK: - GitHubFollowerView - Model
+
 extension GitHubFollowerView {
     struct Model {
         let followers : Int

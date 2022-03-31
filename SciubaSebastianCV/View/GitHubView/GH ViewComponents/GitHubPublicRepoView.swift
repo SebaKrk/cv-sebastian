@@ -28,18 +28,14 @@ class GitHubPublicRepoView : UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    // MARK: - Setup UIElemenets
     
-//    func setupData(users: User) {
-//        publicRepoScore.text = "\(users.public_repos)"
-//    }
+    // MARK: - Setup UIElemenets
     
     func setupPublicRepoData(model: Model) {
         publicRepoScore.text = "\(model.public_repos)"
     }
     
-//    MARK: - Constraints
+    //    MARK: - Constraints
     
     private func configureContainer() {
         addSubview(container)
@@ -93,6 +89,8 @@ class GitHubPublicRepoView : UIView {
         ])
     }
 }
+
+// MARK: - GitHubPublicRepoView - Model
 
 extension GitHubPublicRepoView {
     struct Model {

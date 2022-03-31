@@ -36,14 +36,6 @@ class GitHubProfileView : UIView {
     
     // MARK: - Setup UIElemenets
     
-//    func setupData(user: User) {
-//        dowloadImage(from: user.avatar_url)
-//        userLoginLabel.text = user.login
-//        userNameLabel.text = user.name
-//        locationLabel.text = user.location
-//        companyLabel.text = user.company
-//    }
-    
     func setupProfileData(model: Model) {
         userLoginLabel.text = model.login
         userNameLabel.text = model.name
@@ -143,6 +135,7 @@ class GitHubProfileView : UIView {
         task.resume()
     }
 }
+// MARK: - GitHubProfileView - Model
 
 extension GitHubProfileView {
     struct Model {
@@ -153,8 +146,4 @@ extension GitHubProfileView {
         let avatarUrl : String
     }
 }
-//dowloadImage(from: user.avatar_url)
-//userLoginLabel.text = user.login
-//userNameLabel.text = user.name
-//locationLabel.text = user.location
-//companyLabel.text = user.company
+

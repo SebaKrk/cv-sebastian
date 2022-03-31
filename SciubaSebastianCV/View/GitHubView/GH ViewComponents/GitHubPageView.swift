@@ -52,7 +52,6 @@ class GitHubPageView : UIView {
 //    MARK: - Setup UI Elemnts
     
     func setupData(user: User) {
-//        gitHubCreatedLabel.text = "since \(user.created_at)"
         gitHubURL = user.html_url // usunac
     }
     
@@ -107,6 +106,8 @@ class GitHubPageView : UIView {
         ])
     }
 }
+
+// MARK: - GitHubPageView - Model
 
 extension GitHubPageView {
     struct Model {

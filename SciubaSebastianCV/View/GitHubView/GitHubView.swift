@@ -42,16 +42,9 @@ class GitHubView : UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 //    MARK: - SetupUsersData
-    
-    func setUsersDataView(user: User) {
-//        profileView.setupData(user: user)
-//        bioView.setupData(user: user)
-//        folowersView.setupData(users: user)
-//        publicRepoView.setupData(users: user)
-//        githubPage.setupData(user: user)
-    }
-    
+
     func getPublicReposDataView(repos: [GitHubRepos]) {
         listPubRepoTableView.setuData(repos: repos)
     }
@@ -158,7 +151,9 @@ class GitHubView : UIView {
         ])
     }
 }
- 
+
+// MARK: - GitHubView - Model
+
 extension GitHubView {
     struct Model {
         let githubView: GitHubPageView.Model
@@ -169,7 +164,7 @@ extension GitHubView {
     }
 }
 
-// MARK: - GitHubTopViewDelegate, GitHubPageViewDelegate
+// MARK: - GitHubTopViewDelegate, GitHubPageViewDelegate, GitHubPublicRepoDelegate
 
 extension GitHubView : GitHubTopViewDelegate, GitHubPageViewDelegate, GitHubPublicRepoDelegate {
  
