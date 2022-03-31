@@ -56,6 +56,7 @@ class GitHubView : UIView {
         bioView.setupBioData(model: userModel.bioView)
         profileView.setupProfileData(model: userModel.profileView)
     }
+
     
 //    MARK: - SignInDelegates
     
@@ -160,7 +161,7 @@ extension GitHubView {
         let publicRepoView: GitHubPublicRepoView.Model
         let followerView: GitHubFollowerView.Model
         let bioView: GitHubBioView.Model
-        let profileView : GitHubProfileView.Model
+        let profileView: GitHubProfileView.Model
     }
 }
 

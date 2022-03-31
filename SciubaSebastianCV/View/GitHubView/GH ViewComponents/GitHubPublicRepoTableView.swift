@@ -67,4 +67,3 @@ extension GitHubPublicRepoTableView : UITableViewDelegate, UITableViewDataSource
         publicRepoDelegate?.didSelectPublicRepoCell(urlString: urlString)
     }
 }
-

@@ -52,7 +52,8 @@ class GitHubPageView : UIView {
 //    MARK: - Setup UI Elemnts
 
     func setupPageData(model: Model) {
-        gitHubCreatedLabel.text = "since \(model.created_at)"
+        let date = convertDate(date: model.created_at)
+        gitHubCreatedLabel.text = "since \(date)"
         gitHubURL = model.html_url
     }
     
