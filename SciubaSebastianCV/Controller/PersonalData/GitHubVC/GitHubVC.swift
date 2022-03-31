@@ -37,6 +37,7 @@ class GitHubVC : UIViewController{
         gitHubViewModel.gitHubViewModelDelegate = self
         gitHubViewModel.setUserData()
         gitHubViewModel.setReposData()
+        
     }
     
     func signDelegate() {
@@ -61,6 +62,10 @@ class GitHubVC : UIViewController{
 // MARK: - GitHubViewModelDelegate
 
 extension GitHubVC : GitHubViewModelDelegate {
+    func updateUser(userModel: GitHubView.Model) {
+//        gitHubView.setUserModel(userModel: userModel)
+        gitHubView.setUserModel(userModel: userModel)
+    }
     
     func updateUserDataView(user: User) {
         gitHubView.setUsersDataView(user: user)
@@ -69,12 +74,12 @@ extension GitHubVC : GitHubViewModelDelegate {
     func updateReposView(repos: [GitHubRepos]) {
         gitHubView.getPublicReposDataView(repos: repos)
     }
+    
 }
 
 // MARK: - GitHubViewDelegate
 
 extension GitHubVC: GitHubViewDelegate {
-    
     
     func dismissGitHubViewController() {
         dismiss(animated: true, completion: nil)

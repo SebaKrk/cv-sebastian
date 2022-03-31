@@ -52,8 +52,12 @@ class GitHubPageView : UIView {
 //    MARK: - Setup UI Elemnts
     
     func setupData(user: User) {
-        gitHubCreatedLabel.text = "since \(user.created_at)"
-        gitHubURL = user.html_url
+//        gitHubCreatedLabel.text = "since \(user.created_at)"
+        gitHubURL = user.html_url // usunac
+    }
+    
+    func setupPageData(model: Model) {
+        gitHubCreatedLabel.text = "since \(model.created_at)"
     }
     
 //    MARK: - Constraints
@@ -101,5 +105,11 @@ class GitHubPageView : UIView {
             gitHubIMG.widthAnchor.constraint(equalToConstant: 25),
             gitHubIMG.heightAnchor.constraint(equalToConstant: 25)
         ])
+    }
+}
+
+extension GitHubPageView {
+    struct Model {
+        let created_at: String
     }
 }

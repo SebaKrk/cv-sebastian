@@ -45,15 +45,23 @@ class GitHubView : UIView {
 //    MARK: - SetupUsersData
     
     func setUsersDataView(user: User) {
-        profileView.setupData(user: user)
-        bioView.setupData(user: user)
-        folowersView.setupData(users: user)
-        publicRepoView.setupData(users: user)
-        githubPage.setupData(user: user)
+//        profileView.setupData(user: user)
+//        bioView.setupData(user: user)
+//        folowersView.setupData(users: user)
+//        publicRepoView.setupData(users: user)
+//        githubPage.setupData(user: user)
     }
     
     func getPublicReposDataView(repos: [GitHubRepos]) {
         listPubRepoTableView.setuData(repos: repos)
+    }
+    
+    func setUserModel(userModel: GitHubView.Model) {
+        githubPage.setupPageData(model: userModel.githubView)
+        publicRepoView.setupPublicRepoData(model: userModel.publicRepoView)
+        folowersView.setupFollowerData(model: userModel.followerView)
+        bioView.setupBioData(model: userModel.bioView)
+        profileView.setupProfileData(model: userModel.profileView)
     }
     
 //    MARK: - SignInDelegates
@@ -148,6 +156,16 @@ class GitHubView : UIView {
             listPubRepoTableView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -15),
             listPubRepoTableView.bottomAnchor.constraint(equalTo: githubPage.topAnchor)
         ])
+    }
+}
+ 
+extension GitHubView {
+    struct Model {
+        let githubView: GitHubPageView.Model
+        let publicRepoView: GitHubPublicRepoView.Model
+        let followerView: GitHubFollowerView.Model
+        let bioView: GitHubBioView.Model
+        let profileView : GitHubProfileView.Model
     }
 }
 

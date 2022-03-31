@@ -31,8 +31,12 @@ class GitHubPublicRepoView : UIView {
 
     // MARK: - Setup UIElemenets
     
-    func setupData(users: User) {
-        publicRepoScore.text = "\(users.public_repos)"
+//    func setupData(users: User) {
+//        publicRepoScore.text = "\(users.public_repos)"
+//    }
+    
+    func setupPublicRepoData(model: Model) {
+        publicRepoScore.text = "\(model.public_repos)"
     }
     
 //    MARK: - Constraints
@@ -87,5 +91,11 @@ class GitHubPublicRepoView : UIView {
             publicRepoScore.centerYAnchor.constraint(equalTo: centerYAnchor),
             publicRepoScore.leadingAnchor.constraint(equalTo: publicRepoLabel.trailingAnchor,constant: 40)
         ])
+    }
+}
+
+extension GitHubPublicRepoView {
+    struct Model {
+        let public_repos : Int
     }
 }

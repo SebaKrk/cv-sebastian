@@ -24,8 +24,12 @@ class GitHubBioView : UIView {
     
 // MARK: - Setup UIElemenets
     
-    func setupData(user: User) {
-        bioLabel.text = user.bio
+//    func setupData(user: User) {
+//        bioLabel.text = user.bio
+//    }
+    
+    func setupBioData(model: Model) {
+        bioLabel.text = model.bio
     }
     
 //    MARK: - Constraints
@@ -43,5 +47,11 @@ class GitHubBioView : UIView {
             bioLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             bioLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9)
         ])
+    }
+}
+
+extension GitHubBioView {
+    struct Model {
+        let bio : String
     }
 }

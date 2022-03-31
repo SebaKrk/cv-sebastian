@@ -36,12 +36,20 @@ class GitHubProfileView : UIView {
     
     // MARK: - Setup UIElemenets
     
-    func setupData(user: User) {
-        dowloadImage(from: user.avatar_url)
-        userLoginLabel.text = user.login
-        userNameLabel.text = user.name
-        locationLabel.text = user.location
-        companyLabel.text = user.company
+//    func setupData(user: User) {
+//        dowloadImage(from: user.avatar_url)
+//        userLoginLabel.text = user.login
+//        userNameLabel.text = user.name
+//        locationLabel.text = user.location
+//        companyLabel.text = user.company
+//    }
+    
+    func setupProfileData(model: Model) {
+        userLoginLabel.text = model.login
+        userNameLabel.text = model.name
+        locationLabel.text = model.location
+        companyLabel.text = model.company
+        dowloadImage(from: model.avatarUrl)
     }
     
     //    MARK: - Constraints
@@ -135,3 +143,18 @@ class GitHubProfileView : UIView {
         task.resume()
     }
 }
+
+extension GitHubProfileView {
+    struct Model {
+        let login : String
+        let name: String
+        let location : String
+        let company : String
+        let avatarUrl : String
+    }
+}
+//dowloadImage(from: user.avatar_url)
+//userLoginLabel.text = user.login
+//userNameLabel.text = user.name
+//locationLabel.text = user.location
+//companyLabel.text = user.company

@@ -31,8 +31,12 @@ class GitHubFollowerView : UIView {
     
     // MARK: - Setup UIElemenets
     
-    func setupData(users: User) {
-        followerScore.text = "\(users.followers)"
+//    func setupData(users: User) {
+//        followerScore.text = "\(users.followers)"
+//    }
+    
+    func setupFollowerData(model: Model) {
+        followerScore.text = "\(model.followers)"
     }
 
 //    MARK: - Constraints
@@ -87,5 +91,10 @@ class GitHubFollowerView : UIView {
             followerScore.centerYAnchor.constraint(equalTo: centerYAnchor),
             followerScore.leadingAnchor.constraint(equalTo: followerLabel.trailingAnchor,constant: 40)
         ])
+    }
+}
+extension GitHubFollowerView {
+    struct Model {
+        let followers : Int
     }
 }
