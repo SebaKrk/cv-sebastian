@@ -7,6 +7,14 @@
 
 import Foundation
 
+enum DataError : Error {
+    case network(Error)
+    case invalidResponse
+    case invalidData
+    case decoding
+}
+
+
 class Networking {
     
   static let shared = Networking()
@@ -67,4 +75,6 @@ class Networking {
             }
         } .resume()
     }
+    
+ 
 }
