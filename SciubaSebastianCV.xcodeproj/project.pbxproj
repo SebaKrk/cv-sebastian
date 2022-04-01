@@ -24,6 +24,8 @@
 		0502B5B927F6010E00D0ED7F /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5B827F6010E00D0ED7F /* EducationViewModel.swift */; };
 		0502B5BB27F6020700D0ED7F /* SemesterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5BA27F6020700D0ED7F /* SemesterTableView.swift */; };
 		0502B5BD27F602AF00D0ED7F /* SemesterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5BC27F602AF00D0ED7F /* SemesterCell.swift */; };
+		0502B5C127F6F40400D0ED7F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5C027F6F40400D0ED7F /* Courses.swift */; };
+		0502B5C327F6F51E00D0ED7F /* SkillsAndCoursesData+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5C227F6F51E00D0ED7F /* SkillsAndCoursesData+Service.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
@@ -81,6 +83,8 @@
 		0502B5B827F6010E00D0ED7F /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
 		0502B5BA27F6020700D0ED7F /* SemesterTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterTableView.swift; sourceTree = "<group>"; };
 		0502B5BC27F602AF00D0ED7F /* SemesterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterCell.swift; sourceTree = "<group>"; };
+		0502B5C027F6F40400D0ED7F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		0502B5C227F6F51E00D0ED7F /* SkillsAndCoursesData+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsAndCoursesData+Service.swift"; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 			children = (
 				05BC637627E8A64800FB1544 /* Experience.swift */,
 				0502B5AE27F45BA000D0ED7F /* Education.swift */,
+				0502B5C027F6F40400D0ED7F /* Courses.swift */,
 				05BC644627EC83FE00FB1544 /* GitHubUser.swift */,
 				05BC644827EC8A9100FB1544 /* GitHubRepos.swift */,
 			);
@@ -296,6 +301,7 @@
 				05BC649427EDB25B00FB1544 /* Networking.swift */,
 				05BC637827E8A9B200FB1544 /* ExperienceData+Service.swift */,
 				0502B5B627F5F60A00D0ED7F /* EducationData+Service.swift */,
+				0502B5C227F6F51E00D0ED7F /* SkillsAndCoursesData+Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -483,6 +489,7 @@
 				9304607327DF7C330056CB5F /* ContactTitleLabel.swift in Sources */,
 				0502B59A27F19CA800D0ED7F /* GitHubPublicRepoTableView.swift in Sources */,
 				05BC644227EB2BCD00FB1544 /* UIViewController+Ext.swift in Sources */,
+				0502B5C327F6F51E00D0ED7F /* SkillsAndCoursesData+Service.swift in Sources */,
 				05BC638327E9BD9D00FB1544 /* ResDetailsLabel.swift in Sources */,
 				05F9105F27E0C0DB0069233D /* EducationVC.swift in Sources */,
 				05BC638127E9AF6100FB1544 /* SepearatingLine.swift in Sources */,
@@ -505,6 +512,7 @@
 				93B0E1AE27DF5A7D00A4433B /* PersonalDataVC.swift in Sources */,
 				05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */,
 				0502B59827F1081600D0ED7F /* GitHubPageView.swift in Sources */,
+				0502B5C127F6F40400D0ED7F /* Courses.swift in Sources */,
 				0502B5AB27F4503100D0ED7F /* UniversityView.swift in Sources */,
 				05BC638A27EB118B00FB1544 /* GitHubVC.swift in Sources */,
 				9304606D27DF70330056CB5F /* CostumeButtonView.swift in Sources */,
