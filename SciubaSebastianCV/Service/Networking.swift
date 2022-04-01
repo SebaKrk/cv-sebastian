@@ -76,5 +76,32 @@ class Networking {
         } .resume()
     }
     
+    typealias Completion<T> = (Result<T,DataError>) -> Void
+    
+    func fetchData<T: Decodable>(from url: URL, completion: @escaping Completion<T>) {
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(.network(error)))
+                return
+            }
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let decodeData = try decoder.decode(T.self, from: data)
+                completion(.success(decodeData))
+            } catch  {
+                completion(.failure(.decoding))
+            }
+        }.resume()
+    }
+    
  
 }
