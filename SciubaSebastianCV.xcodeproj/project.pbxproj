@@ -26,6 +26,7 @@
 		0502B5BD27F602AF00D0ED7F /* SemesterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5BC27F602AF00D0ED7F /* SemesterCell.swift */; };
 		0502B5C127F6F40400D0ED7F /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5C027F6F40400D0ED7F /* Courses.swift */; };
 		0502B5C327F6F51E00D0ED7F /* SkillsAndCoursesData+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5C227F6F51E00D0ED7F /* SkillsAndCoursesData+Service.swift */; };
+		0502B5C527F70D6B00D0ED7F /* SkillsCourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502B5C427F70D6B00D0ED7F /* SkillsCourViewModel.swift */; };
 		05BC635D27E1DBD100FB1544 /* AdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635C27E1DBD100FB1544 /* AdressView.swift */; };
 		05BC636027E3288B00FB1544 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC635F27E3288B00FB1544 /* SideMenuVC.swift */; };
 		05BC636327E4718400FB1544 /* ProfileIMG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC636227E4718400FB1544 /* ProfileIMG.swift */; };
@@ -85,6 +86,7 @@
 		0502B5BC27F602AF00D0ED7F /* SemesterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterCell.swift; sourceTree = "<group>"; };
 		0502B5C027F6F40400D0ED7F /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
 		0502B5C227F6F51E00D0ED7F /* SkillsAndCoursesData+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsAndCoursesData+Service.swift"; sourceTree = "<group>"; };
+		0502B5C427F70D6B00D0ED7F /* SkillsCourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCourViewModel.swift; sourceTree = "<group>"; };
 		05BC635C27E1DBD100FB1544 /* AdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressView.swift; sourceTree = "<group>"; };
 		05BC635F27E3288B00FB1544 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		05BC636227E4718400FB1544 /* ProfileIMG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIMG.swift; sourceTree = "<group>"; };
@@ -215,9 +217,10 @@
 		05BC637227E8A11500FB1544 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				05BC649627EDB81200FB1544 /* GitHubUserViewModel.swift */,
 				05BC644427EB3E0500FB1544 /* ExperianceViewModel.swift */,
 				0502B5B827F6010E00D0ED7F /* EducationViewModel.swift */,
-				05BC649627EDB81200FB1544 /* GitHubUserViewModel.swift */,
+				0502B5C427F70D6B00D0ED7F /* SkillsCourViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				0502B5AF27F45BA000D0ED7F /* Education.swift in Sources */,
 				93B0E19A27DF567200A4433B /* AppDelegate.swift in Sources */,
 				0502B59427F0E65F00D0ED7F /* GitHubPublicRepoView.swift in Sources */,
+				0502B5C527F70D6B00D0ED7F /* SkillsCourViewModel.swift in Sources */,
 				0502B59627F0E82D00D0ED7F /* GitHubFollowerView.swift in Sources */,
 				05BC636627E4C31E00FB1544 /* NSNotification+Ext.swift in Sources */,
 				05BC649527EDB25B00FB1544 /* Networking.swift in Sources */,
