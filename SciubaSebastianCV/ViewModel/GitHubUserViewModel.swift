@@ -18,13 +18,14 @@ class GitHubUserViewModel {
     
     weak var gitHubViewModelDelegate : GitHubViewModelDelegate?
     
-//    MARK: - User
+    //    MARK: - User
     
     func setUserData() {
-        Networking.shared.fetchUserData { result in
+        let urlString = Networking.basicUserURL
+        guard let url = URL(string: urlString) else {return}
+        Networking.shared.fetchData(from: url) { (result: Result<User, DataError>) in
             switch result {
-                
-            case .success( let user):
+            case .success(let user):
                 DispatchQueue.main.async {
                     let formatedUserModel =  self.formatUserData(user)
                     self.gitHubViewModelDelegate?.updateUser(userModel: formatedUserModel)
@@ -48,12 +49,13 @@ class GitHubUserViewModel {
                                                                      avatarUrl: user.avatar_url))
     }
     
-//    MARK: - Repos
+    //    MARK: - Repos
     
     func setReposData() {
-        Networking.shared.fetchReposData { result in
+        let urlString = Networking.basicRepoURL
+        guard let url = URL(string: urlString) else {return}
+        Networking.shared.fetchData(from: url) { (result: Result<[GitHubRepos], DataError>) in
             switch result {
-                
             case .success(let repo):
                 DispatchQueue.main.async {
                     self.gitHubViewModelDelegate?.updateReposView(repos: repo)
