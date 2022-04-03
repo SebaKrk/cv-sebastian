@@ -12,6 +12,7 @@ class SkillsAndCoursesCV: UIViewController {
     
     var coursesCollectionView : UICollectionView!
     var collectionReuseIdentifier = "collectionReuseIdentifier"
+    let skillsAndCoursesViewModel = SkillsCourViewModel()
     var courseListArry : [Courses] = []
 
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class SkillsAndCoursesCV: UIViewController {
         setupView()
         setupCollectionView()
         configureCollectionView()
+        setupData()
     }
     
 //    MARK: - SetupView
@@ -40,6 +42,14 @@ class SkillsAndCoursesCV: UIViewController {
         coursesCollectionView?.delegate = self
         coursesCollectionView?.dataSource = self
     }
+//    MARK: - SetupData
+    
+    private func setupData() {
+        courseListArry = skillsAndCoursesViewModel.setSkilsCourData()
+    }
+    
+    
+//    MARK: - Constraints
     
     private func configureCollectionView() {
         view.addSubview(coursesCollectionView)
@@ -58,16 +68,27 @@ class SkillsAndCoursesCV: UIViewController {
 
 extension SkillsAndCoursesCV: UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return courseListArry.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = coursesCollectionView.dequeueReusableCell(withReuseIdentifier: collectionReuseIdentifier, for: indexPath) as! SkillsAndCoursesCell
+        let data = courseListArry[indexPath.row]
+        
+        cell.courseTitleLabel.text = data.title
+        cell.authorLabel.text = data.author
+        
+        cell.dowloadImage(from: data.courseImg)
+        cell.typeImg.image = UIImage(named: data.type)
+
+        cell.skillOneLabel.text = "- \(data.skills.first)"
+        cell.skillSecondLabel.text = "- \(data.skills.second)"
+        cell.skillThirdLabel.text = "- \(data.skills.third)"
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-         return CGSize(width: view.frame.size.width , height: 220)
+         return CGSize(width: view.frame.size.width , height: 175)
      }
 }

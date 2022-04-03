@@ -14,6 +14,7 @@ class CollectionSecondaryLabel : UILabel {
         super.init(frame: frame)
         
         textColor = .secondaryLabel
+        font = UIFont.systemFont(ofSize: 16)
         adjustsFontSizeToFitWidth = true
         numberOfLines = 0
     }
