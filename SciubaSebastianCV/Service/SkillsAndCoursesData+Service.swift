@@ -33,6 +33,8 @@ class SkillsAndCoursesDataService {
         
         let eighthCourse = Courses(title: "Figma Course - Designing Mobile App", author: "Nima Tahami", courseImg: "https://img-c.udemycdn.com/course/240x135/3032002_37a1_3.jpg", type: "Figma", skills: Skills(first: "Working live with a team inside Figma", second: "Designing the Mobile App UI ", third: "Creating reusable design components"))
         
-        return [firstCourse, secondCourse , thirdCourse, fourthCourse, fifthCourse, sixthCourse, seventhCourse, eighthCourse]
+        let nightCourse = Courses(title: "Build your foundation in SwiftUI", author: "Sean Allen", courseImg: "https://www.filepicker.io/api/file/tIrIh3a0TWegfxnTvtno", type: "SwiftUI", skills: Skills(first: "Fundamentals of SwiftUI Views", second: "Creating Widgets with SwiftUI", third: "Data Flow in SwiftUI"))
+        
+        return [firstCourse, secondCourse , thirdCourse, fourthCourse, fifthCourse, sixthCourse, seventhCourse, eighthCourse, nightCourse]
     }
 }
