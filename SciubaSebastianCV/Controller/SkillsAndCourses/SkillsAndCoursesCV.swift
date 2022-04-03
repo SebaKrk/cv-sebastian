@@ -68,6 +68,6 @@ extension SkillsAndCoursesCV: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-         return CGSize(width: view.frame.size.width , height: 200)
+         return CGSize(width: view.frame.size.width , height: 220)
      }
 }
