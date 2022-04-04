@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol WorkExpTableViewDelegate : AnyObject {
+    func didSelectWorkExpCell(firstResp: String, secondResp: String, thirdResp: String)
+}
+
 class WorkExpTabeView : UITableView {
     
     var expArray = [Experience]()
+    
+    weak var workExpTableViewDelegate : WorkExpTableViewDelegate?
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -24,7 +30,6 @@ class WorkExpTabeView : UITableView {
     //    MARK: - UI Elements
     
     func setuData(experience: [Experience]) {
-        print("reload")
         expArray = experience
         reloadData()
     }
@@ -59,6 +64,13 @@ extension WorkExpTabeView : UITableViewDataSource, UITableViewDelegate {
         
         return  cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        deselectRow(at: indexPath, animated: true)
+        let data = expArray[indexPath.row].responsibilities
+        
+        workExpTableViewDelegate?.didSelectWorkExpCell(firstResp: data.first, secondResp: data.second, thirdResp: data.third)
+    }
 }
-
+ 
 

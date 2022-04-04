@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SkillsAndCoursesCV: UIViewController {
+class SkillsAndCoursesVC: UIViewController {
     
     var coursesCollectionView : UICollectionView!
     var collectionReuseIdentifier = "collectionReuseIdentifier"
@@ -66,7 +66,7 @@ class SkillsAndCoursesCV: UIViewController {
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 
-extension SkillsAndCoursesCV: UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
+extension SkillsAndCoursesVC: UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return courseListArry.count
     }
