@@ -27,7 +27,7 @@ class WorkExperienceVC : UIViewController {
     
     private func setupView() {
         view.backgroundColor = .white
-        title = "Work Experience"
+        title = "Work Experience".localized
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     

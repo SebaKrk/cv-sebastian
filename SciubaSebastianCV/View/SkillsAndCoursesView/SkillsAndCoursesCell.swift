@@ -120,7 +120,7 @@ class SkillsAndCoursesCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             skillsStackView.topAnchor.constraint(equalTo: courseTitleLabel.bottomAnchor, constant: 10),
             skillsStackView.leadingAnchor.constraint(equalTo: courseIMG.trailingAnchor,constant: 5),
-            skillsStackView.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            skillsStackView.trailingAnchor.constraint(equalTo: container.trailingAnchor,constant: -5),
             skillsStackView.bottomAnchor.constraint(equalTo: courseIMG.bottomAnchor)
         ])
     }

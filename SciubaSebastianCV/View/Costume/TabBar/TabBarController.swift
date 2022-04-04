@@ -42,7 +42,7 @@ class TabBarController : UITabBarController {
     func skillsAndCoursesC() -> UINavigationController {
         let skilVC = SkillsAndCoursesCV()
         let img = UIImage(systemName: "book")
-        let title = "Skills".localized
+        let title = "Courses".localized
         skilVC.tabBarItem = UITabBarItem(title: title, image: img, tag: 3)
         return UINavigationController(rootViewController: skilVC)
     }

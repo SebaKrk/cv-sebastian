@@ -17,8 +17,9 @@
 
 
 // ResponsibilitiesDetails
-"Responsibilities Details" = "Responsibilities Details";"
-Done" = "Done";
+"Work Experience" = "Work Experience";
+"Responsibilities Details" = "Responsibilities Details";
+"Done" = "Done";
 
 // MailMassageUI
 "Sebastian Sciuba CV APP" = "Sebastian Sciuba CV APP";
@@ -33,3 +34,4 @@ Done" = "Done";
 "Subjects:" = "Subjects:";
 "Star date:" = "Star date:";
 "Semester:" = "Semester:";
+"Courses" = "Courses";

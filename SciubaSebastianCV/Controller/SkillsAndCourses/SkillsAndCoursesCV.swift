@@ -26,7 +26,7 @@ class SkillsAndCoursesCV: UIViewController {
 //    MARK: - SetupView
     
     private func setupView() {
-        title = "Work Experience"
+        title = "Courses".localized
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
