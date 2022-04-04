@@ -11,7 +11,7 @@ class SkillsAndCoursesDataService {
     
     func setSkillsAndCoursesData() -> [Courses] {
         
-        let firstCourse = Courses(title: "iOS App Decelopment Bootcamp", author: "Dr. Angela Yu", courseImg: "https://img-c.udemycdn.com/course/240x135/1778502_f4b9_12.jpg", type: "Swift", skills: Skills(
+        let firstCourse = Courses(title: "iOS App Development Bootcamp", author: "Dr. Angela Yu", courseImg: "https://img-c.udemycdn.com/course/240x135/1778502_f4b9_12.jpg", type: "Swift", skills: Skills(
             first: "How to use storyboard", second: "Implement Auto Layout", third: "Basic Netwok Call"))
         
         let secondCourse = Courses(title: "iOS 12 & Swift 4: Build a Pokedex App", author: "Stephan Dowless", courseImg: "https://img-c.udemycdn.com/course/240x135/2153544_0872_3.jpg", type: "Swift", skills: Skills(first: "Build storyboards programmatically", second: "Understand the MVC architecture", third: "Work with UICollectionView"))
