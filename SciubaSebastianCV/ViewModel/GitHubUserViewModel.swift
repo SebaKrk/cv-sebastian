@@ -62,7 +62,7 @@ class GitHubUserViewModel {
             case .success(let repos):
                 DispatchQueue.main.async {
 //                    self.gitHubViewModelDelegate?.updateReposView(repos: repo)
-                    let frormatedRepo = repos.compactMap { repo in
+                    let frormatedRepo = repos.map { repo in
                         return self.createGiiHubRepo(repo)
                     }
                     self.gitHubViewModelDelegate?.updateReposView(repos: frormatedRepo)
@@ -74,11 +74,13 @@ class GitHubUserViewModel {
         }
     }
     
-    func createGiiHubRepo(_ repo: GitHubRepos) -> GitHubPublicRepoTableView.Model? {
-        guard let languageImg = UIImage(named: repo.language) else {
-            return nil
-        }
-        return GitHubPublicRepoTableView.Model(createdAt: convertDate(date: repo.created_at), name: repo.name, languageImg: languageImg )
+    func createGiiHubRepo(_ repo: GitHubRepos) -> GitHubPublicRepoTableView.Model {
+//        guard let languageImg = UIImage(named: repo.language) else {
+//            return nil
+//        }
+//        return GitHubPublicRepoTableView.Model(createdAt: convertDate(date: repo.created_at), name: repo.name, languageImg: languageImg )
+        
+        return GitHubPublicRepoTableView.Model(createdAt: repo.created_at, name: repo.name, languageImg: UIImage(named: repo.language) ?? UIImage(named: "DefaultImg"))
     }
     
     func getUrlStrig(indexPath : IndexPath ) -> String {

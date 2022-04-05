@@ -74,6 +74,6 @@ extension GitHubPublicRepoTableView {
     struct Model {
         let createdAt : String
         let name : String
-        let languageImg : UIImage
+        let languageImg : UIImage?
     }
 }
