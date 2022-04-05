@@ -7,12 +7,12 @@
 import UIKit
 
 protocol GitHubPublicRepoDelegate : AnyObject {
-    func didSelectPublicRepoCell(urlString: String)
+    func didSelectPublicRepoCell(indexPath: IndexPath)
 }
 
 class GitHubPublicRepoTableView : UITableView {
     
-    var gitHubRepos = [GitHubRepos]()
+    var gitHubRepos = [GitHubPublicRepoTableView.Model]()
     
     weak var publicRepoDelegate: GitHubPublicRepoDelegate?
     
@@ -36,7 +36,7 @@ class GitHubPublicRepoTableView : UITableView {
     
 //    MARK: - UI Elements
     
-    func setuData(repos: [GitHubRepos]) {
+    func setuData(repos: [GitHubPublicRepoTableView.Model]) {
         gitHubRepos = repos
         reloadData()
     }
@@ -53,19 +53,27 @@ extension GitHubPublicRepoTableView : UITableViewDelegate, UITableViewDataSource
         let cell = dequeueReusableCell(withIdentifier: PublicRepoCell.publicRepoIdentifier) as! PublicRepoCell
         let data = gitHubRepos[indexPath.row]
         
-        let date = convertDate(date: data.created_at)
-        
         cell.repoNameLabel.text = data.name
-        cell.repoCreatedLabel.text = date
-        cell.languageIMG.image = UIImage(named: data.language)
+        cell.repoCreatedLabel.text = data.createdAt
+        cell.languageIMG.image =  data.languageImg
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         deselectRow(at: indexPath, animated: true)
-        let cell = gitHubRepos[indexPath.row]
-        let urlString = cell.html_url
-        publicRepoDelegate?.didSelectPublicRepoCell(urlString: urlString)
+//        let cell = gitHubRepos[indexPath.row]
+//        let urlString = cell.html_url
+//            publicRepoDelegate?.didSelectPublicRepoCell(urlString: urlString)
+        
+        publicRepoDelegate?.didSelectPublicRepoCell(indexPath: indexPath)
+    }
+}
+
+extension GitHubPublicRepoTableView {
+    struct Model {
+        let createdAt : String
+        let name : String
+        let languageImg : UIImage
     }
 }

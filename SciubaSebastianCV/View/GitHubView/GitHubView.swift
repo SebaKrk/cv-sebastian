@@ -10,7 +10,7 @@ import UIKit
 protocol GitHubViewDelegate : AnyObject {
     func dismissGitHubViewController()
     func didPressGitHubPageButton(urlString: String)
-    func didSelectPublicRepoCell(urlString: String)
+    func didSelectPublicRepoCell(indexPath: IndexPath)
 }
 
 class GitHubView : UIView {
@@ -45,9 +45,10 @@ class GitHubView : UIView {
     
 //    MARK: - SetupUsersData
 
-    func getPublicReposDataView(repos: [GitHubRepos]) {
+    func getPublicReposDataView(repos: [GitHubPublicRepoTableView.Model]) {
         listPubRepoTableView.setuData(repos: repos)
     }
+    
     
     func setUserModel(userModel: GitHubView.Model) {
         githubPage.setupPageData(model: userModel.githubView)
@@ -163,11 +164,14 @@ extension GitHubView {
         let bioView: GitHubBioView.Model
         let profileView: GitHubProfileView.Model
     }
+    
 }
 
 // MARK: - GitHubTopViewDelegate, GitHubPageViewDelegate, GitHubPublicRepoDelegate
 
 extension GitHubView : GitHubTopViewDelegate, GitHubPageViewDelegate, GitHubPublicRepoDelegate {
+
+    
  
     func dismissGitHubViewController() {
         gitHubViewDelegate?.dismissGitHubViewController()
@@ -177,8 +181,12 @@ extension GitHubView : GitHubTopViewDelegate, GitHubPageViewDelegate, GitHubPubl
         gitHubViewDelegate?.didPressGitHubPageButton(urlString: urlString)
     }
     
-    func didSelectPublicRepoCell(urlString: String) {
-        gitHubViewDelegate?.didSelectPublicRepoCell(urlString: urlString)
+//    func didSelectPublicRepoCell(urlString: String) {
+//        gitHubViewDelegate?.didSelectPublicRepoCell(urlString: urlString)
+//    }
+    func didSelectPublicRepoCell(indexPath: IndexPath) {
+        gitHubViewDelegate?.didSelectPublicRepoCell(indexPath: indexPath)
     }
 }
+
 

@@ -139,6 +139,4 @@ class ResponsibilitiesDetailsVC : UIViewController {
             stackView.widthAnchor.constraint(equalTo: secContainer.widthAnchor, multiplier: 0.9)
         ])
     }
-     
-    
 }

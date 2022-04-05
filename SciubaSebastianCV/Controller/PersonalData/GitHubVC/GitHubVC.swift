@@ -62,19 +62,22 @@ class GitHubVC : UIViewController{
 // MARK: - GitHubViewModelDelegate
 
 extension GitHubVC : GitHubViewModelDelegate {
+    func updateReposView(repos: [GitHubPublicRepoTableView.Model]) {
+        gitHubView.getPublicReposDataView(repos: repos)
+    }
+    
     func updateUser(userModel: GitHubView.Model) {
         gitHubView.setUserModel(userModel: userModel)
     }
     
-    func updateReposView(repos: [GitHubRepos]) {
-        gitHubView.getPublicReposDataView(repos: repos)
-    }
+//    func updateReposView(repos: [GitHubRepos]) {
+//        gitHubView.getPublicReposDataView(repos: repos)
+//    }
 }
 
 // MARK: - GitHubViewDelegate
 
 extension GitHubVC: GitHubViewDelegate {
-    
     func dismissGitHubViewController() {
         dismiss(animated: true, completion: nil)
     }
@@ -83,7 +86,12 @@ extension GitHubVC: GitHubViewDelegate {
         showSafariService(with: urlString)
     }
     
-    func didSelectPublicRepoCell(urlString: String) {
+//    func didSelectPublicRepoCell(urlString: String) {
+//        showSafariService(with: urlString)
+//    }
+    
+    func didSelectPublicRepoCell(indexPath: IndexPath) {
+        let urlString = gitHubViewModel.getUrlStrig(indexPath: indexPath)
         showSafariService(with: urlString)
     }
 }

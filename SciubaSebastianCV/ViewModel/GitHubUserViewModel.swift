@@ -6,15 +6,18 @@
 //
 
 import Foundation
-
+import UIKit
 
 protocol GitHubViewModelDelegate : AnyObject {
-    func updateReposView(repos: [GitHubRepos])
+    func updateReposView(repos: [GitHubPublicRepoTableView.Model])
     func updateUser(userModel: GitHubView.Model)
 }
 
 
+
 class GitHubUserViewModel {
+
+    var repoArray = [GitHubRepos]()
     
     weak var gitHubViewModelDelegate : GitHubViewModelDelegate?
     
@@ -56,14 +59,40 @@ class GitHubUserViewModel {
         guard let url = URL(string: urlString) else {return}
         Networking.shared.fetchData(from: url) { (result: Result<[GitHubRepos], DataError>) in
             switch result {
-            case .success(let repo):
+            case .success(let repos):
                 DispatchQueue.main.async {
-                    self.gitHubViewModelDelegate?.updateReposView(repos: repo)
+//                    self.gitHubViewModelDelegate?.updateReposView(repos: repo)
+                    let frormatedRepo = repos.compactMap { repo in
+                        return self.createGiiHubRepo(repo)
+                    }
+                    self.gitHubViewModelDelegate?.updateReposView(repos: frormatedRepo)
+                    self.repoArray = repos
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
-    // uialert controller
+    
+    func createGiiHubRepo(_ repo: GitHubRepos) -> GitHubPublicRepoTableView.Model? {
+        guard let languageImg = UIImage(named: repo.language) else {
+            return nil
+        }
+        return GitHubPublicRepoTableView.Model(createdAt: convertDate(date: repo.created_at), name: repo.name, languageImg: languageImg )
+    }
+    
+    func getUrlStrig(indexPath : IndexPath ) -> String {
+        let url = repoArray[indexPath.row].html_url
+        return url
+    }
+    
+
+    func convertDate(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let newDate = dateFormatter.date(from: date)
+        let monthAndYerDateFormatter = DateFormatter()
+        monthAndYerDateFormatter.dateFormat = "d MMMM yyyy"
+        return monthAndYerDateFormatter.string(from: newDate ?? Date())
+    }
 }
