@@ -1,0 +1,28 @@
+
+
+// TabBar
+"Personal Data" = "Dane osobowe";
+"Work Experience" = "Doswiadczenie";
+"Education" = "Wyksztalcenie";
+"Skills" = "Umiejetnosci";
+
+//SideMenu
+"Language" = "Jezyk";
+
+//PersonalData
+"Phone" = "Telefon";
+"Home" = "Adres";
+"Email" = "Poczta";
+"Poland" = "Polska";
+"aboutMe" = "Jestem studentem 3 roku informatyki, samoukiem z zakresu wytwarzania oprogramowania na platforme IOS. Posiadam podstawowa wiedze z zakresu programowania którą nadal zdobywam na uczelni. Codziennie powieksza swoja wiedze poprzez roznego rodzaju kursy oraz wlasne projekty ktore załaczam do cv.W Panstwa firmie chce rozwijac sie oraz powiekszac swoja wiedze w zakresie dostarczania oprogramowania dla platformy iOS";
+
+
+// ResponsibilitiesDetails
+"Responsibilities Details" = "Obowiazki Szczegoly";
+"Done" = "Gotowe";
+
+// MailMassageUI
+"Sebastian Sciuba CV APP" = "Sebastian Sciuba CV aplikacja";
+"Hi Sebastian," = "Czesc Sebastian,";
+"Error" = "Blad";
+"You don't have any mailbox on Your device" = "Nie masz zainstalowanej zadnej skrzynki pocztowej na tym urzadzeniu";
